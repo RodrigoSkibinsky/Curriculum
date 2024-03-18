@@ -183,6 +183,7 @@
     background-color: #f00;
     border-radius: 2px;
     margin-right: 5px;
+    cursor: pointer;
   }
   
   .maximize-square {
