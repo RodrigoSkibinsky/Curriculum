@@ -166,7 +166,7 @@ function App() {
           >
             <div className='top-top'>
               <div className='top-space top-left'>
-              <img src={selection} className="terminal-small" alt="logo" onClick={toggleScreenVisibility}/>
+              <img src={selection} className="terminal-small" alt="logo"/>
               </div>
               <div className='top-space top-middle'>
                 <p>root@kali</p>
