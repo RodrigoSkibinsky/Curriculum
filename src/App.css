@@ -195,7 +195,7 @@
     width: 3px;
     height: 3px;
     background-color: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #111;
   }
   
   .top-top {
@@ -248,14 +248,6 @@
 
   .terminal-item:hover {
     background-color: #222d;
-  }
-
-  .button {
-    height: 17px;
-    width: 17px;
-    background-color: #f00;
-    border-radius: 2px;
-    margin-right: 5px;
   }
   
   .maximize-square {
