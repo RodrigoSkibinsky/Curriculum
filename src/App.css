@@ -276,9 +276,13 @@
     width: 1px;
     background-color: #ddd;
     height: 60%;
-    margin: 0px 2px;
+    margin: 0px 5px;
   }
   
+  .frame {
+    padding: 5px;
+  }
+
   .terminal-text, .terminal-sub-title {
     text-align: left;
   }

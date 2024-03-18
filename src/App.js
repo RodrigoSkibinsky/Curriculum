@@ -175,6 +175,11 @@ function App() {
               )}
             </div>
             <div className='vertical-line'></div>
+            <div className='frame'>
+              <div className="icon-holder">
+                <img src={terminalDefault} className="icon terminal-small" alt="logo" onClick={toggleScreenVisibility}/> 
+              </div>
+            </div>
           </div>
           <div className="barra barra2">
             <p>¿Quién es Rodrigo Sacramento?</p>
@@ -203,7 +208,7 @@ function App() {
           >
             <div className='top-top'>
               <div className='top-space top-left'>
-              <img src={selection} className="terminal-small" alt="logo"/>
+              <img src={terminalDefault} className="terminal-small" alt="logo"/>
               </div>
               <div className='top-space top-middle'>
                 <p>{getTerminalTitle(selection)}</p>
