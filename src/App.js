@@ -83,10 +83,10 @@ function App() {
 
   const openScreen = () => {
     if (isScreenHidden) {
-      setIsScreenHidden(!isScreenHidden);
+      setIsScreenHidden(false);
     }
     if (isScreenClosed) {
-      setIsScreenClosed(!isScreenClosed);
+      setIsScreenClosed(false);
     }
   };
 
