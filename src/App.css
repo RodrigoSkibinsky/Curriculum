@@ -180,10 +180,15 @@
   .button {
     height: 17px;
     width: 17px;
-    background-color: #f00;
-    border-radius: 2px;
+    background-color: #0000;
+    border-radius: 50%;
     margin-right: 5px;
     cursor: pointer;
+    color: #111;
+  }
+
+  .button:hover {
+    background-color: #3281ff;
   }
   
   .maximize-square {
