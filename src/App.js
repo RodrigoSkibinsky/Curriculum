@@ -41,7 +41,7 @@ function getTerminalTitle(image) {
   }
 }
 
-function getTerminalName(image) {
+function getTerminalSubTitle(image) {
   switch (image) {
     case terminalDefault:
       return "kali@kali:~ ";
@@ -225,7 +225,7 @@ function App() {
           </div>
           <div className="line"></div> {/* Agrega esta línea */}
           <div className="content">
-            <Presentacion/>
+            <Presentacion name={getTerminalSubTitle(selection, red)}/>
           </div>
         </div>
       </div>
