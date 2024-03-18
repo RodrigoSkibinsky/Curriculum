@@ -180,7 +180,7 @@
   .button {
     height: 17px;
     width: 17px;
-    background-color: #252525;
+    background-color: #333;
     border-radius: 50%;
     border: 1px solid #222;
     margin-right: 5px;
@@ -250,15 +250,7 @@
   .terminal-item:hover {
     background-color: #222d;
   }
-  
-  .maximize-square {
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: 1px solid #111;
-    margin-right: 5px;
-  }
-  
+    
   .close {
     margin-right: 5px;
   }
