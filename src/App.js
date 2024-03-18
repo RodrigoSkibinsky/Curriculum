@@ -76,9 +76,18 @@ function App() {
     setMenuVisible(!menuVisible);
   };
 
-  const openCloseScreen = () => {
-    setIsScreenHidden(!isScreenHidden);
-    setIsScreenClosed(!isScreenClosed);
+  const closeScreen = () => {
+    setIsScreenHidden(true);
+    setIsScreenClosed(true);
+  };
+
+  const openScreen = () => {
+    if (isScreenHidden) {
+      setIsScreenHidden(!isScreenHidden);
+    }
+    if (isScreenClosed) {
+      setIsScreenClosed(!isScreenClosed);
+    }
   };
 
   const handleSelection = (image) => {
@@ -145,7 +154,7 @@ function App() {
               <img src={logo} className="icon Menu" alt="logo" />
             </div>
             <div className="icon-holder">
-              <img src={selection} className="icon Terminal" alt="logo" onClick={toggleScreenVisibility}/> 
+              <img src={selection} className="icon Terminal" alt="logo" onClick={openScreen}/> 
             </div>
             <div
               className="icon-holder"
@@ -212,7 +221,7 @@ function App() {
                   <div className='button maximize-square'>
                   </div>
                 </div>
-                <div className='button close' onClick={openCloseScreen}>
+                <div className='button close' onClick={closeScreen}>
                   x
                 </div>
               </div>
