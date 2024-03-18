@@ -177,7 +177,7 @@ function App() {
               )}
             </div>
             <div className='vertical-line'></div>
-            <div className={`frame ${isScreenHidden ? '' : 'selected', isScreenClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
+            <div className={`frame ${isScreenHidden ? '' : 'selected'} ${isScreenClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
                 <img src={terminalDefault} className="open-icon terminal-small" alt="logo"/> 
             </div>
           </div>
