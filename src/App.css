@@ -202,10 +202,14 @@
     width: 5px;
     height: 5px;
     background-color: transparent;
-    border: 2px solid #111;
+    border: 2px solid #0000;
     display: flex; /* Añadir flexbox para alinear */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
+  }
+
+  .maximize-square:hover {
+    border: 2px solid #ddd;
   }
 
   .top-top {
@@ -263,6 +267,7 @@
   .close {
     margin-right: 5px;
     background-color: #3281ff;
+    color: #111;
   }
   
   .line {
