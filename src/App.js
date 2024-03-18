@@ -56,9 +56,9 @@ function getTerminalSubTitle(image) {
 
 function getTerminalColor(image) {
   if (image === terminalRoot) {
-    return "#f55";
+    return "#e44";
   } else {
-    return "#55f";
+    return "#3060ff";
   }
 }
 
