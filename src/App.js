@@ -67,6 +67,9 @@ function App() {
   const [isScreenHidden, setIsScreenHidden] = useState(false);
   const [isScreenClosed, setIsScreenClosed] = useState(false);
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
+  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(0);
+
   
   const toggleScreenVisibility = () => {
     setIsScreenHidden(!isScreenHidden);
@@ -116,14 +119,6 @@ function App() {
     });
   };
 
-  var height = window.innerHeight*0.75;
-  var width = window.innerWidth*0.7;
-
-  const maximize = () => {
-    height = window.innerHeight - 30;
-    width = window.innerWidth;
-  }
-
   useEffect(() => {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -133,6 +128,28 @@ function App() {
     const initialY = (screenHeight - windowHeight) / 2;
     setWindowPosition({ x: initialX, y: initialY });
   }, []);
+
+  const maximize = () => {
+    // Establecer las dimensiones máximas de la ventana
+    const maxHeight = window.innerHeight - 30;
+    const maxWidth = window.innerWidth;
+  
+    // Actualizar las dimensiones de la ventana
+    setHeight(maxHeight);
+    setWidth(maxWidth);
+  };
+  
+  useEffect(() => {
+    // Establecer las dimensiones iniciales de la ventana
+    const initialHeight = window.innerHeight * 0.75;
+    const initialWidth = window.innerWidth * 0.7;
+    setHeight(initialHeight);
+    setWidth(initialWidth);
+  
+    // Resto del código useEffect...
+  
+  }, []);
+  
 
   const handleMouseMove = (e) => {
     if (dragging) {
