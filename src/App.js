@@ -5,6 +5,7 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 import React, { useState, useEffect } from 'react';
+import Presentacion from './Presentacion.js';
 
 // function MyButton({ className, text }) {
 //   return (
@@ -27,14 +28,27 @@ function getTerminalName(image) {
   }
 }
 
-function getTerminalText(image) {
+function getTerminalTitle(image) {
   switch (image) {
     case terminalDefault:
-      return "kali@kali: ~";
+      return "kali@kali:~";
     case terminalRoot:
-      return "root@kali: ~";
+      return "root@kali:~";
     case terminalUser:
-      return "PS> kali@kali: home/kali";
+      return "PS> kali@kali:home/kali";
+    default:
+      return "";
+  }
+}
+
+function getTerminalName(image) {
+  switch (image) {
+    case terminalDefault:
+      return "kali@kali:~ ";
+    case terminalRoot:
+      return "root@kali:# ";
+    case terminalUser:
+      return "kali@kali:PS> ";
     default:
       return "";
   }
@@ -182,7 +196,7 @@ function App() {
               <img src={selection} className="terminal-small" alt="logo"/>
               </div>
               <div className='top-space top-middle'>
-                <p>{getTerminalText(selection)}</p>
+                <p>{getTerminalTitle(selection)}</p>
               </div>
               <div className='top-space top-right'>
                 <div className='button minimize'>
@@ -211,6 +225,7 @@ function App() {
           </div>
           <div className="line"></div> {/* Agrega esta línea */}
           <div className="content">
+            <Presentacion/>
           </div>
         </div>
       </div>
