@@ -187,11 +187,10 @@
   }
   
   .maximize-square {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     background-color: transparent;
     border: 1px solid #ccc;
-    margin-right: 5px;
   }
   
   .top-top {

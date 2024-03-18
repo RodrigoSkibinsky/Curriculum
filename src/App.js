@@ -222,7 +222,7 @@ function App() {
                 <div className='button minimize'>
                   -
                 </div>
-                <div className='button maximize' oClick={maximize}>
+                <div className='button maximize' onClick={maximize}>
                   <div className='maximize-square'>
                   </div>
                 </div>
