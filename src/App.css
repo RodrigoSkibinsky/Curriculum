@@ -306,6 +306,10 @@
     text-align: left;
   }
 
+  .plain-text p{
+    margin-left: 5px;
+  }
+
   .oculto {
     opacity: 0;
     pointer-events: none;
