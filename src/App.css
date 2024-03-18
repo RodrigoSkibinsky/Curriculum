@@ -79,8 +79,8 @@
   }
 
   .terminal-small {
-    height: calc(var(--altura-barra) - 20px);
-    width: calc(var(--altura-barra) - 15px);
+    height: calc(var(--altura-barra) - 18px);
+    width: calc(var(--altura-barra) - 13px);
     margin-left: 10px;
   }
 
@@ -281,7 +281,8 @@
   
   .frame {
     padding: 5px;
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
+    justify-content: center;
   }
 
   .frame:hover {
