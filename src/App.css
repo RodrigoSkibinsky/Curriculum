@@ -280,12 +280,14 @@
   }
   
   .frame {
-    padding: 5px;
-    border: 1px solid #ddda;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    border: 1px solid #ddda;
+    /* border-radius: 7px; */
   }
+  
 
   .frame:hover {
     background-color: #111c;
