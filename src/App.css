@@ -285,13 +285,14 @@
     align-items: center;
     padding: 5px;
     border: 1px solid #ddda;
-    margin: 0 auto;
   }
   
   .open-icon {
     flex: auto;
     justify-self: center;
+    margin: 0 auto;
   }
+  
 
   .frame:hover {
     background-color: #111c;
