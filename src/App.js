@@ -234,7 +234,7 @@ function App() {
           </div>
           <div className="line"></div> {/* Agrega esta línea */}
           <div className="content">
-            {/* <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)}/> */}
+            <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)}/>
           </div>
         </div>
       </div>

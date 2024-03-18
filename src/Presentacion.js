@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Presentacion(name, textColor) {
+function Presentacion({ name, textColor }) {
     return(
         <div className='plain-text'>
             <p className='sub-title'><b style={{color: textColor,}}>{name}</b>Sobre mi:</p>
