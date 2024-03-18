@@ -59,9 +59,9 @@
     opacity: 100%;
   }
 
-  .icon-holder, .selected {
+  .icon-holder {
     display: flex;
-    height: var(--altura-barra);
+    height: 100%;
     align-items: center;
   }
 
@@ -294,9 +294,11 @@
   
   .frame:hover {
     background-color: #111c;
+    height: auto;
   }
 
   .selected {
+    height: auto;
     background-color: #111c;
     border-bottom: 1px solid #3060ff;
   }
