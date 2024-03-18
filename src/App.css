@@ -187,8 +187,8 @@
   }
   
   .maximize-square {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     background-color: transparent;
     border: 1px solid #ccc;
   }
