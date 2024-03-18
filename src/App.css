@@ -199,8 +199,8 @@
   }
   
   .maximize-square {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background-color: transparent;
     border: 2px solid #111;
     display: flex; /* Añadir flexbox para alinear */
