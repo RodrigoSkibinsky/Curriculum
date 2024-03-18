@@ -284,6 +284,7 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
+    height: 100%;
   }
   
   .open-icon {
@@ -294,11 +295,9 @@
   
   .frame:hover {
     background-color: #111c;
-    height: auto;
   }
 
   .selected {
-    height: auto;
     background-color: #111c;
     border-bottom: 1px solid #3060ff;
   }
