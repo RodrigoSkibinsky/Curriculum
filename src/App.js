@@ -120,8 +120,8 @@ function App() {
   var width = window.innerWidth*0.7;
 
   const maximize = () => {
-    setHeight(window.innerHeight - 30);
-    setWidth(window.innerWidth);
+    height = window.innerHeight - 30;
+    width = window.innerWidth;
   }
 
   useEffect(() => {
