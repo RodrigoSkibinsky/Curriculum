@@ -181,15 +181,15 @@
     height: 17px;
     width: 17px;
     background-color: #333;
+    color: #0000;
     border-radius: 50%;
     border: 1px solid #222;
     margin-right: 5px;
     cursor: pointer;
-    color: #111;
   }
-
+  
   .button:hover {
-    background-color: #3281ff;
+    color: #ddd;
   }
   
   .maximize {
@@ -262,6 +262,7 @@
 
   .close {
     margin-right: 5px;
+    background-color: #3281ff;
   }
   
   .line {
