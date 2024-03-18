@@ -27,6 +27,19 @@ function getTerminalName(image) {
   }
 }
 
+function getTerminalText(image) {
+  switch (image) {
+    case terminalDefault:
+      return "kali@kali: ~";
+    case terminalRoot:
+      return "root@kali: ~";
+    case terminalUser:
+      return "PS> kali@kali: home/kali";
+    default:
+      return "";
+  }
+}
+
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
@@ -169,7 +182,7 @@ function App() {
               <img src={selection} className="terminal-small" alt="logo"/>
               </div>
               <div className='top-space top-middle'>
-                <p>root@kali</p>
+                <p>{getTerminalText(selection)}</p>
               </div>
               <div className='top-space top-right'>
                 <div className='button minimize'>
