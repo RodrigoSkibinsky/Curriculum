@@ -61,7 +61,7 @@
 
   .icon-holder, .selected {
     display: flex;
-    height: 100%;
+    height: var(--altura-barra);
     align-items: center;
   }
 
