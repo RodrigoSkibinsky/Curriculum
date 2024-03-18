@@ -7,14 +7,6 @@ import Clock from './Clock.js';
 import React, { useState, useEffect } from 'react';
 import Presentacion from './Presentacion.js';
 
-// function MyButton({ className, text }) {
-//   return (
-//     <button className={className}>
-//       {text}
-//     </button>
-//   );
-// }
-
 function getTerminalName(image) {
   switch (image) {
     case terminalDefault:
@@ -73,8 +65,8 @@ function App() {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isWindowHidden, setWindowHidden] = useState(false);
   const [isScreenHidden, setIsScreenHidden] = useState(false);
-  const [buttonDragEnabled, setButtonDragEnabled] = useState(true); // Nuevo estado para habilitar/deshabilitar el arrastre desde los botones
-
+  const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
+  
   const toggleScreenVisibility = () => {
     setIsScreenHidden(!isScreenHidden);
   };
@@ -82,10 +74,6 @@ function App() {
   const handleDisplayClick = () => {
     setMenuVisible(!menuVisible);
   };
-
-  // const hideWindow = () => {
-  //   setWindowHidden(true);
-  // };
 
   const handleSelection = (image) => {
     var img = image;
@@ -103,7 +91,6 @@ function App() {
   };
 
   const handleMouseDown = (e) => {
-    // Habilitar el arrastre de la ventana solo si no se hace clic en los botones
     if (!buttonDragEnabled) {
       return;
     }
@@ -175,7 +162,7 @@ function App() {
               )}
             </div>
             <div className='vertical-line'></div>
-            <div className='frame' onClick={toggleScreenVisibility}>
+            <div className={`frame ${isScreenHidden ? '' : 'selected'}`} onClick={toggleScreenVisibility}>
                 <img src={terminalDefault} className="open-icon terminal-small" alt="logo"/> 
             </div>
           </div>
