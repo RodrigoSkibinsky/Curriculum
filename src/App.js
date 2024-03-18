@@ -79,7 +79,7 @@ function App() {
   };
 
   var height = window.innerHeight*0.75;
-  var width = height*1.25;
+  var width = window.innerWidth*0.7;
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
