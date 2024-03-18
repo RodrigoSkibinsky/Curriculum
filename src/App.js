@@ -154,7 +154,6 @@ function App() {
             <div className="icon-holder">
               <img src={selection} className="icon Terminal" alt="logo" onClick={toggleScreenVisibility}/> 
             </div>
-            <div className='vertical-line'></div>
             <div
               className="icon-holder"
               onClick={handleDisplayClick}
@@ -175,6 +174,7 @@ function App() {
                 </div>
               )}
             </div>
+            <div className='vertical-line'></div>
           </div>
           <div className="barra barra2">
             <p>¿Quién es Rodrigo Sacramento?</p>
