@@ -59,7 +59,7 @@
     opacity: 100%;
   }
 
-  .icon-holder {
+  .icon-holder, .selected {
     display: flex;
     height: 100%;
     align-items: center;
