@@ -272,6 +272,10 @@
     background-color: #222;
   }
   
+  .terminal-text {
+    justify-self: left;
+  }
+
   .oculto {
     opacity: 0;
     pointer-events: none;
