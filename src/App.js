@@ -119,6 +119,11 @@ function App() {
   var height = window.innerHeight*0.75;
   var width = window.innerWidth*0.7;
 
+  const maximize = () => {
+    setHeight(window.innerHeight - 30);
+    setWidth(window.innerWidth);
+  }
+
   useEffect(() => {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -218,7 +223,7 @@ function App() {
                   -
                 </div>
                 <div className='button maximize'>
-                  <div className='button maximize-square'>
+                  <div className='button maximize-square' oClick={maximize}>
                   </div>
                 </div>
                 <div className='button close' onClick={closeScreen}>
