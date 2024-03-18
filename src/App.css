@@ -275,7 +275,7 @@
   .vertical-line {
     width: 1px;
     background-color: #ddd;
-    height: 90%;
+    height: 80%;
   }
   
   .terminal-text, .terminal-sub-title {
