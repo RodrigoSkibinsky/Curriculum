@@ -65,6 +65,7 @@ function App() {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isWindowHidden, setWindowHidden] = useState(false);
   const [isScreenHidden, setIsScreenHidden] = useState(false);
+  const [isScreenClosed, setIsScreenClosed] = useState(false);
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
   
   const toggleScreenVisibility = () => {
@@ -73,6 +74,11 @@ function App() {
 
   const handleDisplayClick = () => {
     setMenuVisible(!menuVisible);
+  };
+
+  const openCloseScreen = () => {
+    setIsScreenHidden(!isScreenHidden);
+    setIsScreenClosed(!isScreenClosed);
   };
 
   const handleSelection = (image) => {
@@ -162,7 +168,7 @@ function App() {
               )}
             </div>
             <div className='vertical-line'></div>
-            <div className={`frame ${isScreenHidden ? '' : 'selected'}`} onClick={toggleScreenVisibility}>
+            <div className={`frame ${isScreenHidden ? '' : 'selected', isScreenClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
                 <img src={terminalDefault} className="open-icon terminal-small" alt="logo"/> 
             </div>
           </div>
@@ -206,7 +212,7 @@ function App() {
                   <div className='button maximize-square'>
                   </div>
                 </div>
-                <div className='button close'>
+                <div className='button close' onClick={openCloseScreen}>
                   x
                 </div>
               </div>
