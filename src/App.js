@@ -54,6 +54,15 @@ function getTerminalSubTitle(image) {
   }
 }
 
+function getTerminalColor(image) {
+  if (image === terminalRoot) {
+    return "#f55";
+  } else {
+    return "#55f";
+  }
+}
+
+
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
@@ -225,7 +234,7 @@ function App() {
           </div>
           <div className="line"></div> {/* Agrega esta línea */}
           <div className="content">
-            <Presentacion name={getTerminalSubTitle(selection, red)}/>
+            <Presentacion name={getTerminalSubTitle(selection) textColor={getTerminalColor(selection)}}/>
           </div>
         </div>
       </div>
