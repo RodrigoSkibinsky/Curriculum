@@ -174,6 +174,7 @@ function App() {
                 </div>
               )}
             </div>
+            <div className='vertical-line'></div>
           </div>
           <div className="barra barra2">
             <p>¿Quién es Rodrigo Sacramento?</p>
@@ -232,7 +233,7 @@ function App() {
               <div className='top-space top-right'></div>
             </div>
           </div>
-          <div className="line"></div> {/* Agrega esta línea */}
+          <div className="line"></div>
           <div className="content">
             <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)}/>
           </div>

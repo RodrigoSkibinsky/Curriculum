@@ -271,6 +271,12 @@
     height: 1px;
     background-color: #222;
   }
+
+  .line {
+    width: 1px;
+    background-color: #ddd;
+    height: 90%;
+  }
   
   .terminal-text, .terminal-sub-title {
     text-align: left;
