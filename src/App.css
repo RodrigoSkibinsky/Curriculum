@@ -285,13 +285,12 @@
     align-items: center;
     padding: 5px;
     border: 1px solid #ddda;
-    width: 20px;
   }
   
   .open-icon {
     flex: auto;
     justify-self: center;
-    margin: 0 auto;
+    margin: auto;
   }
   
 
