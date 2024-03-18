@@ -273,7 +273,7 @@
   }
   
   .terminal-text {
-    justify-self: left;
+    text-align: left;
   }
 
   .oculto {
