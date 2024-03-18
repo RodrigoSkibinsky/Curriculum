@@ -281,8 +281,10 @@
   
   .frame {
     padding: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #ddda;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .frame:hover {
