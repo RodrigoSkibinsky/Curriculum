@@ -165,7 +165,9 @@ function App() {
             }} onMouseDown={handleMouseDown}
           >
             <div className='top-top'>
-              <div className='top-space top-left'></div>
+              <div className='top-space top-left'>
+              <img src={selection} className="terminal-small" alt="logo" onClick={toggleScreenVisibility}/>
+              </div>
               <div className='top-space top-middle'>
                 <p>root@kali</p>
               </div>

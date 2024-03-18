@@ -78,6 +78,11 @@
     width: calc(var(--altura-barra) - 10px);
   }
 
+  .terminal-small {
+    height: calc(var(--altura-barra) - 20px);
+    width: calc(var(--altura-barra) - 15px);
+  }
+
   .display-terminal {
     padding: 5px 5px 9px 5px;
     rotate: 90deg;
