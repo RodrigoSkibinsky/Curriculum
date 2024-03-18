@@ -182,6 +182,7 @@
     width: 17px;
     background-color: #0000;
     border-radius: 50%;
+    border: 1px solid #111;
     margin-right: 5px;
     cursor: pointer;
     color: #111;
@@ -254,13 +255,11 @@
     width: 10px;
     height: 10px;
     background-color: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #111;
     margin-right: 5px;
   }
   
   .close {
-    background-color: #f55;
-    border-radius: 50%;
     margin-right: 5px;
   }
   
