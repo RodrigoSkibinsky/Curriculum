@@ -192,15 +192,20 @@
     background-color: #3281ff;
   }
   
-  .maximize-square {
-    width: 5px;
-    height: 5px;
-    background-color: transparent;
-    border: 1px solid #111;
+  .maximize {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
   }
   
-  .maximize {
-    align-items: center;
+  .maximize-square {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border: 2px solid #111;
+    display: flex; /* Añadir flexbox para alinear */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
   }
 
   .top-top {
