@@ -288,6 +288,10 @@
     /* border-radius: 7px; */
   }
   
+  .open-icon {
+    flex: auto;
+    justify-self: center;
+  }
 
   .frame:hover {
     background-color: #111c;
