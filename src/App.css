@@ -281,6 +281,11 @@
   
   .frame {
     padding: 5px;
+    border: 2px solid #ddd;
+  }
+
+  .frame:hover {
+    background-color: #111c;
   }
 
   .terminal-text, .terminal-sub-title {

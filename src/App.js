@@ -177,7 +177,7 @@ function App() {
             <div className='vertical-line'></div>
             <div className='frame'>
               <div className="icon-holder">
-                <img src={terminalDefault} className="icon terminal-small" alt="logo" onClick={toggleScreenVisibility}/> 
+                <img src={terminalDefault} className="terminal-small" alt="logo" onClick={toggleScreenVisibility}/> 
               </div>
             </div>
           </div>
