@@ -91,7 +91,8 @@ function App() {
     const initialY = (screenHeight - windowHeight) / 2;
     if (isScreenClosed) {
       setIsScreenClosed(false);
-      minimize;
+      setHeight(initialHeight);
+      setWidth(initialWidth);
       setWindowPosition({ x: initialX, y: initialY });
     }
     if (isScreenHidden) {
