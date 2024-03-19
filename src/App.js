@@ -166,7 +166,7 @@ function App() {
       let newX = e.clientX - offset.x;
       let newY = e.clientY - offset.y;
       newX = Math.max((width/2), Math.min(screenWidth-(width/2), newX));
-      newY = Math.max((height/2)+5, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
+      newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
       setWindowPosition({ x: newX, y: newY });
     }
   };
