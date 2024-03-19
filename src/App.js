@@ -85,11 +85,16 @@ function App() {
   };
 
   const openScreen = () => {
-    if (isScreenHidden) {
-      setIsScreenHidden(false);
-    }
+    const initialHeight = window.innerHeight * 0.75;
+    const initialWidth = window.innerWidth * 0.6;
+    const initialX = (screenWidth - windowWidth) / 2;
+    const initialY = (screenHeight - windowHeight) / 2;
     if (isScreenClosed) {
       setIsScreenClosed(false);
+      setWindowPosition({ x: initialX, y: initialY });
+    }
+    if (isScreenHidden) {
+        setIsScreenHidden(false);
     }
   };
 
