@@ -89,6 +89,8 @@ function App() {
     const screenHeight = window.innerHeight;
     const initialHeight = window.innerHeight * 0.75;
     const initialWidth = window.innerWidth * 0.6;
+    const windowWidth = 30;
+    const windowHeight = 50;
     const initialX = (screenWidth - windowWidth) / 2;
     const initialY = (screenHeight - windowHeight) / 2;
     if (isScreenClosed) {
