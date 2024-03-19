@@ -244,7 +244,7 @@ function App() {
                 <p>{getTerminalTitle(selection)}</p>
               </div>
               <div className='top-space top-right'>
-                <div className='button minimize'>
+                <div className='button minimize' onClick={handleDisplayClick}>
                   -
                 </div>
                 <div className='button maximize' onClick={maximize}>
