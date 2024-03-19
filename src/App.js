@@ -156,14 +156,8 @@ function App() {
   };
   
   useEffect(() => {
-    // Establecer las dimensiones iniciales de la ventana
-    const initialHeight = window.innerHeight * 0.75;
-    const initialWidth = window.innerWidth * 0.6;
     setHeight(initialHeight);
     setWidth(initialWidth);
-  
-    // Resto del código useEffect...
-  
   }, []);
   
 
