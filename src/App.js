@@ -140,7 +140,7 @@ function App() {
     if (height === window.innerHeight*0.75) {
       setHeight(maxHeight);
       setWidth(maxWidth);
-      setWindowPosition({ x: 769, y: 360});
+      setWindowPosition({ x: 769, y: 330});
     } else {
       setHeight(initialHeight);
       setWidth(initialWidth);
