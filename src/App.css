@@ -31,6 +31,7 @@
     background-color: #222c;
     height: var(--altura-barra);
     font-family: 'DejaVu Sans Mono', monospace;
+    z-index: 100;
   }
 
   .barra {
