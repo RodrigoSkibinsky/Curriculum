@@ -6,6 +6,8 @@ import './App.css';
 import Clock from './Clock.js';
 import React, { useState, useEffect } from 'react';
 import Presentacion from './Presentacion.js';
+import Experiencia from './Experiencia.js';
+import Estudios from './Estudios.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -69,6 +71,7 @@ function App() {
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
+  const [terminalText, setTerminalText] = useState("File");
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   const initialHeight = window.innerHeight * 0.75;
@@ -77,6 +80,10 @@ function App() {
   const windowHeight = 50;
   const initialX = (screenWidth - windowWidth) / 2;
   const initialY = (screenHeight - windowHeight) / 2;
+
+  const handleTerminalItemClick = (text) => {
+    setTerminalText(text);
+  };
   
   const toggleScreenVisibility = () => {
     setIsScreenHidden(!isScreenHidden);
@@ -255,11 +262,11 @@ function App() {
             </div>
             <div className='top-bottom'>
               <div className='top-space top-left'>
-                <p className='terminal-item'>File</p>                            
-                <p className='terminal-item'>Action</p>                            
-                <p className='terminal-item'>Edit</p>                            
-                <p className='terminal-item'>View</p>                            
-                <p className='terminal-item'>Help</p>   
+                <p className='terminal-item' onClick={() => handleTerminalItemClick("File")}>File</p>
+                <p className='terminal-item' onClick={() => handleTerminalItemClick("Action")}>Action</p>
+                <p className='terminal-item' onClick={() => handleTerminalItemClick("Edit")}>Edit</p>
+                <p className='terminal-item' onClick={() => handleTerminalItemClick("View")}>View</p>
+                <p className='terminal-item' onClick={() => handleTerminalItemClick("Help")}>Help</p>
               </div>
               <div className='top-space top-middle'></div>
               <div className='top-space top-right'></div>
@@ -267,7 +274,16 @@ function App() {
           </div>
           <div className="line"></div>
           <div className="content">
-            <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)}/>
+            {(() => {
+              switch (terminalText) {
+                case "Action":
+                  return <Experiencia name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
+                case "Edit":
+                  return <Estudios name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
+                default:
+                  return <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
+              }
+            })()}
           </div>
         </div>
       </div>
