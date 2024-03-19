@@ -131,18 +131,25 @@ function App() {
 
   const maximize = () => {
     // Establecer las dimensiones máximas de la ventana
-    const maxHeight = window.innerHeight - 30;
+    const maxHeight = window.innerHeight - 40;
     const maxWidth = window.innerWidth;
+    const initialHeight = window.innerHeight * 0.75;
+    const initialWidth = window.innerWidth * 0.6;
   
     // Actualizar las dimensiones de la ventana
-    setHeight(maxHeight);
-    setWidth(maxWidth);
+    if (height === window.innerHeight*0.75) {
+      setHeight(maxHeight);
+      setWidth(maxWidth);
+    } else {
+      setHeight(initialHeight);
+      setWidth(initialWidth);
+    }
   };
   
   useEffect(() => {
     // Establecer las dimensiones iniciales de la ventana
     const initialHeight = window.innerHeight * 0.75;
-    const initialWidth = window.innerWidth * 0.7;
+    const initialWidth = window.innerWidth * 0.6;
     setHeight(initialHeight);
     setWidth(initialWidth);
   
