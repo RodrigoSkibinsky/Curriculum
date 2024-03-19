@@ -69,7 +69,14 @@ function App() {
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
-
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const initialHeight = window.innerHeight * 0.65;
+  const initialWidth = window.innerWidth * 0.5;
+  const windowWidth = 30;
+  const windowHeight = 50;
+  const initialX = (screenWidth - windowWidth) / 2;
+  const initialY = (screenHeight - windowHeight) / 2;
   
   const toggleScreenVisibility = () => {
     setIsScreenHidden(!isScreenHidden);
@@ -85,14 +92,6 @@ function App() {
   };
 
   const openScreen = () => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const initialHeight = window.innerHeight * 0.75;
-    const initialWidth = window.innerWidth * 0.6;
-    const windowWidth = 30;
-    const windowHeight = 50;
-    const initialX = (screenWidth - windowWidth) / 2;
-    const initialY = (screenHeight - windowHeight) / 2;
     if (isScreenClosed) {
       setIsScreenClosed(false);
       setHeight(initialHeight);
@@ -135,12 +134,6 @@ function App() {
   };
 
   useEffect(() => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const windowWidth = 30;
-    const windowHeight = 50;
-    const initialX = (screenWidth - windowWidth) / 2;
-    const initialY = (screenHeight - windowHeight) / 2;
     setWindowPosition({ x: initialX, y: initialY });
   }, []);
 
