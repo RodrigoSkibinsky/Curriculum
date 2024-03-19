@@ -95,7 +95,7 @@
   }
 
   .menu {
-    position: absolute;
+    position: fixed;
     top: var(--altura-barra);
     background-color: #222c;
     display: flex;
