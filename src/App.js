@@ -85,6 +85,8 @@ function App() {
   };
 
   const openScreen = () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
     const initialHeight = window.innerHeight * 0.75;
     const initialWidth = window.innerWidth * 0.6;
     const initialX = (screenWidth - windowWidth) / 2;
