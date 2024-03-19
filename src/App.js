@@ -71,8 +71,8 @@ function App() {
   const [width, setWidth] = useState(0);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const initialHeight = window.innerHeight * 0.65;
-  const initialWidth = window.innerWidth * 0.5;
+  const initialHeight = window.innerHeight * 0.75;
+  const initialWidth = window.innerWidth * 0.6;
   const windowWidth = 30;
   const windowHeight = 50;
   const initialX = (screenWidth - windowWidth) / 2;
@@ -138,13 +138,8 @@ function App() {
   }, []);
 
   const maximize = () => {
-    // Establecer las dimensiones máximas de la ventana
     const maxHeight = window.innerHeight - 32;
     const maxWidth = window.innerWidth;
-    const initialHeight = window.innerHeight * 0.75;
-    const initialWidth = window.innerWidth * 0.6;
-  
-    // Actualizar las dimensiones de la ventana
     if (height === window.innerHeight*0.75) {
       setHeight(maxHeight);
       setWidth(maxWidth);
