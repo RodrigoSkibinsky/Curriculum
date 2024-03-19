@@ -4,10 +4,9 @@ function Estudios({ name, textColor }) {
     return(
         <div className='plain-text'>
             <p className='terminal-sub-title'><b style={{color: textColor,}}>{name}</b>Trayectoria Académica:</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Soy un profesional motivado en el desarrollo frontend, con sólida formación en Ingeniería en Computación.</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Mi compromiso es aportar al equipo mis habilidades técnicas y mi entusiasmo por el aprendizaje continuo.</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Con dominio en desarrollo frontend y en proceso de dominar ReactJs,</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>estoy preparado para contribuir al éxito de sus proyectos con responsabilidad y dedicación.</p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Estudios Terciarios:</p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>MAR 2021 - Actualidad: Ingeniería en Computación - UDELAR</p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Escolaridad disponible <a href='Escolaridad.pdf' target='_blank'>aquí</a></p>
         </div>
     );
 }
