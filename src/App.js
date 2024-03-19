@@ -131,7 +131,7 @@ function App() {
 
   const maximize = () => {
     // Establecer las dimensiones máximas de la ventana
-    const maxHeight = window.innerHeight - 35;
+    const maxHeight = window.innerHeight - 33;
     const maxWidth = window.innerWidth;
     const initialHeight = window.innerHeight * 0.75;
     const initialWidth = window.innerWidth * 0.6;
