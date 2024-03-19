@@ -274,7 +274,10 @@ function App() {
             </div>
           </div>
           <div className="line"></div>
-          <div className="content">
+          <div className="content" style={{
+            overflowY: 'auto',
+            maxHeight: `${height - 100}px`,
+          }}>
             {(() => {
               switch (terminalText) {
                 case "Action":
