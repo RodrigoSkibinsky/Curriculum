@@ -93,6 +93,10 @@ function App() {
     }
   };
 
+  const minimize = () => {
+    setIsScreenHidden(true);
+  }
+
   const handleSelection = (image) => {
     var img = image;
     if (img === noSelection1) {
@@ -244,7 +248,7 @@ function App() {
                 <p>{getTerminalTitle(selection)}</p>
               </div>
               <div className='top-space top-right'>
-                <div className='button minimize' onClick={handleDisplayClick}>
+                <div className='button minimize' onClick={minimize}>
                   -
                 </div>
                 <div className='button maximize' onClick={maximize}>
