@@ -104,6 +104,7 @@ function App() {
       setHeight(initialHeight);
       setWidth(initialWidth);
       setWindowPosition({ x: initialX, y: initialY });
+      handleTerminalItemClick("File")
     }
     if (isScreenHidden) {
         setIsScreenHidden(false);
