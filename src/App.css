@@ -127,6 +127,10 @@
     justify-content: center;
   }
   
+  .terminal-sub-title {
+    color: #595;
+  }
+
   .screen {
     position: fixed;
     margin-top: var(--altura-barra);
