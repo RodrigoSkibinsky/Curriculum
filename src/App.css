@@ -128,7 +128,7 @@
   .screen {
     position: fixed;
     margin-top: var(--altura-barra);
-    height: calc(100vh - var(--altura-barra) - 5px);
+    height: calc(100vh - var(--altura-barra) - 10px);
     z-index: 5000;
     font-family: 'DejaVu Sans Mono', monospace;
   }
