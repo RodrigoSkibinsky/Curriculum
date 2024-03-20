@@ -60,7 +60,7 @@
     opacity: 100%;
   }
 
-  .icon-holder {
+  .icon-holder, .icon-holder-holder {
     display: flex;
     height: 100%;
     align-items: center;

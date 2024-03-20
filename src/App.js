@@ -210,26 +210,26 @@ function App() {
                     <img src={terminalDefault} className="icon Terminal" alt="logo" />
                     <p>{getTerminalName(terminalDefault)}</p>
                   </div>
-                  <div>
+                  <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
-                      <div className="icon-holder" onClick={handleOption1Click}>
-                        <p className='icon display-app-options'>{'>'}</p>
-                        {menuOption1Visible && (
-                          <div className="menu">
-                            <div className="menu-item">
-                              <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                              <p>... 1 ...</p>
-                            </div>
-                            <div className="menu-item">
-                              <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                              <p>... 2 ...</p>
-                            </div>
+                    </div>
+                    <div className="icon-holder" onClick={handleOption1Click}>
+                      <p className='icon display-app-options'>{'>'}</p>
+                      {menuOption1Visible && (
+                        <div className="menu">
+                          <div className="menu-item">
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <p>... 1 ...</p>
                           </div>
-                        )}
-                      </div>
-                      </div>
+                          <div className="menu-item">
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <p>... 2 ...</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
