@@ -221,8 +221,8 @@ function App() {
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
                         <div className="menu" style={{
-                          marginRight: 200 + 'px',
-                          backgroundColor: '#f00',
+                          marginLeft: '20px',
+                          marginTop: '100px',
                         }}>
                           <div className="menu-item">
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
