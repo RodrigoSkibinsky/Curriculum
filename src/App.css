@@ -133,7 +133,11 @@
   .menu-item, .index-menu-item {
     display: flex;
     align-items: center;
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
+  }
+
+  .index-menu-item {
+    flex-grow: 1; /* Agrega esta línea para que los elementos ocupen todo el ancho disponible */
   }
   
   .menu-item:hover, .index-menu-item:hover {
