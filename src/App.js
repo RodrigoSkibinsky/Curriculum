@@ -5,9 +5,6 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 import React, { useState, useEffect } from 'react';
-import Presentacion from './Presentacion.js';
-import Experiencia from './Experiencia.js';
-import Estudios from './Estudios.js';
 import Screen from './Screen.js';
 
 function getTerminalName(image) {
