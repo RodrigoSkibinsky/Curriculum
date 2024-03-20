@@ -127,6 +127,7 @@ function App() {
       setNoSelection2(terminalUser);
     }
     setSelection(image);
+    openScreen;
     setMenuVisible(false);
   };
 
