@@ -103,6 +103,9 @@ function App() {
     if (menuVisible) {
       setMenuVisible(false)
     }
+    if (!indexVisible) {
+      setMenuOption1Visible(false)
+    }
   };
 
   const handleOption1Click = (e) => {
@@ -219,9 +222,7 @@ function App() {
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
                     </div>
-                    <div className="icon-holder" onClick={handleOption1Click} style={{
-                        // backgroundColor: '#0f0',
-                      }}>
+                    <div className="icon-holder" onClick={handleOption1Click}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
                         <div className="option-menu" style={{
