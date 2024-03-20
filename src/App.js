@@ -226,7 +226,7 @@ function App() {
                           marginTop: '41px',
                         }}>
                           <div className="menu-item">
-                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" onClick={() => handleSelection(terminalDefault)}/>
                             <p>... 1 ...</p>
                           </div>
                           <div className="menu-item">
