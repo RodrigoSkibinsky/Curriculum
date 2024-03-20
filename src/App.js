@@ -173,7 +173,7 @@ function App() {
           </div>
         </div>
       </header>
-      <Screen />
+      <Screen isWindowHidden={isWindowHidden} isScreenHidden={isScreenHidden} isScreenClosed={isScreenClosed} />
     </div>
   );
 }
