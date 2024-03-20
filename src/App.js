@@ -205,37 +205,26 @@ function App() {
                     <img src={terminalDefault} className="icon Terminal" alt="logo" />
                     <p>{getTerminalName(terminalDefault)}</p>
                   </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 1...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 2...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 3...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 4...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 5...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 6...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 7...</p>
-                  </div>
-                  <div className="index-menu-item" onClick={handleIndexClick}>
-                    <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo 8...</p>
+                  <div>
+                    <div className="index-menu-item" onClick={handleIndexClick}>
+                      <img src={logo} className="icon Terminal" alt="logo" />
+                      <p>Texto de ejemplo 1...</p>
+                    </div>
+                    <div>
+                      <p className='icon display-app-options'>{'>'}</p>
+                      {menuVisible && (
+                        <div className="menu">
+                          <div className="menu-item" onClick={() => handleSelection(noSelection1)}>
+                            <img src={noSelection1} className="icon Terminal" alt="logo" />
+                            <p>{getTerminalName(noSelection1)}</p>
+                          </div>
+                          <div className="menu-item" onClick={() => handleSelection(noSelection2)}>
+                            <img src={noSelection2} className="icon Terminal" alt="logo" />
+                            <p>{getTerminalName(noSelection2)}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
