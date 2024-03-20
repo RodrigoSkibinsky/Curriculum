@@ -61,6 +61,7 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
   const [menuOption1Visible, setMenuOption1Visible] = useState(false);
+  const [menuOption2Visible, setMenuOption2Visible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);
@@ -105,6 +106,7 @@ function App() {
     }
     if (!indexVisible) {
       setMenuOption1Visible(false)
+      setMenuOption2Visible(false)
     }
   };
 
@@ -112,6 +114,11 @@ function App() {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
   }  
+
+  const handleOption2Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption2Visible(!menuOption1Visible);
+  }
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
@@ -219,12 +226,36 @@ function App() {
                   </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
-                      <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click}>
+                      <img src={logo} className="icon Terminal" alt="logo" />
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
+                        <div className="option-menu" style={{
+                          marginLeft: '17.5px',
+                          marginTop: '41px',
+                        }}>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
+                            <img src={terminalDefault} className="icon Terminal" alt="logo"/>
+                            <p>... 1 ...</p>
+                          </div>
+                          <div className="menu-item">
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <p>... 2 ...</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className='icon-holder-holder'>
+                    <div className="index-menu-item" onClick={handleIndexClick}>
+                      <img src={logo} className="icon Terminal" alt="logo" />
+                      <p>Texto de ejemplo 1...</p>
+                    </div>
+                    <div className="icon-holder" onClick={handleOption2Click}>
+                      <p className='icon display-app-options'>{'>'}</p>
+                      {menuOption2Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
                           marginTop: '41px',
