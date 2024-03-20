@@ -59,6 +59,7 @@ function getTerminalColor(image) {
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
@@ -211,15 +212,15 @@ function App() {
                       <p>Texto de ejemplo 1...</p>
                       <div className="icon-holder">
                         <p className='icon display-app-options'>{'>'}</p>
-                        {menuVisible && (
+                        {menuOption1Visible && (
                           <div className="menu">
-                            <div className="menu-item" onClick={() => handleSelection(noSelection1)}>
-                              <img src={noSelection1} className="icon Terminal" alt="logo" />
-                              <p>{getTerminalName(noSelection1)}</p>
+                            <div className="menu-item">
+                              <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                              <p>... 1 ...</p>
                             </div>
-                            <div className="menu-item" onClick={() => handleSelection(noSelection2)}>
-                              <img src={noSelection2} className="icon Terminal" alt="logo" />
-                              <p>{getTerminalName(noSelection2)}</p>
+                            <div className="menu-item">
+                              <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                              <p>... 2 ...</p>
                             </div>
                           </div>
                         )}
