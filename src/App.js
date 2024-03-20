@@ -220,6 +220,8 @@ function App() {
                 <div className="index-menu" style={{
                   opacity: 1
                 }}>
+                  <div className="index-menu-item" onClick={() => handleSelection(terminalDefault) && openTerminal}>
+                  </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={terminalDefault} className="icon Terminal" alt="logo" />
@@ -230,18 +232,15 @@ function App() {
                       {menuOption1Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
+                          marginTop: '41px',
                         }}>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("File")}>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo"/>
-                            <p>Sobre Mi</p>
+                            <p>... 1 ...</p>
                           </div>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("Action")}>
+                          <div className="menu-item">
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>Experiencia Laboral</p>
-                          </div>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("Edit")}>
-                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>Trayectoria Académica</p>
+                            <p>... 2 ...</p>
                           </div>
                         </div>
                       )}
