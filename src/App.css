@@ -104,7 +104,7 @@
     cursor: pointer;
   }
 
-  .menu , .index-menu{
+  .menu .index-menu{
     position: fixed;
     top: var(--altura-barra);
     background-color: #222c;
