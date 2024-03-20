@@ -67,8 +67,8 @@ function App() {
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isWindowHidden, setWindowHidden] = useState(false);
-  const [isScreenHidden, setIsScreenHidden] = useState(false);
-  const [isScreenClosed, setIsScreenClosed] = useState(false);
+  const [isTerminalHidden, setisTerminalHidden] = useState(false);
+  const [isTerminalClosed, setisTerminalClosed] = useState(false);
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
@@ -87,7 +87,7 @@ function App() {
   };
   
   const toggleScreenVisibility = () => {
-    setIsScreenHidden(!isScreenHidden);
+    setisTerminalHidden(!isTerminalHidden);
   };
 
   const handleDisplayClick = () => {
@@ -104,26 +104,26 @@ function App() {
     }
   };
 
-  const closeScreen = () => {//solo se usa dentro de screen
-    setIsScreenHidden(true);
-    setIsScreenClosed(true);
+  const closeTerminal = () => {//solo se usa dentro de screen
+    setisTerminalHidden(true);
+    setisTerminalClosed(true);
   };
 
-  const openScreen = () => {
-    if (isScreenClosed) {
-      setIsScreenClosed(false);
+  const openTerminal = () => {
+    if (isTerminalClosed) {
+      setisTerminalClosed(false);
       setHeight(initialHeight);
       setWidth(initialWidth);
       setWindowPosition({ x: initialX, y: initialY });
       handleTerminalItemClick("File")
     }
-    if (isScreenHidden) {
-        setIsScreenHidden(false);
+    if (isTerminalHidden) {
+        setisTerminalHidden(false);
     }
   };
 
   const minimize = () => {//solo se usa dentro de screen
-    setIsScreenHidden(true);
+    setisTerminalHidden(true);
   }
 
   const handleSelection = (image) => {//solo se usa en el menu dentro de barra
@@ -138,7 +138,7 @@ function App() {
       setNoSelection2(terminalUser);
     }
     setSelection(image);
-    openScreen();
+    openTerminal();
     setMenuVisible(false);
   };
 
@@ -201,7 +201,7 @@ function App() {
               <img src={logo} className="icon menu-icon" alt="logo" />
               {indexVisible && (
                 <div className="index-menu">
-                  <div className="index-menu-item" onClick={openScreen}>
+                  <div className="index-menu-item" onClick={openTerminal}>
                     <img src={selection} className="icon Terminal" alt="logo" />
                     <p>{getTerminalName(selection)}</p>
                   </div>
@@ -213,7 +213,7 @@ function App() {
               )}
             </div>
             <div className="icon-holder">
-              <img src={selection} className="icon Terminal" alt="logo" onClick={openScreen}/>
+              <img src={selection} className="icon Terminal" alt="logo" onClick={openTerminal}/>
             </div>
             <div
               className="icon-holder"
@@ -236,7 +236,7 @@ function App() {
               )}
             </div>
             <div className='vertical-line'></div>
-            <div className={`frame ${isScreenHidden ? '' : 'selected'} ${isScreenClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
+            <div className={`frame ${isTerminalHidden ? '' : 'selected'} ${isTerminalClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
                 <img src={terminalDefault} className="open-icon app-small" alt="logo"/> 
             </div>
           </div>
@@ -249,7 +249,7 @@ function App() {
         </div>
       </header>
       <div 
-        className={`screen ${isScreenHidden ? 'oculto' : ''}`}
+        className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
         onMouseMove={handleMouseMove} 
         onMouseUp={handleMouseUp}
       >
@@ -280,7 +280,7 @@ function App() {
                   <div className='maximize-square'>
                   </div>
                 </div>
-                <div className='button close' onClick={closeScreen}>
+                <div className='button close' onClick={closeTerminal}>
                   x
                 </div>
               </div>
