@@ -216,7 +216,7 @@ function App() {
                       <p>Texto de ejemplo 1...</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click} style={{
-                        backgroundColor: '#0f0',
+                        // backgroundColor: '#0f0',
                       }}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
