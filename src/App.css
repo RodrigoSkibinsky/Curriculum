@@ -105,7 +105,7 @@
     border-right: #111;
   }
 
-  .icon:hover {
+  .icon:hover, .icon-holder:hover {
     cursor: pointer;
   }
 
