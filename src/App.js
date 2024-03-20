@@ -214,7 +214,7 @@ function App() {
             </div>
             <div className='vertical-line'></div>
             <div className={`frame ${isScreenHidden ? '' : 'selected'} ${isScreenClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
-                <img src={terminalDefault} className="open-icon terminal-small" alt="logo"/> 
+                <img src={terminalDefault} className="open-icon app-small" alt="logo"/> 
             </div>
           </div>
           <div className="barra barra2">
@@ -244,7 +244,7 @@ function App() {
           >
             <div className='top-top'>
               <div className='top-space top-left'>
-              <img src={terminalDefault} className="terminal-small" alt="logo"/>
+              <img src={terminalDefault} className="app-small" alt="logo"/>
               </div>
               <div className='top-space top-middle'>
                 <p>{getTerminalTitle(selection)}</p>
