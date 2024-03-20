@@ -60,7 +60,7 @@
     opacity: 100%;
   }
 
-  .icon-holder {
+  .icon-holder, .icon-holder-holder {
     display: flex;
     height: 100%;
     align-items: center;
@@ -114,7 +114,7 @@
     background-color: #222c;
   }
 
-  .index-menu, .index-menu-item {
+  .index-menu {
     background-color: #222;
   }
 
