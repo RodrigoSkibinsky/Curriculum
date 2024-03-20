@@ -232,7 +232,6 @@ function App() {
                       {menuOption1Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
-                          marginTop: '41px',
                         }}>
                           <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo"/>
