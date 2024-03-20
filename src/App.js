@@ -220,29 +220,28 @@ function App() {
                 <div className="index-menu" style={{
                   opacity: 1
                 }}>
-                  <div className="index-menu-item" onClick={() => handleSelection(terminalDefault) && openTerminal}>
-                    <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                    <p>{getTerminalName(terminalDefault)}</p>
-                  </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
-                      <p>Texto de ejemplo 1...</p>
+                      <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                      <p>{getTerminalName(terminalDefault)}</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click}>
-                      <img src={logo} className="icon Terminal" alt="logo" />
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
-                          marginTop: '41px',
                         }}>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("File")}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo"/>
-                            <p>... 1 ...</p>
+                            <p>Sobre Mi</p>
                           </div>
-                          <div className="menu-item">
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("Action")}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>... 2 ...</p>
+                            <p>Experiencia Laboral</p>
+                          </div>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && setTerminalText("Edit")}>
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <p>Trayectoria Académica</p>
                           </div>
                         </div>
                       )}
