@@ -109,10 +109,17 @@
     cursor: pointer;
   }
 
+  .menu {
+    background-color: #222c;
+  }
+
+  .index-menu {
+    background-color: #222;
+  }
+
   .menu, .index-menu{
     position: fixed;
     top: var(--altura-barra);
-    background-color: #222c;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -120,18 +127,13 @@
   }
   
   .menu-item, .index-menu-item {
-    /* background-color: #909; */
     display: flex;
     align-items: center;
     padding: 0px 10px;
   }
   
-  .menu-item:hover {
+  .menu-item:hover, .index-menu-item:hover {
     background-color: #111c;
-  }
-
-  .index-menu-item:hover {
-    background-color: #111;
   }
   
   .menu-item img, .index-menu-item img {
