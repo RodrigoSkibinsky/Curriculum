@@ -74,6 +74,11 @@
     background-color: #111c;
   }
 
+  .a {
+    text-decoration: underline;
+    color: inherit;
+  }
+
   .Terminal {
     height: calc(var(--altura-barra) - 15px);
     width: calc(var(--altura-barra) - 10px);
