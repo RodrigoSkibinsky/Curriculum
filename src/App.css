@@ -60,7 +60,7 @@
     opacity: 100%;
   }
 
-  .icon-holder, .icon-holder-holder {
+  .icon-holder {
     display: flex;
     height: 100%;
     align-items: center;
@@ -101,6 +101,7 @@
   }
 
   .display-app-options {
+    background-color: #222;
     padding: 0px 5px;
     border-right: #111;
   }
