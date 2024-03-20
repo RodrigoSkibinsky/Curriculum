@@ -22,7 +22,9 @@ function Experiencia({ name, textColor }) {
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>JavaScript</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>C/C++</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Java</p>           
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>ReactJs</p>   
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>ReactJs</p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Programación Orientada a Objetos</p>           
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Arquitectura MVC</p>     
         </div>
     );
 }
