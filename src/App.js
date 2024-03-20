@@ -59,8 +59,8 @@ function getTerminalColor(image) {
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
-  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
+  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);
@@ -104,6 +104,10 @@ function App() {
       setMenuVisible(false)
     }
   };
+
+  const handleOption1Click = () => {
+    setMenuOption1Visible(!menuOption1Visible);
+  }
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
@@ -210,7 +214,7 @@ function App() {
                     <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
-                      <div className="icon-holder">
+                      <div className="icon-holder" onClick={handleOption1Click}>
                         <p className='icon display-app-options'>{'>'}</p>
                         {menuOption1Visible && (
                           <div className="menu">
