@@ -224,7 +224,7 @@ function App() {
                       }}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
-                        <div className="menu" style={{
+                        <div className="option-menu" style={{
                           marginLeft: '17.5px',
                           marginTop: '41px',
                         }}>

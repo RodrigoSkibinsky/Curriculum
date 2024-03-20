@@ -101,13 +101,16 @@
   }
 
   .display-app-options {
-    /* background-color: #222; */
     padding: 0px 5px;
     border-right: #111;
   }
 
   .icon:hover, .icon-holder:hover {
     cursor: pointer;
+  }
+
+  .option-menu {
+    background-color: #222;
   }
 
   .menu {
