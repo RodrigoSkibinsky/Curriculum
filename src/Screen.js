@@ -53,7 +53,7 @@ function getTerminalColor(image) {
   }
 }
 
-function Screen({isWindowHidden, isScreenHidden, isScreenClosed}) {
+function Screen({isWindowHiddenInherit, isScreenHiddenInherit, isScreenClosedInherit}) {
     const [menuVisible, setMenuVisible] = useState(false);
     const [selection, setSelection] = useState(terminalDefault);
     const [noSelection1, setNoSelection1] = useState(terminalRoot);
@@ -61,9 +61,9 @@ function Screen({isWindowHidden, isScreenHidden, isScreenClosed}) {
     const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
     const [dragging, setDragging] = useState(false);
     const [offset, setOffset] = useState({ x: 0, y: 0 });
-    // const [isWindowHidden, setWindowHidden] = useState(false);
-    // const [isScreenHidden, setIsScreenHidden] = useState(false);
-    // const [isScreenClosed, setIsScreenClosed] = useState(false);
+    const [isWindowHidden, setWindowHidden] = useState(isWindowHiddenInherit);
+    const [isScreenHidden, setIsScreenHidden] = useState(isScreenHiddenInherit);
+    const [isScreenClosed, setIsScreenClosed] = useState(isScreenClosedInherit);
     const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
     const [height, setHeight] = useState(0);
     const [width, setWidth] = useState(0);
