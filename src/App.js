@@ -146,6 +146,7 @@ function App() {
     setSelection(image);
     openTerminal();
     setMenuVisible(false);
+    setIndexVisible(false);
   };
 
   const handleMouseDown = (e) => {//solo se usa dentro de screen
