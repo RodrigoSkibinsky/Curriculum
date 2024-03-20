@@ -124,7 +124,7 @@
     background-color: #111c;
   }
   
-  .menu-item img {
+  .menu-item img, .index-menu-item img {
     margin-right: 10px;
   }
   
