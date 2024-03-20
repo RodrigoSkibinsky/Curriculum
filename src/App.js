@@ -220,6 +220,7 @@ function App() {
                       {menuOption1Visible && (
                         <div className="menu" style={{
                           marginRight: 200 + 'px',
+                          backgroundColor: '#f00',
                         }}>
                           <div className="menu-item">
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
