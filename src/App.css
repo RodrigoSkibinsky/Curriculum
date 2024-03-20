@@ -126,8 +126,12 @@
     padding: 0px 10px;
   }
   
-  .menu-item:hover, .index-menu-item:hover {
+  .menu-item:hover {
     background-color: #111c;
+  }
+
+  .index-menu-item:hover {
+    background-color: #111;
   }
   
   .menu-item img, .index-menu-item img {
