@@ -201,7 +201,7 @@ function App() {
               <img src={logo} className="icon menu-icon" alt="logo" />
               {indexVisible && (
                 <div className="index-menu">
-                  <div className="index-menu-item" onClick={openTerminal}>
+                  <div className="index-menu-item" onClick={openTerminal && handleSelection(terminalDefault)}>
                     <img src={terminalDefault} className="icon Terminal" alt="logo" />
                     <p>{getTerminalName(terminalDefault)}</p>
                   </div>
