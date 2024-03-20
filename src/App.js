@@ -209,22 +209,22 @@ function App() {
                     <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
-                    </div>
-                    <div>
-                      <p className='icon display-app-options'>{'>'}</p>
-                      {menuVisible && (
-                        <div className="menu">
-                          <div className="menu-item" onClick={() => handleSelection(noSelection1)}>
-                            <img src={noSelection1} className="icon Terminal" alt="logo" />
-                            <p>{getTerminalName(noSelection1)}</p>
+                      <div className="icon-holder">
+                        <p className='icon display-app-options'>{'>'}</p>
+                        {menuVisible && (
+                          <div className="menu">
+                            <div className="menu-item" onClick={() => handleSelection(noSelection1)}>
+                              <img src={noSelection1} className="icon Terminal" alt="logo" />
+                              <p>{getTerminalName(noSelection1)}</p>
+                            </div>
+                            <div className="menu-item" onClick={() => handleSelection(noSelection2)}>
+                              <img src={noSelection2} className="icon Terminal" alt="logo" />
+                              <p>{getTerminalName(noSelection2)}</p>
+                            </div>
                           </div>
-                          <div className="menu-item" onClick={() => handleSelection(noSelection2)}>
-                            <img src={noSelection2} className="icon Terminal" alt="logo" />
-                            <p>{getTerminalName(noSelection2)}</p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                        )}
+                      </div>
+                      </div>
                   </div>
                 </div>
               )}
