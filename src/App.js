@@ -59,6 +59,7 @@ function getTerminalColor(image) {
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [indexVisible, setIndexVisible] = useState(false);
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);
@@ -91,6 +92,10 @@ function App() {
 
   const handleDisplayClick = () => {
     setMenuVisible(!menuVisible);
+  };
+
+  const handleIndexClick = () => {
+    setIndexVisible(!indexVisible);
   };
 
   const closeScreen = () => {//solo se usa dentro de screen
@@ -186,11 +191,23 @@ function App() {
       <header className="App-header">
         <div className="barraTareas">
           <div className="barra barra1">
-            <div className="icon-holder">
+            <div className="icon-holder" onClick={handleIndexClick}>
               <img src={logo} className="icon Menu" alt="logo" />
+              {indexVisible && (
+                <div className="menu">
+                  <div className="menu-item" onClick={() => handleSelection(noSelection1)}>
+                    <img src={noSelection1} className="icon Terminal" alt="logo" />
+                    <p>{getTerminalName(noSelection1)}</p>
+                  </div>
+                  <div className="menu-item" onClick={() => handleSelection(noSelection2)}>
+                    <img src={noSelection2} className="icon Terminal" alt="logo" />
+                    <p>{getTerminalName(noSelection2)}</p>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="icon-holder">
-              <img src={selection} className="icon Terminal" alt="logo" onClick={openScreen}/> 
+              <img src={selection} className="icon Terminal" alt="logo" onClick={openScreen}/>
             </div>
             <div
               className="icon-holder"
