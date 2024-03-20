@@ -105,9 +105,10 @@ function App() {
     }
   };
 
-  const handleOption1Click = () => {
+  const handleOption1Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
-  }
+  }  
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
