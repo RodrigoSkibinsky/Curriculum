@@ -218,7 +218,9 @@ function App() {
                     <div className="icon-holder" onClick={handleOption1Click}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
-                        <div className="menu">
+                        <div className="menu" style={{
+                          marginRight: 20 + 'px',
+                        }}>
                           <div className="menu-item">
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
                             <p>... 1 ...</p>
