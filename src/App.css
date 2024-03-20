@@ -65,7 +65,7 @@
     height: 100%;
     align-items: center;
   }
-
+  
   .icon-holder img {
     width: auto;
   }
@@ -75,7 +75,7 @@
   }
 
   .index-menu {
-      min-height: 50%;
+    min-height: 50%;
   }
 
   a {
