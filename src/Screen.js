@@ -6,6 +6,7 @@ import terminalUser from './terminal-user-icon.png';
 import Presentacion from './Presentacion.js';
 import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
+import './App.css';
 
 function Screen() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -61,7 +62,7 @@ function Screen() {
           return "";
       }
     }
-    
+
     function getTerminalSubTitle(image) {
       switch (image) {
         case terminalDefault:
@@ -74,7 +75,7 @@ function Screen() {
           return "";
       }
     }
-    
+
     function getTerminalColor(image) {
       if (image === terminalRoot) {
         return "#e44";
