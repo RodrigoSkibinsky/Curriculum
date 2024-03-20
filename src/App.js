@@ -273,8 +273,8 @@ function App() {
                 </div>
               )}
             </div>
-            <div className="icon-holder">
-              <img src={selection} className="icon Terminal" alt="logo" onClick={openTerminal}/>
+            <div className="icon-holder" onClick={openTerminal}>
+              <img src={selection} className="icon Terminal" alt="logo"/>
             </div>
             <div
               className="icon-holder"
