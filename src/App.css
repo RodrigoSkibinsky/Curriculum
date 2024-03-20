@@ -74,9 +74,9 @@
     background-color: #111c;
   }
 
-  .a {
-    text-decoration: none;
-    /* color: inherit; */
+  a {
+    text-decoration: underline;
+    color: inherit;
   }
 
   .Terminal {
