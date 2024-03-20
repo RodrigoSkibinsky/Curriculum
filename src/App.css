@@ -117,7 +117,7 @@
   .menu-item, .index-menu-item {
     display: flex;
     align-items: center;
-    /* padding: 0px 10px; */
+    padding: 0px 10px;
   }
   
   .menu-item:hover, .index-menu-item:hover {
