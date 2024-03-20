@@ -92,10 +92,16 @@ function App() {
 
   const handleDisplayClick = () => {
     setMenuVisible(!menuVisible);
+    if (indexVisible) {
+      setIndexVisible(false)
+    }
   };
 
   const handleIndexClick = () => {
     setIndexVisible(!indexVisible);
+    if (menuVisible) {
+      setMenuVisible(false)
+    }
   };
 
   const closeScreen = () => {//solo se usa dentro de screen
