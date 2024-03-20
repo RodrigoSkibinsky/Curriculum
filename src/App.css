@@ -121,7 +121,7 @@
     background-color: #222;
   }
 
-  .menu, .index-menu{
+  .menu, .index-menu, .option-menu{
     position: fixed;
     top: var(--altura-barra);
     display: flex;
