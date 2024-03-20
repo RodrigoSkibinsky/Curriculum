@@ -104,7 +104,7 @@
     cursor: pointer;
   }
 
-  .menu .index-menu{
+  .menu, .index-menu{
     position: fixed;
     top: var(--altura-barra);
     background-color: #222c;
@@ -114,13 +114,13 @@
     z-index: 1000;
   }
   
-  .menu-item {
+  .menu-item, .index-menu-item {
     display: flex;
     align-items: center;
     padding: 0px 10px;
   }
   
-  .menu-item:hover {
+  .menu-item:hover, .index-menu-item:hover {
     background-color: #111c;
   }
   
