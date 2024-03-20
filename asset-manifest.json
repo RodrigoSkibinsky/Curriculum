@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Curriculum/static/css/main.abfad698.css",
-    "main.js": "/Curriculum/static/js/main.cec5478c.js",
+    "main.js": "/Curriculum/static/js/main.d706c3bb.js",
     "static/js/453.f52a7746.chunk.js": "/Curriculum/static/js/453.f52a7746.chunk.js",
     "static/media/background.png": "/Curriculum/static/media/background.4f68ff4140a455cd3d26.png",
     "static/media/terminal-default-icon.png": "/Curriculum/static/media/terminal-default-icon.f5ab26960d1291fe1007.png",
@@ -10,11 +10,11 @@
     "static/media/logo-kali.svg": "/Curriculum/static/media/logo-kali.7b46cf535d89deaf6c4de1f8899792e0.svg",
     "index.html": "/Curriculum/index.html",
     "main.abfad698.css.map": "/Curriculum/static/css/main.abfad698.css.map",
-    "main.cec5478c.js.map": "/Curriculum/static/js/main.cec5478c.js.map",
+    "main.d706c3bb.js.map": "/Curriculum/static/js/main.d706c3bb.js.map",
     "453.f52a7746.chunk.js.map": "/Curriculum/static/js/453.f52a7746.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abfad698.css",
-    "static/js/main.cec5478c.js"
+    "static/js/main.d706c3bb.js"
   ]
 }
