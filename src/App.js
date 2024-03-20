@@ -216,7 +216,9 @@ function App() {
                       <p>Texto de ejemplo 1...</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click}>
-                      <p className='icon display-app-options'>{'>'}</p>
+                      <p className='icon display-app-options' style={{
+                        backgroundColor: '#0f0',
+                      }}>{'>'}</p>
                       {menuOption1Visible && (
                         <div className="menu" style={{
                           marginRight: 200 + 'px',
