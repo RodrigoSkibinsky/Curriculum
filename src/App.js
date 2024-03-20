@@ -113,11 +113,13 @@ function App() {
   const handleOption1Click = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
+    setMenuOption2Visible(false);
   }  
 
   const handleOption2Click = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption2Visible(!menuOption2Visible);
+    setMenuOption1Visible(false);
   }
 
   const closeTerminal = () => {//solo se usa dentro de screen
