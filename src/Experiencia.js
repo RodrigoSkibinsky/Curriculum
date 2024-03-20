@@ -6,7 +6,7 @@ function Experiencia({ name, textColor }) {
             <p className='terminal-sub-title'><b style={{color: textColor,}}>{name}</b>Experiencia Laboral:</p>
             <p className='oculto'>Enter</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>MAR 2020 - MAR 2021:</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Banco República(brou)</p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Banco República(BROU)</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Rol:</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Pasante</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Tareas Desempeñadas:</p>
