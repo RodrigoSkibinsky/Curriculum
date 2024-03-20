@@ -207,7 +207,35 @@ function App() {
                   </div>
                   <div className="index-menu-item" onClick={handleIndexClick}>
                     <img src={logo} className="icon Terminal" alt="logo" />
-                    <p>Texto de ejemplo...</p>
+                    <p>Texto de ejemplo 1...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 2...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 3...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 4...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 5...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 6...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 7...</p>
+                  </div>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo 8...</p>
                   </div>
                 </div>
               )}
