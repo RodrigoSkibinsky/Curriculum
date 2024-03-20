@@ -51,12 +51,12 @@
     margin-right: 2.5%;
   }
 
-  .Menu {
+  .menu-icon {
     opacity: 50%;
     height: calc(var(--altura-barra) - 5px);
   }
 
-  .Menu:hover {
+  .menu-icon:hover {
     opacity: 100%;
   }
 
@@ -72,6 +72,10 @@
 
   .icon-holder:hover {
     background-color: #111c;
+  }
+
+  .index-menu {
+      min-height: 50%;
   }
 
   a {
@@ -100,7 +104,7 @@
     cursor: pointer;
   }
 
-  .menu {
+  .menu , .index-menu{
     position: fixed;
     top: var(--altura-barra);
     background-color: #222c;
