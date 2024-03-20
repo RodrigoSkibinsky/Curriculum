@@ -205,9 +205,9 @@ function App() {
                     <img src={terminalDefault} className="icon Terminal" alt="logo" />
                     <p>{getTerminalName(terminalDefault)}</p>
                   </div>
-                  <div className="index-menu-item" onClick={() => handleSelection(noSelection2)}>
-                    <img src={noSelection2} className="icon Terminal" alt="logo" />
-                    <p>{getTerminalName(noSelection2)}</p>
+                  <div className="index-menu-item" onClick={handleIndexClick}>
+                    <img src={logo} className="icon Terminal" alt="logo" />
+                    <p>Texto de ejemplo...</p>
                   </div>
                 </div>
               )}
