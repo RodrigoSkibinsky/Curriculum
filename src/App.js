@@ -222,10 +222,7 @@ function App() {
                 <div className="index-menu" style={{
                   opacity: 1
                 }}>
-                  <div className="index-menu-item" onClick={() => {
-                      handleSelection(terminalDefault);
-                      openTerminal;
-                    }}>
+                  <div className="index-menu-item" onClick={() => {handleSelection(terminalDefault) && openTerminal}}>
                   </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
