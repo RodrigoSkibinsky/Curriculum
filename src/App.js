@@ -231,6 +231,9 @@ function App() {
     setDragging(false);
   };
 
+  imagenesMenu1[terminalDefault, terminalDefault];
+  functionsMenu1[handleSelection(terminalDefault), handleSelection(terminalDefault)];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -290,7 +293,7 @@ function App() {
                     </div>
                     <div className="icon-holder" onClick={handleOption2Click} onMouseEnter={handleOption2MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {menuOption2Visible && (
+                      {/* {menuOption2Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
                           marginTop: '41px',
@@ -304,7 +307,8 @@ function App() {
                             <p>... 2 ...</p>
                           </div>
                         </div>
-                      )}
+                      )} */}
+                      <Menu visible={{menuOption2Visible}} indiceMenu={1} num={2} img={{imagenesMenu1}} functionArray={{functionsMenu1}}/>
                     </div>
                   </div>
                 </div>
