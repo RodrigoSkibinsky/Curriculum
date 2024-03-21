@@ -222,7 +222,10 @@ function App() {
                 <div className="index-menu" style={{
                   opacity: 1
                 }}>
-                  <div className="index-menu-item" onClick={() => handleSelection(terminalDefault) && openTerminal}>
+                  <div className="index-menu-item" onClick={() => {
+                      handleSelection(terminalDefault);
+                      openTerminal;
+                    }}>
                   </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
@@ -235,15 +238,24 @@ function App() {
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
                         }}>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("File")}>
+                          <div className="menu-item" onClick={() => {
+                              handleSelection(terminalDefault);
+                              handleTerminalItemClick("File");
+                            }}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo"/>
                             <p>Sobre Mi</p>
                           </div>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("Action")}>
+                          <div className="menu-item" onClick={() => {
+                              handleSelection(terminalDefault);
+                              handleTerminalItemClick("Action");
+                            }}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
                             <p>Experiencia Laboral</p>
                           </div>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("Edit")}>
+                          <div className="menu-item" onClick={() => {
+                              handleSelection(terminalDefault);
+                              handleTerminalItemClick("Edit");
+                            }}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
                             <p>Trayectoria Académica</p>
                           </div>
