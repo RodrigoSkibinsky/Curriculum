@@ -99,28 +99,48 @@ function App() {
     }
   };
 
+  const handleIndexMouseEnter = () => {
+    setIndexVisible(true);
+    setMenuVisible(false);
+    setMenuOption1Visible(false);
+    setMenuOption2Visible(false);
+  };
+  
+  const handleOption1MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption1Visible(true);
+    setMenuOption2Visible(false);
+  };
+  
+  const handleOption2MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption2Visible(true);
+    setMenuOption1Visible(false);
+  };
+  
   const handleIndexClick = () => {
     setIndexVisible(!indexVisible);
     if (menuVisible) {
-      setMenuVisible(false)
+      setMenuVisible(false);
     }
     if (!indexVisible) {
-      setMenuOption1Visible(false)
-      setMenuOption2Visible(false)
+      setMenuOption1Visible(false);
+      setMenuOption2Visible(false);
     }
   };
-
+  
   const handleOption1Click = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
     setMenuOption2Visible(false);
-  }  
-
+  };
+  
   const handleOption2Click = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption2Visible(!menuOption2Visible);
     setMenuOption1Visible(false);
-  }
+  };
+  
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
@@ -232,7 +252,7 @@ function App() {
                       <img src={terminalDefault} className="icon Terminal" alt="logo" />
                       <p>{getTerminalName(terminalDefault)}</p>
                     </div>
-                    <div className="icon-holder" onClick={handleOption1Click}>
+                    <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption1Visible && (
                         <div className="option-menu" style={{
@@ -268,7 +288,7 @@ function App() {
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Texto de ejemplo 1...</p>
                     </div>
-                    <div className="icon-holder" onClick={handleOption2Click}>
+                    <div className="icon-holder" onClick={handleOption2Click} onMouseEnter={handleOption2MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
                       {menuOption2Visible && (
                         <div className="option-menu" style={{
