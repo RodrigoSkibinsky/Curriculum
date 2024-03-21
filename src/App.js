@@ -108,13 +108,13 @@ function App() {
   
   const handleOption1MouseEnter = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption1Visible(true);
+    setMenuOption1Visible(!menuOption1Visible);
     setMenuOption2Visible(false);
   };
   
   const handleOption2MouseEnter = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption2Visible(true);
+    setMenuOption2Visible(!menuOption2Visible);
     setMenuOption1Visible(false);
   };
   
