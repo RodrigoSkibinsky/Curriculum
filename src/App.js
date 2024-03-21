@@ -224,7 +224,7 @@ function App() {
                 }}>
                   <div className="index-menu-item" onClick={() => {
                       handleSelection(terminalDefault);
-                      openTerminal;
+                      openTerminal();
                     }}>
                   </div>
                   <div className='icon-holder-holder'>
