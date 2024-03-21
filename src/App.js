@@ -235,13 +235,17 @@ function App() {
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
                         }}>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("File")}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo"/>
-                            <p>... 1 ...</p>
+                            <p>Sobre Mi</p>
                           </div>
-                          <div className="menu-item">
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("Action")}>
                             <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>... 2 ...</p>
+                            <p>Experiencia Laboral</p>
+                          </div>
+                          <div className="menu-item" onClick={() => handleSelection(terminalDefault) && handleTerminalItemClick("Edit")}>
+                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
+                            <p>Trayectoria Académica</p>
                           </div>
                         </div>
                       )}
