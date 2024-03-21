@@ -231,8 +231,8 @@ function App() {
     setDragging(false);
   };
 
-  imagenesMenu1[terminalDefault, terminalDefault];
-  functionsMenu1[handleSelection(terminalDefault), handleSelection(terminalDefault)];
+  const imagenesMenu1 = [terminalDefault, terminalDefault]; // Corrige la declaración de las variables
+  const functionsMenu1 = [() => handleSelection(terminalDefault), () => handleSelection(terminalDefault)]; // Corrige la declaración de las variables
 
   return (
     <div className="App">
@@ -308,7 +308,7 @@ function App() {
                           </div>
                         </div>
                       )} */}
-                      <Menu visible={{menuOption2Visible}} indiceMenu={1} num={2} img={{imagenesMenu1}} functionArray={{functionsMenu1}}/>
+                      <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} />
                     </div>
                   </div>
                 </div>
