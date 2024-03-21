@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react';
 import Presentacion from './Presentacion.js';
 import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
+import Menu from './Menu.js';
 
 function getTerminalName(image) {
   switch (image) {
