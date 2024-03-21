@@ -75,7 +75,7 @@
   }
 
   .index-menu {
-    min-height: 50%;
+    /* min-height: 50%; */
     height: fit-content; /* Ajustar automáticamente la altura al contenido */
     background-color: #222;
     display: flex;
