@@ -236,14 +236,14 @@ function App() {
     handleSelection(image);
     handleTerminalItemClick(ItemClick);
   }
-
-  const imagenesMenu1 = [terminalDefault, terminalDefault]; // Corrige la declaración de las variables
-  const functionsMenu1 = [() => handleSelection(terminalDefault), () => handleSelection(terminalDefault)]; // Corrige la declaración de las variables
-  const textoMenu1 = ["... 1 ...", "... 2 ..."];
-
-  const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault]; // Corrige la declaración de las variables
-  const functionsMenu0 = [() => handleSelectionPlus(terminalDefault, "File"), () => handleSelectionPlus(terminalDefault, "Action"), () => handleSelectionPlus(terminalDefault, "Edit")]; // Corrige la declaración de las variables
+  
+  const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
+  const functionsMenu0 = [() => handleSelectionPlus(imagenesMenu0[0], "File"), () => handleSelectionPlus(imagenesMenu0[1], "Action"), () => handleSelectionPlus(imagenesMenu0[2], "Edit")]; // Corrige la declaración de las variables
   const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
+
+  const imagenesMenu1 = [terminalDefault, terminalDefault];
+  const functionsMenu1 = [() => handleSelection(imagenesMenu1[0]), () => handleSelection(imagenesMenu0[1])];
+  const textoMenu1 = ["... 1 ...", "... 2 ..."];
 
   return (
     <div className="App">
@@ -268,33 +268,6 @@ function App() {
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {/* {menuOption1Visible && (
-                        <div className="option-menu" style={{
-                          marginLeft: '17.5px',
-                        }}>
-                          <div className="menu-item" onClick={() => {
-                              handleSelection(terminalDefault);
-                              handleTerminalItemClick("File");
-                            }}>
-                            <img src={terminalDefault} className="icon Terminal" alt="logo"/>
-                            <p>Sobre Mi</p>
-                          </div>
-                          <div className="menu-item" onClick={() => {
-                              handleSelection(terminalDefault);
-                              handleTerminalItemClick("Action");
-                            }}>
-                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>Experiencia Laboral</p>
-                          </div>
-                          <div className="menu-item" onClick={() => {
-                              handleSelection(terminalDefault);
-                              handleTerminalItemClick("Edit");
-                            }}>
-                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>Trayectoria Académica</p>
-                          </div>
-                        </div>
-                      )} */}
                       <Menu visible={menuOption1Visible} indiceMenu={0} num={3} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
                     </div>
                   </div>
@@ -305,21 +278,6 @@ function App() {
                     </div>
                     <div className="icon-holder" onClick={handleOption2Click} onMouseEnter={handleOption2MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {/* {menuOption2Visible && (
-                        <div className="option-menu" style={{
-                          marginLeft: '17.5px',
-                          marginTop: '41px',
-                        }}>
-                          <div className="menu-item" onClick={() => handleSelection(terminalDefault)}>
-                            <img src={terminalDefault} className="icon Terminal" alt="logo"/>
-                            <p>... 1 ...</p>
-                          </div>
-                          <div className="menu-item">
-                            <img src={terminalDefault} className="icon Terminal" alt="logo" />
-                            <p>... 2 ...</p>
-                          </div>
-                        </div>
-                      )} */}
                       <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} />
                     </div>
                   </div>
