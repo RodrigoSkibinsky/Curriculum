@@ -74,6 +74,13 @@
     background-color: #111c;
   }
 
+  .profilePicture {
+    background-color: #f00;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+
   .index-menu {
     /* min-height: 50%; */
     height: fit-content; /* Ajustar automáticamente la altura al contenido */
