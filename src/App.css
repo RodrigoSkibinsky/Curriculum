@@ -79,7 +79,7 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    justify-self: center;
+    margin: 0 auto;
   }
 
   .index-menu {
