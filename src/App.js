@@ -375,7 +375,7 @@ function App() {
             maxHeight: `${height - 100}px`,
           }}>
             <div className='profilePicture'>
-                {/* <img src={logo} alt='Profile Picture'/> */}
+                <img src={logo} alt='Profile Picture'/>
             </div>
             {(() => {
               switch (terminalText) {
