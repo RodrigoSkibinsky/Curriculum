@@ -56,7 +56,7 @@ function getTerminalColor(image) {
   }
 }
 
-function Menu({ visible, indiceMenu, num, img, functionArray }) {
+function Menu({ visible, indiceMenu, num, img, functionArray, textoArray }) {
     return (
       visible && (
         <div className="option-menu" style={{
@@ -66,7 +66,7 @@ function Menu({ visible, indiceMenu, num, img, functionArray }) {
           {Array.from({ length: num }).map((_, i) => (
             <div key={i} className="menu-item" onClick={() => functionArray[i]()}>
               <img src={img[i]} className="icon Terminal" alt="logo" />
-              <p>... {i + 1} ...</p>
+              <p>{textoArray[i]}</p>
             </div>
           ))}
         </div>

@@ -232,8 +232,18 @@ function App() {
     setDragging(false);
   };
 
+  const handleSelectionPlus = (image, ItemClick) => {
+    handleSelection(image);
+    handleTerminalItemClick(ItemClick);
+  }
+
   const imagenesMenu1 = [terminalDefault, terminalDefault]; // Corrige la declaración de las variables
   const functionsMenu1 = [() => handleSelection(terminalDefault), () => handleSelection(terminalDefault)]; // Corrige la declaración de las variables
+  const textoMenu1 = ["... 1 ...", "... 2 ..."];
+
+  const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault]; // Corrige la declaración de las variables
+  const functionsMenu0 = [() => handleSelectionPlus(terminalDefault, "File"), () => handleSelectionPlus(terminalDefault, "Action"), () => handleSelectionPlus(terminalDefault, "Edit")]; // Corrige la declaración de las variables
+  const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
 
   return (
     <div className="App">
@@ -258,7 +268,7 @@ function App() {
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {menuOption1Visible && (
+                      {/* {menuOption1Visible && (
                         <div className="option-menu" style={{
                           marginLeft: '17.5px',
                         }}>
@@ -284,7 +294,8 @@ function App() {
                             <p>Trayectoria Académica</p>
                           </div>
                         </div>
-                      )}
+                      )} */}
+                      <Menu visible={menuOption1Visible} indiceMenu={0} num={3} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
                     </div>
                   </div>
                   <div className='icon-holder-holder'>
@@ -309,7 +320,7 @@ function App() {
                           </div>
                         </div>
                       )} */}
-                      <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} />
+                      <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} />
                     </div>
                   </div>
                 </div>
