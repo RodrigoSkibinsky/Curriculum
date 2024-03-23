@@ -82,6 +82,11 @@
     margin: 20px auto;
   }
 
+  .profilePicture img {
+    height: auto;
+    width: auto;
+  }
+
   .index-menu {
     /* min-height: 50%; */
     height: fit-content; /* Ajustar automáticamente la altura al contenido */
