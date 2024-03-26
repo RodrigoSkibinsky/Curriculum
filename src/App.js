@@ -1,4 +1,5 @@
 import logo from './logo-kali.svg';
+import fotoPerfil from './foto-perfil-cv.jpg';
 import terminalDefault from './terminal-default-icon.png';
 import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
@@ -375,7 +376,7 @@ function App() {
             maxHeight: `${height - 100}px`,
           }}>
             <div className='profilePicture'>
-                <img src={logo} alt='Profile Picture'/>
+                <img src={fotoPerfil} alt='Profile Picture'/>
             </div>
             {(() => {
               switch (terminalText) {
