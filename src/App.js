@@ -79,8 +79,8 @@ function App() {
   const [terminalText, setTerminalText] = useState("File");
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const initialHeight = window.innerHeight * 0.75;
-  const initialWidth = window.innerWidth * 0.6;
+  const initialHeight = window.innerHeight * 0.65;
+  const initialWidth = window.innerWidth * 0.5;
   const windowWidth = 30;
   const windowHeight = 50;
   const initialX = (screenWidth - windowWidth) / 2;
