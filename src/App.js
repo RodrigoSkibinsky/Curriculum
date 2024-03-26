@@ -201,7 +201,7 @@ function App() {
   const maximize = () => {//solo se usa dentro de screen
     const maxHeight = window.innerHeight - 32;
     const maxWidth = window.innerWidth;
-    if (height === window.innerHeight*0.75) {
+    if (height === initialHeight) {
       setHeight(maxHeight);
       setWidth(maxWidth);
       setWindowPosition({ x: 769, y: 375});
