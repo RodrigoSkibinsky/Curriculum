@@ -375,8 +375,8 @@ function App() {
             overflowY: 'auto',
             maxHeight: `${height - 100}px`,
           }}>
-            <div className='profilePicture'>
-                <img src={fotoPerfil} alt='Profile Picture'/>
+            <div>
+                <img className='profilePicture' src={fotoPerfil} alt='Profile Picture'/>
             </div>
             {(() => {
               switch (terminalText) {

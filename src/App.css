@@ -75,7 +75,7 @@
   }
 
   .profilePicture {
-    background-color: #f00;
+    /* background-color: #f00; */
     height: 150px;
     width: 150px;
     border-radius: 50%;
