@@ -239,7 +239,7 @@ function App() {
   }
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
-  const functionsMenu0 = [() => handleSelectionPlus(imagenesMenu0[0], "File"), () => handleSelectionPlus(imagenesMenu0[1], "Action"), () => handleSelectionPlus(imagenesMenu0[2], "Edit")]; // Corrige la declaración de las variables
+  const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
   const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
 
   const imagenesMenu1 = [terminalDefault, terminalDefault];
