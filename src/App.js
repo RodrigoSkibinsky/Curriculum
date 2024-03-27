@@ -428,6 +428,9 @@ function App() {
               style={{ 
                 bottom: 0, 
                 right: 0,
+                position: 'absolute',
+                height: '10px',
+                width: '10px',
                 cursor: nwse-resize,
               }}
               onMouseDown={handleResizeMouseDown}
