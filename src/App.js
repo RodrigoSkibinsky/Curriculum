@@ -254,29 +254,30 @@ function App() {
     if (dragging) {
       const newWidth = e.clientX - offset.x;
       const newHeight = e.clientY - offset.y;
+      // Asegurarse de que el nuevo ancho y alto no sean menores que el mínimo permitido
       if (newWidth >= minWidth && newHeight >= minHeight) {
         setWidth(newWidth);
         setHeight(newHeight);
-        setCurrentWidth(newWidth); // Actualiza la variable currentWidth
-        setCurrentHeight(newHeight); // Actualiza la variable currentHeight
+        setCurrentWidth(newWidth);
+        setCurrentHeight(newHeight);
       }
     }
-  };  
+  };
   
   const handleResizeMouseDown = (e) => {
+    e.preventDefault(); // Prevenir el comportamiento predeterminado del mouse
     setDragging(true);
-    // No actualices la posición de la ventana aquí
+    // Calcular el offset con respecto al borde derecho e inferior de la ventana
     setOffset({
       x: e.clientX - width,
       y: e.clientY - height
     });
-    setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
-    setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
-  }; 
+  };
   
   const handleResizeMouseUp = () => {
     setDragging(false);
   };
+  
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
