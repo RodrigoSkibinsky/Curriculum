@@ -62,8 +62,10 @@ function getTerminalColor(image) {
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
+
   const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   const [menuOption2Visible, setMenuOption2Visible] = useState(false);
+
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);
@@ -77,12 +79,22 @@ function App() {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
   const [terminalText, setTerminalText] = useState("File");
+
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const initialHeight = window.innerHeight * 0.65;
-  const initialWidth = window.innerWidth * 0.5;
-  const windowWidth = 30;
+  
+  const initialHeight = screenHeight * 0.65;
+  const initialWidth = screenWidth * 0.5;
+
+  const minHeight = screenHeight * 0.45;
+  const minWidth = screenWidth * 0.3;
+  
   const windowHeight = 50;
+  const windowWidth = 30;
+  
+  const currentHeight = screenHeight * 0.65;
+  const currentWidth = screenWidth * 0.5;
+
   const initialX = (screenWidth - windowWidth) / 2;
   const initialY = (screenHeight - windowHeight) / 2;
 
@@ -199,15 +211,15 @@ function App() {
   }, []);
 
   const maximize = () => {//solo se usa dentro de screen
-    const maxHeight = window.innerHeight - 32;
-    const maxWidth = window.innerWidth;
-    if (height === initialHeight) {
+    const maxHeight = screenHeight - 32;
+    const maxWidth = screenWidth;
+    if (height !== maxHeight) {
       setHeight(maxHeight);
       setWidth(maxWidth);
       setWindowPosition({ x: 769, y: 375});
     } else {
-      setHeight(initialHeight);
-      setWidth(initialWidth);
+      setHeight(currentHeight);
+      setWidth(currentWidth);
     }
   };
   
@@ -237,6 +249,29 @@ function App() {
     handleSelection(image);
     handleTerminalItemClick(ItemClick);
   }
+
+  const handleResizeMouseDown = (e) => {
+    setDragging(true);
+    setOffset({
+      x: e.clientX - width,
+      y: e.clientY - height
+    });
+  };
+  
+  const handleResizeMouseMove = (e) => {
+    if (dragging) {
+      const newWidth = e.clientX - offset.x;
+      const newHeight = e.clientY - offset.y;
+      if (newWidth >= minWidth && newHeight >= minHeight) {
+        setWidth(newWidth);
+        setHeight(newHeight);
+      }
+    }
+  };
+  
+  const handleResizeMouseUp = () => {
+    setDragging(false);
+  };
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
@@ -388,6 +423,13 @@ function App() {
                   return <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
               }
             })()}
+            <div
+              className="resize-handle"
+              style={{ bottom: 0, right: 0 }}
+              onMouseDown={handleResizeMouseDown}
+              onMouseMove={handleResizeMouseMove}
+              onMouseUp={handleResizeMouseUp}
+            />
           </div>
         </div>
       </div>
