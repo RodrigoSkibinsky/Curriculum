@@ -275,11 +275,11 @@ function App() {
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={logo} className="icon Terminal" alt="logo" />
-                      <p>Texto de ejemplo 1...</p>
+                      <p>Proyectos</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption2Click} onMouseEnter={handleOption2MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} />
+                      {/* <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} /> */}
                     </div>
                   </div>
                 </div>
