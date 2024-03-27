@@ -265,7 +265,7 @@ function App() {
   
   const handleResizeMouseDown = (e) => {
     e.preventDefault(); // Prevenir el comportamiento predeterminado del mouse
-    setDragging(true);
+    // setDragging(true);
     // No actualices la posición de la ventana aquí
     setOffset({
       x: e.clientX - width,
