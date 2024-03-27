@@ -85,15 +85,15 @@ function App() {
   
   const initialHeight = screenHeight * 0.65;
   const initialWidth = screenWidth * 0.5;
+  
+  const [currentHeight, setCurrentHeight] = useState(initialHeight);
+  const [currentWidth, setCurrentWidth] = useState(initialWidth);
 
   const minHeight = screenHeight * 0.45;
   const minWidth = screenWidth * 0.3;
   
   const windowHeight = 50;
   const windowWidth = 30;
-  
-  const currentHeight = screenHeight * 0.65;
-  const currentWidth = screenWidth * 0.5;
 
   const initialX = (screenWidth - windowWidth) / 2;
   const initialY = (screenHeight - windowHeight) / 2;
@@ -256,7 +256,9 @@ function App() {
       x: e.clientX - width,
       y: e.clientY - height
     });
-  };
+    setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
+    setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
+  };  
   
   const handleResizeMouseMove = (e) => {
     if (dragging) {
@@ -265,13 +267,15 @@ function App() {
       if (newWidth >= minWidth && newHeight >= minHeight) {
         setWidth(newWidth);
         setHeight(newHeight);
+        setCurrentWidth(newWidth); // Actualiza la variable currentWidth
+        setCurrentHeight(newHeight); // Actualiza la variable currentHeight
       }
     }
   };
   
   const handleResizeMouseUp = () => {
     setDragging(false);
-  };
+  };  
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
