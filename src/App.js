@@ -229,17 +229,17 @@ function App() {
   }, []);
   
 
-  // const handleMouseMove = (e) => {//solo se usa dentro de screen
-  //   if (dragging) {
-  //     const screenWidth = window.innerWidth;
-  //     const screenHeight = window.innerHeight;
-  //     let newX = e.clientX - offset.x;
-  //     let newY = e.clientY - offset.y;
-  //     newX = Math.max((width/2), Math.min(screenWidth-(width/2), newX));
-  //     newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
-  //     setWindowPosition({ x: newX, y: newY });
-  //   }
-  // };
+  const handleMouseMove = (e) => {//solo se usa dentro de screen
+    if (dragging) {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      let newX = e.clientX - offset.x;
+      let newY = e.clientY - offset.y;
+      newX = Math.max((width/2), Math.min(screenWidth-(width/2), newX));
+      newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
+      setWindowPosition({ x: newX, y: newY });
+    }
+  };
   
   const handleMouseUp = () => {//solo se usa dentro de screen
     setDragging(false);
@@ -250,7 +250,7 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  const handleMouseMove = (e) => {//solo se usa dentro de screen
+  const handleResizeMouseMove = (e) => {//solo se usa dentro de screen
     if (dragging) {
       const newWidth = e.clientX - offset.x;
       const newHeight = e.clientY - offset.y;
