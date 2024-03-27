@@ -229,17 +229,17 @@ function App() {
   }, []);
   
 
-  const handleMouseMove = (e) => {//solo se usa dentro de screen
-    if (dragging) {
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
-      let newX = e.clientX - offset.x;
-      let newY = e.clientY - offset.y;
-      newX = Math.max((width/2), Math.min(screenWidth-(width/2), newX));
-      newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
-      setWindowPosition({ x: newX, y: newY });
-    }
-  };
+  // const handleMouseMove = (e) => {//solo se usa dentro de screen
+  //   if (dragging) {
+  //     const screenWidth = window.innerWidth;
+  //     const screenHeight = window.innerHeight;
+  //     let newX = e.clientX - offset.x;
+  //     let newY = e.clientY - offset.y;
+  //     newX = Math.max((width/2), Math.min(screenWidth-(width/2), newX));
+  //     newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
+  //     setWindowPosition({ x: newX, y: newY });
+  //   }
+  // };
   
   const handleMouseUp = () => {//solo se usa dentro de screen
     setDragging(false);
@@ -250,17 +250,7 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  const handleResizeMouseDown = (e) => {
-    setDragging(true);
-    setOffset({
-      x: e.clientX - width,
-      y: e.clientY - height
-    });
-    setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
-    setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
-  };  
-  
-  const handleResizeMouseMove = (e) => {
+  const handleMouseMove = (e) => {//solo se usa dentro de screen
     if (dragging) {
       const newWidth = e.clientX - offset.x;
       const newHeight = e.clientY - offset.y;
@@ -273,9 +263,20 @@ function App() {
     }
   };
   
+  const handleResizeMouseDown = (e) => {
+    setDragging(true);
+    // No actualices la posición de la ventana aquí
+    setOffset({
+      x: e.clientX - width,
+      y: e.clientY - height
+    });
+    setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
+    setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
+  }; 
+  
   const handleResizeMouseUp = () => {
     setDragging(false);
-  };  
+  };
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
