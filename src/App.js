@@ -425,7 +425,11 @@ function App() {
             })()}
             <div
               className="resize-handle"
-              style={{ bottom: 0, right: 0 }}
+              style={{ 
+                bottom: 0, 
+                right: 0,
+                cursor: nwse-resize,
+              }}
               onMouseDown={handleResizeMouseDown}
               onMouseMove={handleResizeMouseMove}
               onMouseUp={handleResizeMouseUp}
