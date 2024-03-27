@@ -250,7 +250,7 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  const handleResizeMouseMove = (e) => {//solo se usa dentro de screen
+  const handleResizeMouseMove = (e) => {
     if (dragging) {
       const newWidth = e.clientX - offset.x;
       const newHeight = e.clientY - offset.y;
@@ -261,7 +261,7 @@ function App() {
         setCurrentHeight(newHeight); // Actualiza la variable currentHeight
       }
     }
-  };
+  };  
   
   const handleResizeMouseDown = (e) => {
     setDragging(true);
