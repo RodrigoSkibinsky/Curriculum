@@ -99,6 +99,12 @@ function App() {
   const initialY = (screenHeight - windowHeight) / 2;
 
   const handleTerminalItemClick = (text) => {
+    if (isTerminalClosed) {
+      setisTerminalClosed(false);
+    }
+    if (isTerminalHidden) {
+        setisTerminalHidden(false);
+    }
     setTerminalText(text);
   };
   
