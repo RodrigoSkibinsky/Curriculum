@@ -63,8 +63,8 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
 
+  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
   const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-  const [menuOption2Visible, setMenuOption2Visible] = useState(false);
 
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
@@ -116,20 +116,20 @@ function App() {
   const handleIndexMouseEnter = () => {
     setIndexVisible(true);
     setMenuVisible(false);
+    setMenuOption0Visible(false);
     setMenuOption1Visible(false);
-    setMenuOption2Visible(false);
+  };
+  
+  const handleOption0MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
   };
   
   const handleOption1MouseEnter = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
-    setMenuOption2Visible(false);
-  };
-  
-  const handleOption2MouseEnter = (e) => {
-    e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption2Visible(!menuOption2Visible);
-    setMenuOption1Visible(false);
+    setMenuOption0Visible(false);
   };
   
   const handleIndexClick = () => {
@@ -138,21 +138,21 @@ function App() {
       setMenuVisible(false);
     }
     if (!indexVisible) {
+      setMenuOption0Visible(false);
       setMenuOption1Visible(false);
-      setMenuOption2Visible(false);
     }
+  };
+  
+  const handleOption0Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
   };
   
   const handleOption1Click = (e) => {
     e.stopPropagation(); // Detener la propagación del evento
     setMenuOption1Visible(!menuOption1Visible);
-    setMenuOption2Visible(false);
-  };
-  
-  const handleOption2Click = (e) => {
-    e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption2Visible(!menuOption2Visible);
-    setMenuOption1Visible(false);
+    setMenuOption0Visible(false);
   };
   
 
@@ -250,34 +250,34 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  const handleResizeMouseMove = (e) => {
-    if (dragging) {
-      const newWidth = e.clientX - offset.x;
-      const newHeight = e.clientY - offset.y;
-      if (newWidth >= minWidth && newHeight >= minHeight) {
-        setWidth(newWidth);
-        setHeight(newHeight);
-        setCurrentWidth(newWidth); // Actualiza la variable currentWidth
-        setCurrentHeight(newHeight); // Actualiza la variable currentHeight
-      }
-    }
-  };  
+  // const handleResizeMouseMove = (e) => {
+  //   if (dragging) {
+  //     const newWidth = e.clientX - offset.x;
+  //     const newHeight = e.clientY - offset.y;
+  //     if (newWidth >= minWidth && newHeight >= minHeight) {
+  //       setWidth(newWidth);
+  //       setHeight(newHeight);
+  //       setCurrentWidth(newWidth); // Actualiza la variable currentWidth
+  //       setCurrentHeight(newHeight); // Actualiza la variable currentHeight
+  //     }
+  //   }
+  // };  
   
-  const handleResizeMouseDown = (e) => {
-    e.preventDefault(); // Prevenir el comportamiento predeterminado del mouse
-    // setDragging(true);
-    // No actualices la posición de la ventana aquí
-    setOffset({
-      x: e.clientX - width,
-      y: e.clientY - height
-    });
-    setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
-    setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
-  }; 
+  // const handleResizeMouseDown = (e) => {
+  //   e.preventDefault(); // Prevenir el comportamiento predeterminado del mouse
+  //   // setDragging(true);
+  //   // No actualices la posición de la ventana aquí
+  //   setOffset({
+  //     x: e.clientX - width,
+  //     y: e.clientY - height
+  //   });
+  //   setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
+  //   setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
+  // }; 
   
-  const handleResizeMouseUp = () => {
-    setDragging(false);
-  };
+  // const handleResizeMouseUp = () => {
+  //   setDragging(false);
+  // };
   
   
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
@@ -309,9 +309,9 @@ function App() {
                       <img src={terminalDefault} className="icon Terminal" alt="logo" />
                       <p>{getTerminalName(terminalDefault)}</p>
                     </div>
-                    <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
+                    <div className="icon-holder" onClick={handleOption0Click} onMouseEnter={handleOption0MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      <Menu visible={menuOption1Visible} indiceMenu={0} num={3} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
+                      <Menu visible={menuOption0Visible} indiceMenu={0} num={3} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
                     </div>
                   </div>
                   <div className='icon-holder-holder'>
@@ -319,9 +319,9 @@ function App() {
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Proyectos</p>
                     </div>
-                    <div className="icon-holder" onClick={handleOption2Click} onMouseEnter={handleOption2MouseEnter}>
+                    <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {/* <Menu visible={menuOption2Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} /> */}
+                      {/* <Menu visible={menuOption1Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} /> */}
                     </div>
                   </div>
                 </div>
@@ -430,7 +430,7 @@ function App() {
                   return <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
               }
             })()}
-            <div
+            {/* <div
               className="resize-handle"
               style={{ 
                 bottom: 0, 
@@ -443,7 +443,7 @@ function App() {
               onMouseDown={handleResizeMouseDown}
               onMouseMove={handleResizeMouseMove}
               onMouseUp={handleResizeMouseUp}
-            />
+            /> */}
           </div>
         </div>
       </div>
