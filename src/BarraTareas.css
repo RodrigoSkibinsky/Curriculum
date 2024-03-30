@@ -56,13 +56,7 @@
   .index-menu {
     height: fit-content;
     background-color: #222;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
     justify-content: flex-start;
-    position: fixed;
-    top: var(--altura-barra);
-    z-index: 1000;
   }
 
   .menu, .index-menu, .option-menu{
