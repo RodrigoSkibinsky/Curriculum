@@ -10,6 +10,7 @@ import Presentacion from './Presentacion.js';
 import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
 import Menu from './Menu.js';
+import Inicio from './Inicio.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -78,7 +79,7 @@ function App() {
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
-  const [terminalText, setTerminalText] = useState("File");
+  const [terminalText, setTerminalText] = useState("Inicio");
 
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
@@ -430,6 +431,8 @@ function App() {
             </div>
             {(() => {
               switch (terminalText) {
+                case "Inicio":
+                  return <Inicio name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
                 case "Action":
                   return <Experiencia name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
                 case "Edit":
