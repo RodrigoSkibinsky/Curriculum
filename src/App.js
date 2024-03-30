@@ -11,6 +11,7 @@ import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
 import Menu from './Menu.js';
 import Inicio from './Inicio.js';
+import Content from './Content.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -22,40 +23,6 @@ function getTerminalName(image) {
       return "PowerShell";
     default:
       return "";
-  }
-}
-
-function getTerminalTitle(image) {
-  switch (image) {
-    case terminalDefault:
-      return "kali@kali:~";
-    case terminalRoot:
-      return "root@kali:~";
-    case terminalUser:
-      return "PS> kali@kali:home/kali";
-    default:
-      return "";
-  }
-}
-
-function getTerminalSubTitle(image) {
-  switch (image) {
-    case terminalDefault:
-      return "kali@kali:~ ";
-    case terminalRoot:
-      return "root@kali:# ";
-    case terminalUser:
-      return "kali@kali:PS> ";
-    default:
-      return "";
-  }
-}
-
-function getTerminalColor(image) {
-  if (image === terminalRoot) {
-    return "#e44";
-  } else {
-    return "#3060ff";
   }
 }
 
@@ -422,40 +389,7 @@ function App() {
             </div>
           </div>
           <div className="line"></div>
-          <div className="content" style={{
-            overflowY: 'auto',
-            maxHeight: `${height - 100}px`,
-          }}>
-            <div>
-                <img className='profilePicture' src={fotoPerfil} alt='Profile Picture'/>
-            </div>
-            {(() => {
-              switch (terminalText) {
-                case "Inicio":
-                  return <Inicio name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
-                case "Action":
-                  return <Experiencia name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
-                case "Edit":
-                  return <Estudios name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
-                default:
-                  return <Presentacion name={getTerminalSubTitle(selection)} textColor={getTerminalColor(selection)} />;
-              }
-            })()}
-            {/* <div
-              className="resize-handle"
-              style={{ 
-                bottom: 0, 
-                right: 0,
-                position: 'absolute',
-                height: '10px',
-                width: '10px',
-                cursor: 'nwse-resize',
-              }}
-              onMouseDown={handleResizeMouseDown}
-              onMouseMove={handleResizeMouseMove}
-              onMouseUp={handleResizeMouseUp}
-            /> */}
-          </div>
+          <Content selected={selection}/>
         </div>
       </div>
     </div>
