@@ -11,7 +11,7 @@
   font-weight: bold;
 }
 
-  .App {
+  .App {/*BarraTareas, Screen y App-header estan contenidos en esta clase*/
     font-family: 'DejaVu Sans Mono', monospace;
     background-image: var(--url-computer);
     text-align: center;
@@ -23,99 +23,27 @@
     flex-direction: column;
     min-height: 100vh;
   }
-
-  .menu-icon {
-    opacity: 50%;
-    height: calc(var(--altura-barra) - 5px);
-  }
-
-  .menu-icon:hover {
-    opacity: 100%;
-  }
-
-  .icon-holder, .icon-holder-holder {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
   
-  .icon-holder img {
-    width: auto;
-  }
-
-  .icon-holder:hover {
-    background-color: #111c;
-  }
-
-  a {
-    text-decoration: underline;
-    color: inherit;
-  }
-
-  .Terminal {
-    height: calc(var(--altura-barra) - 15px);
-    width: calc(var(--altura-barra) - 10px);
-  }
-
-  .app-small {
-    height: calc(var(--altura-barra) - 18px);
-    width: calc(var(--altura-barra) - 13px);
-    /* margin-left: 10px; */
-  }
-
-  .display-terminal {
-    padding: 5px 5px 9px 5px;
-    rotate: 90deg;
-    border-right: #111;
-  }
-
-  .display-app-options {
-    padding: 0px 5px;
-    border-right: #111;
-  }
-
-  .icon:hover, .icon-holder:hover {
-    cursor: pointer;
-  }
-
-  .index-menu-item {
-    flex-grow: 1;
-  }
-  
-  .menu-item:hover, .index-menu-item:hover {
-    background-color: #111c;
-  }
-  
-  .menu-item img, .index-menu-item img {
-    margin-right: 10px;
-  }
-  
-  .App-header {
+  .App-header {/*BarraTareas y Screen estan contenidos en esta clase*/
     min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  
-  .frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    height: calc(var(--altura-barra) - 10px);
-  }
-  
-  .frame:hover {
-    background-color: #111c;
+
+  .menu-icon:hover {
+    opacity: 100%;
   }
 
-  .terminal-text, .terminal-sub-title {
-    text-align: left;
+  a {/*se usa en BarraTareas y en Screen*/
+    text-decoration: underline;
+    color: inherit;
   }
 
-  .plain-text p{
-    margin-left: 10px;
+  .app-small {/*se usa en BarraTareas y en Screen*/
+    height: calc(var(--altura-barra) - 18px);
+    width: calc(var(--altura-barra) - 13px);
   }
 
   .oculto {

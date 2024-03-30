@@ -168,3 +168,16 @@
     height: 60%;
     margin: 0px 5px;
   }
+
+  .plain-text p{
+    margin-left: 10px;
+  }
+
+  .terminal-text, .terminal-sub-title {
+    text-align: left;
+  }
+
+  .Terminal {
+    height: calc(var(--altura-barra) - 15px);
+    width: calc(var(--altura-barra) - 10px);
+  }
