@@ -1,0 +1,40 @@
+.barraTareas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #222c;
+    height: var(--altura-barra);
+    font-family: 'DejaVu Sans Mono', monospace;
+    z-index: 100;
+  }
+
+  .barra {
+    display: flex;
+    align-items: center;
+  }
+
+  .barra1 {
+    height: var(--altura-barra);
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .barra3 {
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 2.5%;
+  }
+  
+  .open-icon {
+    flex: auto;
+    justify-self: center;
+    margin: auto;
+  }
+
+  .selected {
+    background-color: #111c;
+    border-bottom: 1px solid #3060ff;
+  }

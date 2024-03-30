@@ -1,3 +1,6 @@
+@import url('BarraTareas.css');
+@import url('Screen.css');
+
 #root{
   --url-computer: url("../../images/background.png");
   --altura-barra : 30px;
@@ -19,36 +22,6 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-
-  .barraTareas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #222c;
-    height: var(--altura-barra);
-    font-family: 'DejaVu Sans Mono', monospace;
-    z-index: 100;
-  }
-
-  .barra {
-    display: flex;
-    align-items: center;
-  }
-
-  .barra1 {
-    height: var(--altura-barra);
-    justify-content: flex-start;
-    flex: 1;
-  }
-
-  .barra3 {
-    justify-content: flex-end;
-    flex: 1;
-    margin-right: 2.5%;
   }
 
   .menu-icon {
@@ -74,29 +47,18 @@
     background-color: #111c;
   }
 
-  .profilePicture {
-    /* background-color: #f00; */
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin: 20px auto;
-  }
-
-  .profilePicture img {
-    height: 100%;
-    width: 100%;
-  }
-
   .index-menu {
-    /* min-height: 50%; */
-    height: fit-content; /* Ajustar automáticamente la altura al contenido */
+    height: fit-content;
     background-color: #222;
+    justify-content: flex-start;
+  }
+
+  .menu, .index-menu, .option-menu{
+    position: fixed;
+    top: var(--altura-barra);
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: flex-start;
-    position: fixed;
-    top: var(--altura-barra);
     z-index: 1000;
   }
 
@@ -138,19 +100,6 @@
   .menu {
     background-color: #222c;
   }
-
-  .index-menu {
-    background-color: #222;
-  }
-
-  .menu, .index-menu, .option-menu{
-    position: fixed;
-    top: var(--altura-barra);
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    z-index: 1000;
-  }
   
   .menu-item, .index-menu-item {
     display: flex;
@@ -159,7 +108,7 @@
   }
 
   .index-menu-item {
-    flex-grow: 1; /* Agrega esta línea para que los elementos ocupen todo el ancho disponible */
+    flex-grow: 1;
   }
   
   .menu-item:hover, .index-menu-item:hover {
@@ -345,19 +294,8 @@
     height: calc(var(--altura-barra) - 10px);
   }
   
-  .open-icon {
-    flex: auto;
-    justify-self: center;
-    margin: auto;
-  }
-  
   .frame:hover {
     background-color: #111c;
-  }
-
-  .selected {
-    background-color: #111c;
-    border-bottom: 1px solid #3060ff;
   }
 
   .terminal-text, .terminal-sub-title {
