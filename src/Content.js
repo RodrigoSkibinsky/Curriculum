@@ -33,17 +33,17 @@ function getTerminalColor(image) {
   }
 }
 
-function Content({ selected }) {
+function Content({ selected, altura, textoTerminal }) {
     return(
           <div className="content" style={{
             overflowY: 'auto',
-            maxHeight: `${height - 100}px`,
+            maxHeight: `${altura - 100}px`,
           }}>
             <div>
                 <img className='profilePicture' src={fotoPerfil} alt='Profile Picture'/>
             </div>
             {(() => {
-              switch (terminalText) {
+              switch (textoTerminal) {
                 case "Inicio":
                   return <Inicio name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
                 case "Action":

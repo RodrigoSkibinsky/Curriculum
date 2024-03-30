@@ -371,7 +371,7 @@ function App() {
             </div>
           </div>
           <div className="line"></div>
-          <Content selected={selection}/>
+          <Content selected={selection} altura={height} textoTerminal={terminalText}/>
         </div>
       </div>
     </div>
