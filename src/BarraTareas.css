@@ -38,3 +38,38 @@
     background-color: #111c;
     border-bottom: 1px solid #3060ff;
   }
+
+  .option-menu {
+    background-color: #222;
+  }
+
+  .menu {
+    background-color: #222c;
+  }
+  
+  .menu-item, .index-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .index-menu {
+    height: fit-content;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    position: fixed;
+    top: var(--altura-barra);
+    z-index: 1000;
+  }
+
+  .menu, .index-menu, .option-menu{
+    position: fixed;
+    top: var(--altura-barra);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    z-index: 1000;
+  }
