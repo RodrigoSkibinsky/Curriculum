@@ -1,18 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-function getTerminalTitle(image) {
-  switch (image) {
-    case terminalDefault:
-      return "kali@kali:~";
-    case terminalRoot:
-      return "root@kali:~";
-    case terminalUser:
-      return "PS> kali@kali:home/kali";
-    default:
-      return "";
-  }
-}
-
 function getTerminalSubTitle(image) {
   switch (image) {
     case terminalDefault:

@@ -26,6 +26,18 @@ function getTerminalName(image) {
   }
 }
 
+function getTerminalTitle(image) {
+  switch (image) {
+    case terminalDefault:
+      return "kali@kali:~";
+    case terminalRoot:
+      return "root@kali:~";
+    case terminalUser:
+      return "PS> kali@kali:home/kali";
+    default:
+      return "";
+  }
+}
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -224,36 +236,6 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  // const handleResizeMouseMove = (e) => {
-  //   if (dragging) {
-  //     const newWidth = e.clientX - offset.x;
-  //     const newHeight = e.clientY - offset.y;
-  //     if (newWidth >= minWidth && newHeight >= minHeight) {
-  //       setWidth(newWidth);
-  //       setHeight(newHeight);
-  //       setCurrentWidth(newWidth); // Actualiza la variable currentWidth
-  //       setCurrentHeight(newHeight); // Actualiza la variable currentHeight
-  //     }
-  //   }
-  // };  
-  
-  // const handleResizeMouseDown = (e) => {
-  //   e.preventDefault(); // Prevenir el comportamiento predeterminado del mouse
-  //   // setDragging(true);
-  //   // No actualices la posición de la ventana aquí
-  //   setOffset({
-  //     x: e.clientX - width,
-  //     y: e.clientY - height
-  //   });
-  //   setCurrentWidth(width); // Actualiza la variable currentWidth con el ancho actual de la ventana
-  //   setCurrentHeight(height); // Actualiza la variable currentHeight con la altura actual de la ventana
-  // }; 
-  
-  // const handleResizeMouseUp = () => {
-  //   setDragging(false);
-  // };
-  
-  
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
   const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
