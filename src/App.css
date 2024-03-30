@@ -32,10 +32,6 @@
     justify-content: center;
   }
 
-  .menu-icon:hover {
-    opacity: 100%;
-  }
-
   a {/*se usa en BarraTareas y en Screen*/
     text-decoration: underline;
     color: inherit;

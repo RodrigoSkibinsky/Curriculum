@@ -103,6 +103,10 @@
     height: calc(var(--altura-barra) - 5px);
   }
 
+  .menu-icon:hover {
+    opacity: 100%;
+  }
+
   .display-terminal {
     padding: 5px 5px 9px 5px;
     rotate: 90deg;
