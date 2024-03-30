@@ -11,7 +11,6 @@ import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
 import Menu from './Menu.js';
 import Inicio from './Inicio.js';
-import Content from './Content.js';
 
 function getTerminalSubTitle(image) {
   switch (image) {
