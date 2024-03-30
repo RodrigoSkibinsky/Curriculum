@@ -388,7 +388,9 @@ function App() {
           >
             <div className='top-top'>
               <div className='top-space top-left'>
-              <img src={terminalDefault} className="app-small" alt="logo"/>
+              <img src={terminalDefault} className="app-small" alt="logo" style={{
+                marginLeft: '10px',
+              }}/>
               </div>
               <div className='top-space top-middle'>
                 <p>{getTerminalTitle(selection)}</p>
