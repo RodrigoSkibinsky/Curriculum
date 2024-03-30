@@ -60,7 +60,7 @@
   .app-small {
     height: calc(var(--altura-barra) - 18px);
     width: calc(var(--altura-barra) - 13px);
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 
   .display-terminal {
