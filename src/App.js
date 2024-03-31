@@ -214,11 +214,6 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
-  const menu0click = (text) => {
-    handleTerminalItemClick(text);
-    setIndexVisible(false);
-  }
-
   return (
     <div className="App">
       <header className="App-header">

@@ -44,6 +44,11 @@ function BarraTareas({ indexVisible, handleIndexClick, toggleScreenVisibility, o
     const functionsMenu1 = [() => handleSelection(imagenesMenu1[0]), () => handleSelection(imagenesMenu0[1])];
     const textoMenu1 = ["... 1 ...", "... 2 ..."];
 
+    const menu0click = (text) => {
+      handleTerminalItemClick(text);
+      setIndexVisible(false);
+    }
+
     return(
         <div className="barraTareas">
           <div className="barra barra1">
