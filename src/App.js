@@ -236,8 +236,13 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
+  const menu0click = (text) => {
+    handleTerminalItemClick(text);
+    setIndexVisible(false);
+  }
+
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
-  const functionsMenu0 = [() => handleTerminalItemClick("File"), () => handleTerminalItemClick("Action"), () => handleTerminalItemClick("Edit")]; // Corrige la declaración de las variables
+  const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
   const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
 
   const imagenesMenu1 = [terminalDefault, terminalDefault];
