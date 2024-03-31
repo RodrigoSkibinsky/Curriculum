@@ -109,18 +109,6 @@ function App() {
     setMenuOption1Visible(false);
   };
   
-  const handleOption0MouseEnter = (e) => {
-    e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption0Visible(!menuOption0Visible);
-    setMenuOption1Visible(false);
-  };
-  
-  const handleOption1MouseEnter = (e) => {
-    e.stopPropagation(); // Detener la propagación del evento
-    setMenuOption1Visible(!menuOption1Visible);
-    setMenuOption0Visible(false);
-  };
-  
   const handleIndexClick = () => {
     setIndexVisible(!indexVisible);
     if (menuVisible) {
