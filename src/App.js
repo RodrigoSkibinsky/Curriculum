@@ -14,6 +14,7 @@ import Inicio from './Inicio.js';
 import TerminalContent from './TerminalContent.js';
 import TerminalTop from './TerminalTop.js';
 import Terminal from './Terminal.js';
+import BarraTareas from './BarraTareas.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -254,7 +255,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="barraTareas">
+        {/* <div className="barraTareas">
           <div className="barra barra1">
             <div className="icon-holder" onClick={handleIndexClick}>
               <img src={logo} className="icon menu-icon" alt="logo" />
@@ -284,7 +285,6 @@ function App() {
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      {/* <Menu visible={menuOption1Visible} indiceMenu={1} num={2} img={imagenesMenu1} functionArray={functionsMenu1} textoArray={textoMenu1} /> */}
                     </div>
                   </div>
                 </div>
@@ -324,7 +324,8 @@ function App() {
           <div className="barra barra3">
             <Clock />
           </div>
-        </div>
+        </div> */}
+        <BarraTareas seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
