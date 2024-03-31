@@ -226,7 +226,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <div className="barraTareas">
+        <div className="barraTareas">
           <div className="barra barra1">
             <div className="icon-holder" onClick={handleIndexClick}>
               <img src={logo} className="icon menu-icon" alt="logo" />
@@ -295,8 +295,8 @@ function App() {
           <div className="barra barra3">
             <Clock />
           </div>
-        </div> */}
-        <BarraTareas 
+        </div>
+        {/* <BarraTareas 
           isTerminalHidden={isTerminalHidden} 
           isTerminalClosed={isTerminalClosed} 
           openTerminal={() => openTerminal()} // Aquí agregué los paréntesis ()
@@ -317,7 +317,7 @@ function App() {
           handleDisplayClick={() => handleDisplayClick()} // Aquí agregué los paréntesis ()
           handleIndexClick={() => handleIndexClick()} // Aquí agregué los paréntesis ()
           setButtonDragEnabled={setButtonDragEnabled()}
-        />
+        /> */}
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
