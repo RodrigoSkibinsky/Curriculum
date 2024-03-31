@@ -11,55 +11,6 @@ function BarraTareas({ toggleScreenVisibility, openTerminal, terminalNameDefault
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-  
-    const handleOption0Click = (e) => {
-      e.stopPropagation(); // Detener la propagación del evento
-      setMenuOption0Visible(!menuOption0Visible);
-      setMenuOption1Visible(false);
-    };
-    
-    const handleOption1Click = (e) => {
-      e.stopPropagation(); // Detener la propagación del evento
-      setMenuOption1Visible(!menuOption1Visible);
-      setMenuOption0Visible(false);
-    };
-
-    const handleDisplayClick = () => {
-      setMenuVisible(!menuVisible);
-      if (indexVisible) {
-        setIndexVisible(false)
-      }
-    };
-  
-    const handleIndexMouseEnter = () => {
-      setIndexVisible(true);
-      setMenuVisible(false);
-      setMenuOption0Visible(false);
-      setMenuOption1Visible(false);
-    };
-    
-    const handleOption0MouseEnter = (e) => {
-      e.stopPropagation(); // Detener la propagación del evento
-      setMenuOption0Visible(!menuOption0Visible);
-      setMenuOption1Visible(false);
-    };
-    
-    const handleOption1MouseEnter = (e) => {
-      e.stopPropagation(); // Detener la propagación del evento
-      setMenuOption1Visible(!menuOption1Visible);
-      setMenuOption0Visible(false);
-    };
-    
-    const handleIndexClick = () => {
-      setIndexVisible(!indexVisible);
-      if (menuVisible) {
-        setMenuVisible(false);
-      }
-      if (!indexVisible) {
-        setMenuOption0Visible(false);
-        setMenuOption1Visible(false);
-      }
-    };  
 
     return(
         <div className="barraTareas">

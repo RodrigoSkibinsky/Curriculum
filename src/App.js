@@ -43,6 +43,11 @@ function getTerminalTitle(image) {
 }
 
 function App() {
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [indexVisible, setIndexVisible] = useState(false);
+
+  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
 
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
@@ -57,9 +62,6 @@ function App() {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
   const [terminalText, setTerminalText] = useState("Inicio");
-    
-  const [menuVisible, setMenuVisible] = useState(false);
-  const [indexVisible, setIndexVisible] = useState(false);
 
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
@@ -88,6 +90,60 @@ function App() {
     }
     setTerminalText(text);
   };
+  
+  const toggleScreenVisibility = () => {
+    setisTerminalHidden(!isTerminalHidden);
+  };
+
+  const handleDisplayClick = () => {
+    setMenuVisible(!menuVisible);
+    if (indexVisible) {
+      setIndexVisible(false)
+    }
+  };
+
+  const handleIndexMouseEnter = () => {
+    setIndexVisible(true);
+    setMenuVisible(false);
+    setMenuOption0Visible(false);
+    setMenuOption1Visible(false);
+  };
+  
+  const handleOption0MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
+  };
+  
+  const handleOption1MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption1Visible(!menuOption1Visible);
+    setMenuOption0Visible(false);
+  };
+  
+  const handleIndexClick = () => {
+    setIndexVisible(!indexVisible);
+    if (menuVisible) {
+      setMenuVisible(false);
+    }
+    if (!indexVisible) {
+      setMenuOption0Visible(false);
+      setMenuOption1Visible(false);
+    }
+  };
+  
+  const handleOption0Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
+  };
+  
+  const handleOption1Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption1Visible(!menuOption1Visible);
+    setMenuOption0Visible(false);
+  };
+  
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
@@ -172,10 +228,6 @@ function App() {
       newY = Math.max((height/2)+2, Math.min(screenHeight-((height/2)+32), newY)); // <- Aquí estaba el error, se debía restar el tamaño de la ventana
       setWindowPosition({ x: newX, y: newY });
     }
-  };
-  
-  const toggleScreenVisibility = () => {
-    setisTerminalHidden(!isTerminalHidden);
   };
   
   const handleMouseUp = () => {//solo se usa dentro de screen
@@ -273,7 +325,7 @@ function App() {
             <Clock />
           </div>
         </div> */}
-        <BarraTareas toggleScreenVisibility={toggleScreenVisibility()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
+        <BarraTareas seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
