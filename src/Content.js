@@ -33,7 +33,7 @@ function getTerminalColor(image) {
   }
 }
 
-function Content({ selected, altura, textoTerminal }) {
+function TerminalContent({ selected, altura, textoTerminal }) {
     return(
           <div className="content" style={{
             overflowY: 'auto',
@@ -58,4 +58,4 @@ function Content({ selected, altura, textoTerminal }) {
     )
 }
 
-export default Content
+export default TerminalContent

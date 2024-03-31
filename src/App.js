@@ -12,6 +12,7 @@ import Estudios from './Estudios.js';
 import Menu from './Menu.js';
 import Inicio from './Inicio.js';
 import Content from './Content.js';
+import TerminalContent from './Content.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -376,7 +377,7 @@ function App() {
             </div>
           </div>
           <div className="line"></div>
-          <Content selected={selection} altura={height} textoTerminal={terminalText}/>
+          <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/>
         </div>
       </div>
     </div>
