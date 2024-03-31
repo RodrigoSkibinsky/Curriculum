@@ -4,7 +4,7 @@ import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
 
-function TerminalTop({ handleTerminalItemClick, handleMouseDown, minimize, maximize, closeTerminal, terminalTitle }) {
+function TerminalTop({ dragging, handleTerminalItemClick, handleMouseDown, minimize, maximize, closeTerminal, terminalTitle }) {
     // const [menuVisible, setMenuVisible] = useState(false);
     // const [indexVisible, setIndexVisible] = useState(false);
     // const [menuOption0Visible, setMenuOption0Visible] = useState(false);

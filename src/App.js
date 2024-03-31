@@ -376,7 +376,7 @@ function App() {
               <div className='top-space top-right'></div>
             </div>
           </div> */}
-          <TerminalTop handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
+          <TerminalTop dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
           <div className="line"></div>
           <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/>
         </div>
