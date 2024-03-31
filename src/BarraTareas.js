@@ -46,8 +46,8 @@ function BarraTareas({ isTerminalHidden, isTerminalClosed, menuVisible, handleDi
                       opacity: 1
                     }}>
                   <div className="index-menu-item" onClick={() => {
-                      seleccionarDefault;
-                      openTerminal;
+                      seleccionarDefault();
+                      openTerminal();
                     }}>
                   </div>
                   <div className='icon-holder-holder'>
