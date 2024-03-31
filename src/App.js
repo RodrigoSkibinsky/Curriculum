@@ -336,7 +336,7 @@ function App() {
             height: height,
             width: width,
           }} >
-          <div className="top" 
+          {/* <div className="top" 
             style={{
              cursor: dragging ? 'all-scroll' : 'default' 
             }} onMouseDown={handleMouseDown}
@@ -374,7 +374,8 @@ function App() {
               <div className='top-space top-middle'></div>
               <div className='top-space top-right'></div>
             </div>
-          </div>
+          </div> */}
+          <TerminalTop handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
           <div className="line"></div>
           <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/>
         </div>

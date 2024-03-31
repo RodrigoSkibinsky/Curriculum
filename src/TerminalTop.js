@@ -4,44 +4,44 @@ import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
 
-function TerminalTop({ selected }) {
-    const [menuVisible, setMenuVisible] = useState(false);
-  const [indexVisible, setIndexVisible] = useState(false);
+function TerminalTop({ handleTerminalItemClick, minimize, maximize, closeTerminal, terminalTitle }) {
+//     const [menuVisible, setMenuVisible] = useState(false);
+//   const [indexVisible, setIndexVisible] = useState(false);
 
-  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
+//   const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+//   const [menuOption1Visible, setMenuOption1Visible] = useState(false);
 
-  const [selection, setSelection] = useState(terminalDefault);
-  const [noSelection1, setNoSelection1] = useState(terminalRoot);
-  const [noSelection2, setNoSelection2] = useState(terminalUser);
-  const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
-  const [dragging, setDragging] = useState(false);
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [isWindowHidden, setWindowHidden] = useState(false);
-  const [isTerminalHidden, setisTerminalHidden] = useState(false);
-  const [isTerminalClosed, setisTerminalClosed] = useState(false);
-  const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
-  const [height, setHeight] = useState(0);
-  const [width, setWidth] = useState(0);
-  const [terminalText, setTerminalText] = useState("Inicio");
+//   const [selection, setSelection] = useState(terminalDefault);
+//   const [noSelection1, setNoSelection1] = useState(terminalRoot);
+//   const [noSelection2, setNoSelection2] = useState(terminalUser);
+//   const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
+//   const [dragging, setDragging] = useState(false);
+//   const [offset, setOffset] = useState({ x: 0, y: 0 });
+//   const [isWindowHidden, setWindowHidden] = useState(false);
+//   const [isTerminalHidden, setisTerminalHidden] = useState(false);
+//   const [isTerminalClosed, setisTerminalClosed] = useState(false);
+//   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
+//   const [height, setHeight] = useState(0);
+//   const [width, setWidth] = useState(0);
+//   const [terminalText, setTerminalText] = useState("Inicio");
 
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
+//   const screenWidth = window.innerWidth;
+//   const screenHeight = window.innerHeight;
   
-  const initialHeight = screenHeight * 0.65;
-  const initialWidth = screenWidth * 0.5;
+//   const initialHeight = screenHeight * 0.65;
+//   const initialWidth = screenWidth * 0.5;
   
-  const [currentHeight, setCurrentHeight] = useState(initialHeight);
-  const [currentWidth, setCurrentWidth] = useState(initialWidth);
+//   const [currentHeight, setCurrentHeight] = useState(initialHeight);
+//   const [currentWidth, setCurrentWidth] = useState(initialWidth);
 
-  const minHeight = screenHeight * 0.45;
-  const minWidth = screenWidth * 0.3;
+//   const minHeight = screenHeight * 0.45;
+//   const minWidth = screenWidth * 0.3;
   
-  const windowHeight = 50;
-  const windowWidth = 30;
+//   const windowHeight = 50;
+//   const windowWidth = 30;
 
-  const initialX = (screenWidth - windowWidth) / 2;
-  const initialY = (screenHeight - windowHeight) / 2;
+//   const initialX = (screenWidth - windowWidth) / 2;
+//   const initialY = (screenHeight - windowHeight) / 2;
 
     const handleTerminalItemClick = (text) => {
         if (isTerminalClosed) {
@@ -52,41 +52,6 @@ function TerminalTop({ selected }) {
         }
         setTerminalText(text);
       };
-
-      const minimize = () => {//solo se usa dentro de screen
-        setisTerminalHidden(true);
-      }
-
-    const maximize = () => {//solo se usa dentro de screen
-      const maxHeight = screenHeight - 32;
-      const maxWidth = screenWidth;
-      if (height !== maxHeight) {
-        setHeight(maxHeight);
-        setWidth(maxWidth);
-        setWindowPosition({ x: 769, y: 375});
-      } else {
-        setHeight(currentHeight);
-        setWidth(currentWidth);
-      }
-    };
-
-    const closeTerminal = () => {//solo se usa dentro de screen
-      setisTerminalHidden(true);
-      setisTerminalClosed(true);
-    };
-
-    function getTerminalTitle(image) {
-      switch (image) {
-        case terminalDefault:
-          return "kali@kali:~";
-        case terminalRoot:
-          return "root@kali:~";
-        case terminalUser:
-          return "PS> kali@kali:home/kali";
-        default:
-          return "";
-      }
-    }
 
     const handleMouseDown = (e) => {//solo se usa dentro de screen
       if (!buttonDragEnabled) {
@@ -112,7 +77,7 @@ function TerminalTop({ selected }) {
               }}/>
               </div>
               <div className='top-space top-middle'>
-                <p>{getTerminalTitle(selected)}</p>
+                <p>{terminalTitle}</p>
               </div>
               <div className='top-space top-right'>
                 <div className='button minimize' onClick={minimize}>
