@@ -46,9 +46,6 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
 
-  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);
@@ -222,6 +219,36 @@ function App() {
     handleTerminalItemClick(text);
     setIndexVisible(false);
   }
+
+  //.................................................................................
+  
+  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
+
+  const handleOption0Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
+  };
+  
+  const handleOption1Click = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption1Visible(!menuOption1Visible);
+    setMenuOption0Visible(false);
+  };
+
+  const handleOption0MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption0Visible(!menuOption0Visible);
+    setMenuOption1Visible(false);
+  };
+  
+  const handleOption1MouseEnter = (e) => {
+    e.stopPropagation(); // Detener la propagación del evento
+    setMenuOption1Visible(!menuOption1Visible);
+    setMenuOption0Visible(false);
+  };
+  //.....................................................................
 
   return (
     <div className="App">
