@@ -7,7 +7,7 @@ import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
 
-function BarraTareas({setButtonDragEnabledTrue, setButtonDragEnabledFalse, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
@@ -79,8 +79,8 @@ function BarraTareas({setButtonDragEnabledTrue, setButtonDragEnabledFalse, isTer
             <div
               className="icon-holder"
               onClick={handleDisplayClick}
-              onMouseDown={() => setButtonDragEnabledFalse()} // Deshabilitar el arrastre de la ventana al hacer clic en los botones
-              onMouseUp={() => setButtonDragEnabledTrue()} // Habilitar el arrastre de la ventana al soltar el clic de los botones
+              onMouseDown={() => setButtonDragEnabled(false)} // Deshabilitar el arrastre de la ventana al hacer clic en los botones
+              onMouseUp={() => setButtonDragEnabled(true)} // Habilitar el arrastre de la ventana al soltar el clic de los botones
               >
               <p className='icon display-terminal'> {'>'} </p>
               {menuVisible && (
