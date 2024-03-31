@@ -44,9 +44,6 @@ function getTerminalTitle(image) {
 
 function App() {
 
-  const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-  const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-
   const [selection, setSelection] = useState(terminalDefault);
   const [noSelection1, setNoSelection1] = useState(terminalRoot);
   const [noSelection2, setNoSelection2] = useState(terminalUser);

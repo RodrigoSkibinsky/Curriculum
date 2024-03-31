@@ -11,6 +11,9 @@ function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, 
     
     const [menuVisible, setMenuVisible] = useState(false);
     const [indexVisible, setIndexVisible] = useState(false);
+
+    const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+    const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   
     const handleOption0Click = (e) => {
       e.stopPropagation(); // Detener la propagación del evento
