@@ -5,30 +5,7 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 
 function TerminalTop({ dragging, handleTerminalItemClick, handleMouseDown, minimize, maximize, closeTerminal, terminalTitle }) {
-    // const [menuVisible, setMenuVisible] = useState(false);
-    // const [indexVisible, setIndexVisible] = useState(false);
-    // const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-    // const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-    // const [selection, setSelection] = useState(terminalDefault);
-    // const [noSelection1, setNoSelection1] = useState(terminalRoot);
-    // const [noSelection2, setNoSelection2] = useState(terminalUser);
-    // const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
-    // const [dragging, setDragging] = useState(false);
-    // const [offset, setOffset] = useState({ x: 0, y: 0 });
-    // const [isWindowHidden, setWindowHidden] = useState(false);
-    // const [isTerminalHidden, setisTerminalHidden] = useState(false);
-    // const [isTerminalClosed, setisTerminalClosed] = useState(false);
-    // const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
-    // const [height, setHeight] = useState(0);
-    // const [width, setWidth] = useState(0);
-    // const [terminalText, setTerminalText] = useState("Inicio");
-    // const screenWidth = window.innerWidth;
-    // const screenHeight = window.innerHeight;
-    // const initialHeight = screenHeight * 0.65;
-    // const initialWidth = screenWidth * 0.5;
-    // const [currentHeight, setCurrentHeight] = useState(initialHeight);
-    // const [currentWidth, setCurrentWidth] = useState(initialWidth);
-
+  
     return(
         <div className="top" 
           style={{

@@ -342,7 +342,7 @@ function App() {
           {/* <TerminalTop dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
           <div className="line"></div>
           <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/> */}
-          <Terminal selected={selection} altura={height} textoTerminal={terminalText} dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
+          <Terminal title={getTerminalTitle(selection)} selected={selection} altura={height} textoTerminal={terminalText} dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
         </div>
       </div>
     </div>
