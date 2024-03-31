@@ -7,7 +7,7 @@ import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
 
-function BarraTareas({ isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
