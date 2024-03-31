@@ -299,23 +299,23 @@ function App() {
         <BarraTareas 
           isTerminalHidden={isTerminalHidden} 
           isTerminalClosed={isTerminalClosed} 
+          openTerminal={() => openTerminal()} // Aquí agregué los paréntesis ()
+          selection={selection} 
+          noSelection1={noSelection1} 
+          noSelection2={noSelection2} 
           menuVisible={menuVisible} 
-          handleDisplayClick={handleDisplayClick} 
+          seleccionarDefault={() => handleSelection(terminalDefault)} // Aquí agregué los paréntesis ()
+          seleccionarNoSelec1={() => handleSelection(noSelection1)} // Aquí agregué los paréntesis ()
+          seleccionarNoSelec2={() => handleSelection(noSelection2)} // Aquí agregué los paréntesis ()
+          terminalNameDefault={getTerminalName(terminalDefault)} 
+          terminalNameNoSelec1={getTerminalName(noSelection1)} 
+          terminalNameNoSelec2={getTerminalName(noSelection2)} 
           textoMenu0={textoMenu0} 
           functionsMenu0={functionsMenu0} 
           imagenesMenu0={imagenesMenu0} 
           indexVisible={indexVisible} 
-          handleIndexClick={handleIndexClick} 
-          seleccionarNoSelec1={() => handleSelection(noSelection1)}
-          seleccionarNoSelec2={() => handleSelection(noSelection2)}
-          seleccionarDefault={() => handleSelection(terminalDefault)}
-          selection={selection} 
-          openTerminal={openTerminal}
-          terminalNameDefault={getTerminalName(terminalDefault)} 
-          terminalNameNoSelec1={getTerminalName(noSelection1)} 
-          noSelection1={noSelection1} 
-          noSelection2={noSelection2} 
-          terminalNameNoSelec2={getTerminalName(noSelection2)} 
+          handleDisplayClick={() => handleDisplayClick()} // Aquí agregué los paréntesis ()
+          handleIndexClick={() => handleIndexClick()} // Aquí agregué los paréntesis ()
         />
       </header>
       <div 
