@@ -40,9 +40,9 @@ function BarraTareas({ indexVisible, handleIndexClick, toggleScreenVisibility, o
     const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
     const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
   
-    const imagenesMenu1 = [terminalDefault, terminalDefault];
-    const functionsMenu1 = [() => handleSelection(imagenesMenu1[0]), () => handleSelection(imagenesMenu0[1])];
-    const textoMenu1 = ["... 1 ...", "... 2 ..."];
+    // const imagenesMenu1 = [terminalDefault, terminalDefault];
+    // const functionsMenu1 = [() => handleSelection(imagenesMenu1[0]), () => handleSelection(imagenesMenu0[1])];
+    // const textoMenu1 = ["... 1 ...", "... 2 ..."];
 
     const menu0click = (text) => {
       handleTerminalItemClick(text);
