@@ -4,65 +4,30 @@ import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
 
-function TerminalTop({ minimize, maximize, closeTerminal, terminalTitle }) {
-//     const [menuVisible, setMenuVisible] = useState(false);
-//   const [indexVisible, setIndexVisible] = useState(false);
-
-//   const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-//   const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-
-//   const [selection, setSelection] = useState(terminalDefault);
-//   const [noSelection1, setNoSelection1] = useState(terminalRoot);
-//   const [noSelection2, setNoSelection2] = useState(terminalUser);
-//   const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
-//   const [dragging, setDragging] = useState(false);
-//   const [offset, setOffset] = useState({ x: 0, y: 0 });
-//   const [isWindowHidden, setWindowHidden] = useState(false);
-//   const [isTerminalHidden, setisTerminalHidden] = useState(false);
-//   const [isTerminalClosed, setisTerminalClosed] = useState(false);
-//   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
-//   const [height, setHeight] = useState(0);
-//   const [width, setWidth] = useState(0);
-//   const [terminalText, setTerminalText] = useState("Inicio");
-
-//   const screenWidth = window.innerWidth;
-//   const screenHeight = window.innerHeight;
-  
-//   const initialHeight = screenHeight * 0.65;
-//   const initialWidth = screenWidth * 0.5;
-  
-//   const [currentHeight, setCurrentHeight] = useState(initialHeight);
-//   const [currentWidth, setCurrentWidth] = useState(initialWidth);
-
-//   const minHeight = screenHeight * 0.45;
-//   const minWidth = screenWidth * 0.3;
-  
-//   const windowHeight = 50;
-//   const windowWidth = 30;
-
-//   const initialX = (screenWidth - windowWidth) / 2;
-//   const initialY = (screenHeight - windowHeight) / 2;
-
-    const handleTerminalItemClick = (text) => {
-        if (isTerminalClosed) {
-          setisTerminalClosed(false);
-        }
-        if (isTerminalHidden) {
-            setisTerminalHidden(false);
-        }
-        setTerminalText(text);
-      };
-
-    const handleMouseDown = (e) => {//solo se usa dentro de screen
-      if (!buttonDragEnabled) {
-        return;
-      }
-      setDragging(true);
-      setOffset({
-        x: e.clientX - windowPosition.x,
-        y: e.clientY - windowPosition.y
-      });
-    };
+function TerminalTop({ handleTerminalItemClick, handleMouseDown, minimize, maximize, closeTerminal, terminalTitle }) {
+    // const [menuVisible, setMenuVisible] = useState(false);
+    // const [indexVisible, setIndexVisible] = useState(false);
+    // const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+    // const [menuOption1Visible, setMenuOption1Visible] = useState(false);
+    // const [selection, setSelection] = useState(terminalDefault);
+    // const [noSelection1, setNoSelection1] = useState(terminalRoot);
+    // const [noSelection2, setNoSelection2] = useState(terminalUser);
+    // const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
+    // const [dragging, setDragging] = useState(false);
+    // const [offset, setOffset] = useState({ x: 0, y: 0 });
+    // const [isWindowHidden, setWindowHidden] = useState(false);
+    // const [isTerminalHidden, setisTerminalHidden] = useState(false);
+    // const [isTerminalClosed, setisTerminalClosed] = useState(false);
+    // const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
+    // const [height, setHeight] = useState(0);
+    // const [width, setWidth] = useState(0);
+    // const [terminalText, setTerminalText] = useState("Inicio");
+    // const screenWidth = window.innerWidth;
+    // const screenHeight = window.innerHeight;
+    // const initialHeight = screenHeight * 0.65;
+    // const initialWidth = screenWidth * 0.5;
+    // const [currentHeight, setCurrentHeight] = useState(initialHeight);
+    // const [currentWidth, setCurrentWidth] = useState(initialWidth);
 
     return(
         <div className="top" 
