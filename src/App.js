@@ -13,6 +13,7 @@ import Menu from './Menu.js';
 import Inicio from './Inicio.js';
 import TerminalContent from './TerminalContent.js';
 import TerminalTop from './TerminalTop.js';
+import Terminal from './Terminal.js';
 
 function getTerminalName(image) {
   switch (image) {
@@ -338,9 +339,10 @@ function App() {
             width: width,
           }}
         >
-          <TerminalTop dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
+          {/* <TerminalTop dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
           <div className="line"></div>
-          <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/>
+          <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/> */}
+          <Terminal selected={selection} altura={height} textoTerminal={terminalText} dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
         </div>
       </div>
     </div>
