@@ -327,7 +327,7 @@ function App() {
             <Clock />
           </div>
         </div> */}
-        {/* <BarraTareas 
+        <BarraTareas 
           isTerminalHidden={isTerminalHidden} 
           isTerminalClosed={isTerminalClosed} 
           openTerminal={() => openTerminal()} // Aquí agregué los paréntesis ()
@@ -348,7 +348,7 @@ function App() {
           handleDisplayClick={() => handleDisplayClick()} // Aquí agregué los paréntesis ()
           handleIndexClick={() => handleIndexClick()} // Aquí agregué los paréntesis ()
           setButtonDragEnabled={setButtonDragEnabled()}
-        /> */}
+        />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
