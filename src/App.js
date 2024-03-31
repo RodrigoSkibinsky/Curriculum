@@ -12,6 +12,7 @@ import Estudios from './Estudios.js';
 import Menu from './Menu.js';
 import Inicio from './Inicio.js';
 import TerminalContent from './TerminalContent.js';
+import TerminalTop from './TerminalTop.js';
 
 function getTerminalName(image) {
   switch (image) {
