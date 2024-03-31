@@ -97,7 +97,7 @@ function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, 
               )}
             </div>
             <div className='vertical-line'></div>
-            <div className={`frame ${isTerminalHidden ? '' : 'selected'} ${isTerminalClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility}>
+            <div className={`frame ${isTerminalHidden ? '' : 'selected'} ${isTerminalClosed ? 'oculto' : ''}`} onClick={toggleScreenVisibility()}>
                 <img src={terminalDefault} className="open-icon app-small" alt="logo"/> 
             </div>
           </div>
