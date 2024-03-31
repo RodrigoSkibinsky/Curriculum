@@ -118,6 +118,7 @@ function App() {
   };  
 
   const closeTerminal = () => {//solo se usa dentro de screen
+    const maxHeight = screenHeight - 32;
     setisTerminalHidden(true);
     setisTerminalClosed(true);
     if (height === maxHeight) {
