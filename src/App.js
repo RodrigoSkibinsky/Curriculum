@@ -171,6 +171,10 @@ function App() {
     }
   };
   
+  const toggleScreenVisibility = () => {
+    setisTerminalHidden(!isTerminalHidden);
+  };
+  
   const handleMouseUp = () => {//solo se usa dentro de screen
     setDragging(false);
   };
@@ -266,7 +270,7 @@ function App() {
             <Clock />
           </div>
         </div> */}
-        <BarraTareas seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
+        <BarraTareas toggleScreenVisibility={toggleScreenVisibility()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}

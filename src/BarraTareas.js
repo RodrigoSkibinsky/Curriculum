@@ -6,7 +6,7 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 
-function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({ toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
      
     
     const [menuVisible, setMenuVisible] = useState(false);
@@ -19,10 +19,6 @@ function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, 
       e.stopPropagation(); // Detener la propagación del evento
       setMenuOption0Visible(!menuOption0Visible);
       setMenuOption1Visible(false);
-    };
-  
-    const toggleScreenVisibility = () => {
-      setisTerminalHidden(!isTerminalHidden);
     };
     
     const handleOption1Click = (e) => {
