@@ -7,45 +7,53 @@ import './App.css';
 import Clock from './Clock.js';
 
 function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
-   
-    // const [menuVisible, setMenuVisible] = useState(false);
-    // const [indexVisible, setIndexVisible] = useState(false);
+     
     
-    // const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-    // const [menuOption1Visible, setMenuOption1Visible] = useState(false);
-    
-    // const [selection, setSelection] = useState(terminalDefault);
-    // const [noSelection1, setNoSelection1] = useState(terminalRoot);
-    // const [noSelection2, setNoSelection2] = useState(terminalUser);
-    // const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
-    // const [dragging, setDragging] = useState(false);
-    // const [offset, setOffset] = useState({ x: 0, y: 0 });
-    // const [isWindowHidden, setWindowHidden] = useState(false);
-    // const [isTerminalHidden, setisTerminalHidden] = useState(false);
-    // const [isTerminalClosed, setisTerminalClosed] = useState(false);
-    // const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
-    // const [height, setHeight] = useState(0);
-    // const [width, setWidth] = useState(0);
-    // const [terminalText, setTerminalText] = useState("Inicio");
-    
-    // const screenWidth = window.innerWidth;
-    // const screenHeight = window.innerHeight;
-    
-    // const initialHeight = screenHeight * 0.65;
-    // const initialWidth = screenWidth * 0.5;
-    
-    // const [currentHeight, setCurrentHeight] = useState(initialHeight);
-    // const [currentWidth, setCurrentWidth] = useState(initialWidth);
-    
-    // const minHeight = screenHeight * 0.45;
-    // const minWidth = screenWidth * 0.3;
-    
-    // const windowHeight = 50;
-    // const windowWidth = 30;
-    
-    // const initialX = (screenWidth - windowWidth) / 2;
-    // const initialY = (screenHeight - windowHeight) / 2;
+    const [menuVisible, setMenuVisible] = useState(false);
+    const [indexVisible, setIndexVisible] = useState(false);
   
+    const handleOption0Click = (e) => {
+      e.stopPropagation(); // Detener la propagación del evento
+      setMenuOption0Visible(!menuOption0Visible);
+      setMenuOption1Visible(false);
+    };
+  
+    const toggleScreenVisibility = () => {
+      setisTerminalHidden(!isTerminalHidden);
+    };
+    
+    const handleOption1Click = (e) => {
+      e.stopPropagation(); // Detener la propagación del evento
+      setMenuOption1Visible(!menuOption1Visible);
+      setMenuOption0Visible(false);
+    };
+
+    const handleDisplayClick = () => {
+      setMenuVisible(!menuVisible);
+      if (indexVisible) {
+        setIndexVisible(false)
+      }
+    };
+  
+    const handleIndexMouseEnter = () => {
+      setIndexVisible(true);
+      setMenuVisible(false);
+      setMenuOption0Visible(false);
+      setMenuOption1Visible(false);
+    };
+    
+    const handleOption0MouseEnter = (e) => {
+      e.stopPropagation(); // Detener la propagación del evento
+      setMenuOption0Visible(!menuOption0Visible);
+      setMenuOption1Visible(false);
+    };
+    
+    const handleOption1MouseEnter = (e) => {
+      e.stopPropagation(); // Detener la propagación del evento
+      setMenuOption1Visible(!menuOption1Visible);
+      setMenuOption0Visible(false);
+    };
+    
     const handleIndexClick = () => {
       setIndexVisible(!indexVisible);
       if (menuVisible) {
@@ -55,7 +63,7 @@ function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, 
         setMenuOption0Visible(false);
         setMenuOption1Visible(false);
       }
-    };
+    };  
 
     return(
         <div className="barraTareas">
@@ -72,7 +80,7 @@ function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, 
                     }}>
                   </div>
                   <div className='icon-holder-holder'>
-                    <div className="index-menu-item" onClick={IndiceClick}>
+                    <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={terminalDefault} className="icon Terminal" alt="logo" />
                       <p>{terminalNameDefault}</p>
                     </div>
