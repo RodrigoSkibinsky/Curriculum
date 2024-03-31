@@ -57,6 +57,9 @@ function App() {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
   const [terminalText, setTerminalText] = useState("Inicio");
+    
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [indexVisible, setIndexVisible] = useState(false);
 
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;

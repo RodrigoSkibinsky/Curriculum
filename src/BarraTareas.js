@@ -8,10 +8,6 @@ import Clock from './Clock.js';
 import Menu from './Menu.js';
 
 function BarraTareas({ toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
-     
-    
-    const [menuVisible, setMenuVisible] = useState(false);
-    const [indexVisible, setIndexVisible] = useState(false);
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
