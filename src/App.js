@@ -333,7 +333,7 @@ function App() {
             height: height,
             width: width,
           }} >
-          <TerminalTop />
+          <TerminalTop selected={selection}/>
           <div className="line"></div>
           <TerminalContent selected={selection} altura={height} textoTerminal={terminalText}/>
         </div>
