@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import logo from './logo-kali.svg';
-// import fotoPerfil from './foto-perfil-cv.jpg';
 import terminalDefault from './terminal-default-icon.png';
 import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
