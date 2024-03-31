@@ -5,6 +5,7 @@ import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
+import Menu from './Menu.js';
 
 function BarraTareas({ toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
      
@@ -89,7 +90,7 @@ function BarraTareas({ toggleScreenVisibility, openTerminal, terminalNameDefault
                     </div>
                   </div>
                   <div className='icon-holder-holder'>
-                    <div className="index-menu-item" onClick={IndiceClick}>
+                    <div className="index-menu-item" onClick={handleIndexClick}>
                       <img src={logo} className="icon Terminal" alt="logo" />
                       <p>Proyectos</p>
                     </div>
