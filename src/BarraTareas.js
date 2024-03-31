@@ -85,11 +85,11 @@ function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, 
               <p className='icon display-terminal'> {'>'} </p>
               {menuVisible && (
                   <div className="menu">
-                  <div className="menu-item" onClick={() => seleccionarNoSelec1}>
+                  <div className="menu-item" onClick={() => seleccionarNoSelec1()}>
                     <img src={noSelection1} className="icon Terminal" alt="logo" />
                     <p>{terminalNameNoSelec1}</p>
                   </div>
-                  <div className="menu-item" onClick={() => seleccionarNoSelec2}>
+                  <div className="menu-item" onClick={() => seleccionarNoSelec2()}>
                     <img src={noSelection2} className="icon Terminal" alt="logo" />
                     <p>{terminalNameNoSelec2}</p>
                   </div>
