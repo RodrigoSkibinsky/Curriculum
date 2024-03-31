@@ -7,7 +7,7 @@ import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
 
-function BarraTareas({ indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({ imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
@@ -35,19 +35,6 @@ function BarraTareas({ indexVisible, handleIndexClick, toggleScreenVisibility, o
       setMenuOption1Visible(!menuOption1Visible);
       setMenuOption0Visible(false);
     };
-
-    const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
-    const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
-    const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
-  
-    // const imagenesMenu1 = [terminalDefault, terminalDefault];
-    // const functionsMenu1 = [() => handleSelection(imagenesMenu1[0]), () => handleSelection(imagenesMenu0[1])];
-    // const textoMenu1 = ["... 1 ...", "... 2 ..."];
-
-    const menu0click = (text) => {
-      handleTerminalItemClick(text);
-      setIndexVisible(false);
-    }
 
     return(
         <div className="barraTareas">

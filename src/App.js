@@ -214,6 +214,15 @@ function App() {
     handleTerminalItemClick(ItemClick);
   }
 
+  const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
+  const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
+  const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
+  
+  const menu0click = (text) => {
+    handleTerminalItemClick(text);
+    setIndexVisible(false);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -287,7 +296,7 @@ function App() {
             <Clock />
           </div>
         </div> */}
-        <BarraTareas indexVisible={indexVisible} handleIndexClick={handleIndexClick()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
+        <BarraTareas textoMenu0={textoMenu0} functionsMenu0={functionsMenu0} imagenesMenu0={imagenesMenu0} indexVisible={indexVisible} handleIndexClick={handleIndexClick()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
