@@ -8,43 +8,43 @@ import Clock from './Clock.js';
 
 function BarraTareas({ openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
    
-    const [menuVisible, setMenuVisible] = useState(false);
-    const [indexVisible, setIndexVisible] = useState(false);
+    // const [menuVisible, setMenuVisible] = useState(false);
+    // const [indexVisible, setIndexVisible] = useState(false);
     
-    const [menuOption0Visible, setMenuOption0Visible] = useState(false);
-    const [menuOption1Visible, setMenuOption1Visible] = useState(false);
+    // const [menuOption0Visible, setMenuOption0Visible] = useState(false);
+    // const [menuOption1Visible, setMenuOption1Visible] = useState(false);
     
-    const [selection, setSelection] = useState(terminalDefault);
-    const [noSelection1, setNoSelection1] = useState(terminalRoot);
-    const [noSelection2, setNoSelection2] = useState(terminalUser);
-    const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
-    const [dragging, setDragging] = useState(false);
-    const [offset, setOffset] = useState({ x: 0, y: 0 });
-    const [isWindowHidden, setWindowHidden] = useState(false);
-    const [isTerminalHidden, setisTerminalHidden] = useState(false);
-    const [isTerminalClosed, setisTerminalClosed] = useState(false);
-    const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
-    const [height, setHeight] = useState(0);
-    const [width, setWidth] = useState(0);
-    const [terminalText, setTerminalText] = useState("Inicio");
+    // const [selection, setSelection] = useState(terminalDefault);
+    // const [noSelection1, setNoSelection1] = useState(terminalRoot);
+    // const [noSelection2, setNoSelection2] = useState(terminalUser);
+    // const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
+    // const [dragging, setDragging] = useState(false);
+    // const [offset, setOffset] = useState({ x: 0, y: 0 });
+    // const [isWindowHidden, setWindowHidden] = useState(false);
+    // const [isTerminalHidden, setisTerminalHidden] = useState(false);
+    // const [isTerminalClosed, setisTerminalClosed] = useState(false);
+    // const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
+    // const [height, setHeight] = useState(0);
+    // const [width, setWidth] = useState(0);
+    // const [terminalText, setTerminalText] = useState("Inicio");
     
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
+    // const screenWidth = window.innerWidth;
+    // const screenHeight = window.innerHeight;
     
-    const initialHeight = screenHeight * 0.65;
-    const initialWidth = screenWidth * 0.5;
+    // const initialHeight = screenHeight * 0.65;
+    // const initialWidth = screenWidth * 0.5;
     
-    const [currentHeight, setCurrentHeight] = useState(initialHeight);
-    const [currentWidth, setCurrentWidth] = useState(initialWidth);
+    // const [currentHeight, setCurrentHeight] = useState(initialHeight);
+    // const [currentWidth, setCurrentWidth] = useState(initialWidth);
     
-    const minHeight = screenHeight * 0.45;
-    const minWidth = screenWidth * 0.3;
+    // const minHeight = screenHeight * 0.45;
+    // const minWidth = screenWidth * 0.3;
     
-    const windowHeight = 50;
-    const windowWidth = 30;
+    // const windowHeight = 50;
+    // const windowWidth = 30;
     
-    const initialX = (screenWidth - windowWidth) / 2;
-    const initialY = (screenHeight - windowHeight) / 2;
+    // const initialX = (screenWidth - windowWidth) / 2;
+    // const initialY = (screenHeight - windowHeight) / 2;
   
     const handleIndexClick = () => {
       setIndexVisible(!indexVisible);
