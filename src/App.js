@@ -296,7 +296,7 @@ function App() {
             <Clock />
           </div>
         </div> */}
-        <BarraTareas textoMenu0={textoMenu0} functionsMenu0={functionsMenu0} imagenesMenu0={imagenesMenu0} indexVisible={indexVisible} handleIndexClick={handleIndexClick()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
+        <BarraTareas isTerminalHidden={isTerminalHidden} isTerminalClosed={isTerminalClosed} menuVisible={menuVisible} handleDisplayClick={handleDisplayClick()} textoMenu0={textoMenu0} functionsMenu0={functionsMenu0} imagenesMenu0={imagenesMenu0} indexVisible={indexVisible} handleIndexClick={handleIndexClick()} seleccionarNoSelec1={handleSelection(noSelection1)} seleccionarNoSelec2={handleSelection(noSelection2)} seleccionarDefault={handleSelection(terminalDefault)} selection={selection} openTerminal={openTerminal()} terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} noSelection1={noSelection1} noSelection2={noSelection2} terminalNameNoSelec2={getTerminalName(noSelection2)} />
       </header>
       <div 
         className={`screen ${isTerminalHidden ? 'oculto' : ''}`}
