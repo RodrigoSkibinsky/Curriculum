@@ -82,7 +82,12 @@ function Desktop() {
 
   const handleMenuLangVisibility = () => {
     setMenuLangVisible(!menuLangVisible)
-    console.log(menuLangVisible)
+    if (indexVisible) {
+      setIndexVisible(false);
+    }
+    if (menuVisible) {
+      setMenuVisible(false);
+    }
   };
 
   const handleTerminalItemClick = (text) => {
@@ -117,6 +122,9 @@ function Desktop() {
     setIndexVisible(!indexVisible);
     if (menuVisible) {
       setMenuVisible(false);
+    }
+    if (menuLangVisible) {
+      setMenuLangVisible(false);
     }
     if (!indexVisible) {
       setMenuOption0Visible(false);

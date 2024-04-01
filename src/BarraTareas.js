@@ -49,7 +49,7 @@ function BarraTareas({
       whoIsRodrigoText = '¿Who is Rodrigo Sacramento?';
       break;
     default:
-      whoIsRodrigoText = ''; // Por si acaso
+      whoIsRodrigoText = '¿Quién es Rodrigo Sacramento?'; // Por si acaso
       break;
   }
 
