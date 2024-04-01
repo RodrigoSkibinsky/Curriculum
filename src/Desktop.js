@@ -55,7 +55,7 @@ function Desktop() {
   const [width, setWidth] = useState(0);
   const [terminalText, setTerminalText] = useState("Inicio");
 
-  const [language, setLanguage] = useState("Español");
+  const [language, setLanguage] = useState("English");
   const [menuLangVisible, setMenuLangVisible] = useState(false);
 
   const screenWidth = window.innerWidth;

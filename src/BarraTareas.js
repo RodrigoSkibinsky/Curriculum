@@ -53,6 +53,13 @@ function BarraTareas({
       break;
   }
 
+  let Idioma;
+  if (language === 'English') {
+    Idioma = 'Language'
+  } else {
+    Idioma = 'Idioma'
+  }
+
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
   
@@ -119,6 +126,7 @@ function BarraTareas({
             </div>
             <div className="icon-holder" style={{margin: '0px 10px 0px 5px'}}  onClick={handleMenuLangVisibility}>
               <img style={{ width: '20px'}} src={languageIcon} className="icon Terminal" alt="logo"/>
+              <p style={{marginLeft: '10px'}}>{Idioma}</p>
               <Menu left={0} visible={menuLangVisible} indiceMenu={0} num={numElemLang} img={imagenesMenuLang} functionArray={functionsMenuLang} textoArray={textoMenuLang}/>
             </div>
             <div className="icon-holder" onClick={openTerminal}>

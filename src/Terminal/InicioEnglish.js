@@ -8,7 +8,7 @@ function InicioEnglish({ name, textColor }) {
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>Feel free to explore this page and its hidden features.</p>
             <p className='terminal-text'><b style={{color: textColor,}}>{name}</b>You can access my information through the terminal options (File, Action, and Edit) or through the start menu in the top left corner.</p>
             <p className='oculto'>Enter</p>
-            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b><i style={{ color: 'red', fontSize: 15}}>Warning: Currently, this page is not optimized for mobile devices or touch screens.</i></p>
+            <p className='terminal-text'><b style={{color: textColor,}}>{name}</b><i style={{ color: 'red', fontSize: 15}}>Warning: This page is not currently optimized for mobile or touch-screen devices.</i></p>
         </div>
     );
 }
