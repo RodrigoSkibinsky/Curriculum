@@ -7,7 +7,7 @@ import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
 
-function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({ numElem0, setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
@@ -57,7 +57,7 @@ function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, 
                     </div>
                     <div className="icon-holder" onClick={handleOption0Click} onMouseEnter={handleOption0MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      <Menu visible={menuOption0Visible} indiceMenu={0} num={3} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
+                      <Menu visible={menuOption0Visible} indiceMenu={0} num={numElem0} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
                     </div>
                   </div>
                   <div className='icon-holder-holder'>

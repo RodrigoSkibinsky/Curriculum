@@ -47,7 +47,6 @@ function Desktop() {
   const [windowPosition, setWindowPosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  // const [isWindowHidden, setWindowHidden] = useState(false);
   const [isTerminalHidden, setisTerminalHidden] = useState(false);
   const [isTerminalClosed, setisTerminalClosed] = useState(false);
   const [buttonDragEnabled, setButtonDragEnabled] = useState(true);
@@ -210,6 +209,7 @@ function Desktop() {
     handleTerminalItemClick(ItemClick);
   }
 
+  const numElem0 = 3;
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
   const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
@@ -218,6 +218,8 @@ function Desktop() {
     handleTerminalItemClick(text);
     setIndexVisible(false);
   }
+
+  const Menu0 = [numElem0, imagenesMenu0, functionsMenu0, textoMenu0];
 
   ////////////////////////////////////////////////////////////////////////
                                                                         //
@@ -252,7 +254,29 @@ function Desktop() {
   return (
     <div className="App">
       <header className="App-header">
-        <BarraTareas isTerminalHidden={isTerminalHidden} isTerminalClosed={isTerminalClosed} openTerminal={() => openTerminal()}selection={selection} noSelection1={noSelection1} noSelection2={noSelection2} menuVisible={menuVisible} seleccionarDefault={() => handleSelection(terminalDefault)}seleccionarNoSelec1={() => handleSelection(noSelection1)}seleccionarNoSelec2={() => handleSelection(noSelection2)}terminalNameDefault={getTerminalName(terminalDefault)} terminalNameNoSelec1={getTerminalName(noSelection1)} terminalNameNoSelec2={getTerminalName(noSelection2)} textoMenu0={textoMenu0} functionsMenu0={functionsMenu0} imagenesMenu0={imagenesMenu0} indexVisible={indexVisible} handleDisplayClick={() => handleDisplayClick()}handleIndexClick={() => handleIndexClick()}setButtonDragEnabled={setButtonDragEnabled}toggleScreenVisibility={toggleScreenVisibility}
+        <BarraTareas 
+          isTerminalHidden={isTerminalHidden}
+          isTerminalClosed={isTerminalClosed}
+          openTerminal={() => openTerminal()}
+          selection={selection}
+          noSelection1={noSelection1}
+          noSelection2={noSelection2}
+          menuVisible={menuVisible} 
+          seleccionarDefault={() => handleSelection(terminalDefault)}
+          seleccionarNoSelec1={() => handleSelection(noSelection1)}
+          seleccionarNoSelec2={() => handleSelection(noSelection2)}
+          terminalNameDefault={getTerminalName(terminalDefault)}
+          terminalNameNoSelec1={getTerminalName(noSelection1)}
+          terminalNameNoSelec2={getTerminalName(noSelection2)}
+          numElem0={Menu0[0]}
+          imagenesMenu0={Menu0[1]}
+          functionsMenu0={Menu0[2]}
+          textoMenu0={Menu0[3]}
+          indexVisible={indexVisible}
+          handleDisplayClick={() => handleDisplayClick()}
+          handleIndexClick={() => handleIndexClick()}
+          setButtonDragEnabled={setButtonDragEnabled}
+          toggleScreenVisibility={toggleScreenVisibility}
         />
       </header>
       <div 
@@ -268,7 +292,19 @@ function Desktop() {
             width: width,
           }}
         >
-          <Terminal title={getTerminalTitle(selection)} selected={selection} altura={height} textoTerminal={terminalText} dragging={dragging} handleMouseDown={handleMouseDown} handleTerminalItemClick={handleTerminalItemClick} minimize={minimize} maximize={maximize} closeTerminal={closeTerminal} terminalTitle={getTerminalTitle(selection)} />
+          <Terminal 
+            title={getTerminalTitle(selection)} 
+            selected={selection} 
+            altura={height} 
+            textoTerminal={terminalText} 
+            dragging={dragging} 
+            handleMouseDown={handleMouseDown} 
+            handleTerminalItemClick={handleTerminalItemClick} 
+            minimize={minimize} 
+            maximize={maximize} 
+            closeTerminal={closeTerminal} 
+            terminalTitle={getTerminalTitle(selection)}
+          />
         </div>
       </div>
     </div>
