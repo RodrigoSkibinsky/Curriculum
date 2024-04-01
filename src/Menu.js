@@ -1,13 +1,8 @@
-import logo from './logo-kali.svg';
+import React, { useState, useEffect } from 'react';
 import terminalDefault from './terminal-default-icon.png';
 import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
-import Clock from './Clock.js';
-import React, { useState, useEffect } from 'react';
-import Presentacion from './Presentacion.js';
-import Experiencia from './Experiencia.js';
-import Estudios from './Estudios.js';
 
 function getTerminalName(image) {
   switch (image) {

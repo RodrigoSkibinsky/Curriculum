@@ -5,11 +5,11 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import BarraTareas from './BarraTareas.js';
 import Menu from './Menu.js';
-import Terminal from './Terminal.js';
-import Inicio from './Inicio.js';
-import Presentacion from './Presentacion.js';
-import Experiencia from './Experiencia.js';
-import Estudios from './Estudios.js';
+import Terminal from './Terminal/Terminal.js';
+import Inicio from './Terminal/Inicio.js';
+import Presentacion from './Terminal/Presentacion.js';
+import Experiencia from './Terminal/Experiencia.js';
+import Estudios from './Terminal/Estudios.js';
 
 function getTerminalName(image) {
   switch (image) {
