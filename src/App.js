@@ -7,8 +7,9 @@ function App() {
   const OSInfo = () => {
   
     useEffect(() => {
-      const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-      setIsTouchScreen(isTouchDevice);
+      const userAgent = window.navigator.userAgent;
+      const isMobileOS = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+      setIsTouchScreen(isMobileOS);
     }, []);
   }
   return (
