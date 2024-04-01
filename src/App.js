@@ -7,7 +7,16 @@ function App() {
   const [isTouchScreen, setIsTouchScreen] = useState(false);
   const OSInfo = () => {
     useEffect(() => {
-      setIsTouchScreen(isTouchDevice());
+      const onTouchStart = () => {
+        setIsTouchScreen(true);
+        window.removeEventListener('touchstart', onTouchStart);
+      };
+  
+      window.addEventListener('touchstart', onTouchStart);
+  
+      return () => {
+        window.removeEventListener('touchstart', onTouchStart);
+      };
     }, []);
   }
   return (
