@@ -21,9 +21,6 @@ function App() {
   return (
     <div className="App-Holder">
       <Desktop />
-      {/* <div>
-        <p style={{color:'#000', textAlign: 'center'}}>¿Dispositivo táctil?: {isTouchScreen ? 'Sí' : 'No'}</p>
-      </div> */}
     </div>
   );
 }

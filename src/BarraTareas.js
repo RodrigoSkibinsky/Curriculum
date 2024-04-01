@@ -6,8 +6,52 @@ import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
+import languageIcon from './languaje.png';
 
-function BarraTareas({ numElem0, setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
+function BarraTareas({
+  language,
+  setButtonDragEnabled, 
+  isTerminalHidden, 
+  isTerminalClosed, 
+  menuVisible, 
+  handleDisplayClick,
+  handleMenuLangVisibility,
+  menuLangVisible,
+  numElemLang, 
+  imagenesMenuLang, 
+  functionsMenuLang, 
+  textoMenuLang,
+  numElem0, 
+  imagenesMenu0, 
+  functionsMenu0, 
+  textoMenu0, 
+  indexVisible, 
+  handleIndexClick, 
+  toggleScreenVisibility, 
+  openTerminal, 
+  terminalNameDefault, 
+  terminalNameNoSelec1, 
+  terminalNameNoSelec2, 
+  selection, 
+  noSelection1, 
+  noSelection2, 
+  seleccionarDefault, 
+  seleccionarNoSelec1, 
+  seleccionarNoSelec2 
+}) {
+
+  let whoIsRodrigoText;
+  switch (language) {
+    case 'Español':
+      whoIsRodrigoText = '¿Quién es Rodrigo Sacramento?';
+      break;
+    case 'English':
+      whoIsRodrigoText = '¿Who is Rodrigo Sacramento?';
+      break;
+    default:
+      whoIsRodrigoText = ''; // Por si acaso
+      break;
+  }
 
     const [menuOption0Visible, setMenuOption0Visible] = useState(false);
     const [menuOption1Visible, setMenuOption1Visible] = useState(false);
@@ -57,7 +101,7 @@ function BarraTareas({ numElem0, setButtonDragEnabled, isTerminalHidden, isTermi
                     </div>
                     <div className="icon-holder" onClick={handleOption0Click} onMouseEnter={handleOption0MouseEnter}>
                       <p className='icon display-app-options'>{'>'}</p>
-                      <Menu visible={menuOption0Visible} indiceMenu={0} num={numElem0} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
+                      <Menu left={1} visible={menuOption0Visible} indiceMenu={0} num={numElem0} img={imagenesMenu0} functionArray={functionsMenu0} textoArray={textoMenu0} />
                     </div>
                   </div>
                   <div className='icon-holder-holder'>
@@ -72,6 +116,10 @@ function BarraTareas({ numElem0, setButtonDragEnabled, isTerminalHidden, isTermi
                   </div>
                 </div>
               )}
+            </div>
+            <div className="icon-holder" style={{margin: '0px 10px 0px 5px'}}  onClick={handleMenuLangVisibility}>
+              <img style={{ width: '20px'}} src={languageIcon} className="icon Terminal" alt="logo"/>
+              <Menu left={0} visible={menuLangVisible} indiceMenu={0} num={numElemLang} img={imagenesMenuLang} functionArray={functionsMenuLang} textoArray={textoMenuLang}/>
             </div>
             <div className="icon-holder" onClick={openTerminal}>
               <img src={selection} className="icon Terminal" alt="logo"/>
@@ -102,7 +150,7 @@ function BarraTareas({ numElem0, setButtonDragEnabled, isTerminalHidden, isTermi
             </div>
           </div>
           <div className="barra barra2">
-            <p>¿Quién es Rodrigo Sacramento?</p>
+            <p>{whoIsRodrigoText}</p>
           </div>
           <div className="barra barra3">
             <Clock />

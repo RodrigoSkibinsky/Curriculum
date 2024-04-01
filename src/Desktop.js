@@ -4,12 +4,9 @@ import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import BarraTareas from './BarraTareas.js';
-import Menu from './Menu.js';
 import Terminal from './Terminal/Terminal.js';
-import Inicio from './Terminal/Inicio.js';
-import Presentacion from './Terminal/Presentacion.js';
-import Experiencia from './Terminal/Experiencia.js';
-import Estudios from './Terminal/Estudios.js';
+import Spanish from './bandera-espaniol.png';
+import English from './bandera-usa.jpg';
 
 function getTerminalName(image) {
   switch (image) {
@@ -37,6 +34,10 @@ function getTerminalTitle(image) {
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function Desktop() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [indexVisible, setIndexVisible] = useState(false);
@@ -53,6 +54,9 @@ function Desktop() {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
   const [terminalText, setTerminalText] = useState("Inicio");
+
+  const [language, setLanguage] = useState("Español");
+  const [menuLangVisible, setMenuLangVisible] = useState(false);
 
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
@@ -71,6 +75,15 @@ function Desktop() {
 
   const initialX = (screenWidth - windowWidth) / 2;
   const initialY = (screenHeight - windowHeight) / 2;
+
+  const handleLanguage = (lang) => {
+    setLanguage(lang)
+  };
+
+  const handleMenuLangVisibility = () => {
+    setMenuLangVisible(!menuLangVisible)
+    console.log(menuLangVisible)
+  };
 
   const handleTerminalItemClick = (text) => {
     if (isTerminalClosed) {
@@ -221,6 +234,18 @@ function Desktop() {
 
   const Menu0 = [numElem0, imagenesMenu0, functionsMenu0, textoMenu0];
 
+  const numElemLang = 2;
+  const imagenesMenuLang = [Spanish, English];
+  const functionsMenuLang = [() => menu0Langclick("Español"), () => menu0Langclick("English")]; // Corrige la declaración de las variables
+  const textoMenuLang = ["Español", "English"];
+
+  const menu0Langclick = (text) => {
+    handleLanguage(text);
+    setMenuLangVisible(false);
+  }
+
+  const MenuLang = [numElemLang, imagenesMenuLang, functionsMenuLang, textoMenuLang];
+
   ////////////////////////////////////////////////////////////////////////
                                                                         //
   const [menuOption0Visible, setMenuOption0Visible] = useState(false);  //
@@ -255,9 +280,16 @@ function Desktop() {
     <div className="App">
       <header className="App-header">
         <BarraTareas 
+          language={language}
           isTerminalHidden={isTerminalHidden}
           isTerminalClosed={isTerminalClosed}
           openTerminal={() => openTerminal()}
+          handleMenuLangVisibility={() => handleMenuLangVisibility()}
+          menuLangVisible={menuLangVisible}
+          numElemLang={MenuLang[0]}
+          imagenesMenuLang={MenuLang[1]}
+          functionsMenuLang={MenuLang[2]}
+          textoMenuLang={MenuLang[3]}
           selection={selection}
           noSelection1={noSelection1}
           noSelection2={noSelection2}
@@ -293,6 +325,7 @@ function Desktop() {
           }}
         >
           <Terminal 
+            language={language}
             title={getTerminalTitle(selection)} 
             selected={selection} 
             altura={height} 

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import fotoPerfil from './foto-perfil-cv.jpg';
 import './../App.css';
-import Clock from '../Clock.js';
 import Presentacion from './Presentacion.js';
 import Experiencia from './Experiencia.js';
 import Estudios from './Estudios.js';
@@ -32,25 +31,25 @@ function getTerminalColor(image) {
   }
 }
 
-function TerminalContent({ selected, altura, textoTerminal }) {
+function TerminalContent({ language, selected, altura, textoTerminal }) {
     return(
           <div className="content" style={{
             overflowY: 'auto',
             maxHeight: `${altura - 100}px`,
           }}>
             <div>
-                <img className='profilePicture' src={fotoPerfil} alt='Profile Picture'/>
+                <img className='profilePicture' src={fotoPerfil} alt=''/>
             </div>
             {(() => {
               switch (textoTerminal) {
                 case "Inicio":
-                  return <Inicio name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
+                  return <Inicio language={language} name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
                 case "Action":
-                  return <Experiencia name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
+                  return <Experiencia language={language} name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
                 case "Edit":
-                  return <Estudios name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
+                  return <Estudios language={language} name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
                 default:
-                  return <Presentacion name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
+                  return <Presentacion language={language} name={getTerminalSubTitle(selected)} textColor={getTerminalColor(selected)} />;
               }
             })()}
           </div>
