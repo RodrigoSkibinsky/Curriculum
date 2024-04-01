@@ -348,6 +348,7 @@ function App() {
           handleDisplayClick={() => handleDisplayClick()} // Aquí agregué los paréntesis ()
           handleIndexClick={() => handleIndexClick()} // Aquí agregué los paréntesis ()
           setButtonDragEnabled={setButtonDragEnabled}
+          toggleScreenVisibility={toggleScreenVisibility}
         />
       </header>
       <div 
