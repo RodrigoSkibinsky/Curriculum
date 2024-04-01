@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './../App.css';
 
+const terminalDefault = '../img/terminal-default-icon.png'
+
 function TerminalTop({ dragging, handleTerminalItemClick, handleMouseDown, minimize, maximize, closeTerminal, terminalTitle }) {
   
     return(
