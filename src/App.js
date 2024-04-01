@@ -8,9 +8,9 @@ import Presentacion from './Terminal/Presentacion.js';
 import Experiencia from './Terminal/Experiencia.js';
 import Estudios from './Terminal/Estudios.js';
 
-const terminalDefault = 'img/terminal-default-icon.png'
-const terminalRoot = 'img/terminal-root-icon.png'
-const terminalUser = 'img/terminal-user-icon.png'
+const terminalDefault = './img/terminal-default-icon.png'
+const terminalRoot = './img/terminal-root-icon.png'
+const terminalUser = './img/terminal-user-icon.png'
 
 function getTerminalName(image) {
   switch (image) {
