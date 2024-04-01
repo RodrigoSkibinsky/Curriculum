@@ -109,6 +109,9 @@ function Desktop() {
     if (indexVisible) {
       setIndexVisible(false)
     }
+    if (menuLangVisible) {
+      setMenuLangVisible(false);
+    }
   };
 
   const handleIndexMouseEnter = () => {
