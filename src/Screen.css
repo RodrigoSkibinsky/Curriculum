@@ -175,6 +175,7 @@
 
   .terminal-text, .terminal-sub-title {
     text-align: left;
+    margin: 15px 5px;
   }
 
   .Terminal {
