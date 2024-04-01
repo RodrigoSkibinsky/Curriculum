@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo-kali.svg';
 import fotoPerfil from './foto-perfil-cv.jpg';
 import './../App.css';
 import Clock from '../Clock.js';
