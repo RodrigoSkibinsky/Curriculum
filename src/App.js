@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Desktop from './Desktop.js';
+import isTouchDevice from 'is-touch-device';
 
 function App() {
   const [isTouchScreen, setIsTouchScreen] = useState(false);
   const OSInfo = () => {
-  
     useEffect(() => {
-      const userAgent = window.navigator.userAgent;
-      const isMobileOS = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-      setIsTouchScreen(isMobileOS);
+      setIsTouchScreen(isTouchDevice());
     }, []);
   }
   return (
