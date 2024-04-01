@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo-kali.svg';
-import terminalDefault from './terminal-default-icon.png';
-import terminalRoot from './terminal-root-icon.png';
-import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
