@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import fotoPerfil from './foto-perfil-cv.jpg';
 import './../App.css';
 import Clock from '../Clock.js';
 import Presentacion from './Presentacion.js';
@@ -7,10 +8,9 @@ import Estudios from './Estudios.js';
 import Menu from '../Menu.js';
 import Inicio from './Inicio.js';
 
-const fotoPerfil = './../img/foto-perfil-cv.jpg'
-const terminalDefault = './img/terminal-default-icon.png'
-const terminalRoot = './img/terminal-root-icon.png'
-const terminalUser = './img/terminal-user-icon.png'
+const terminalDefault = 'img/terminal-default-icon.png'
+const terminalRoot = 'img/terminal-root-icon.png'
+const terminalUser = 'img/terminal-user-icon.png'
 
 function getTerminalSubTitle(image) {
   switch (image) {
