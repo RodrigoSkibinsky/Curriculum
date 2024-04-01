@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo-kali.svg';
+import terminalDefault from './terminal-default-icon.png';
+import terminalRoot from './terminal-root-icon.png';
+import terminalUser from './terminal-user-icon.png';
 import './App.css';
 import Clock from './Clock.js';
 import Menu from './Menu.js';
-
-const terminalDefault = './img/terminal-default-icon.png'
 
 function BarraTareas({setButtonDragEnabled, isTerminalHidden, isTerminalClosed, menuVisible, handleDisplayClick, imagenesMenu0, functionsMenu0, textoMenu0, indexVisible, handleIndexClick, toggleScreenVisibility, openTerminal, terminalNameDefault, terminalNameNoSelec1, terminalNameNoSelec2, selection, noSelection1, noSelection2, seleccionarDefault, seleccionarNoSelec1, seleccionarNoSelec2 }) {
 
