@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo-kali.svg';
+import Proyectos from './proyectos.png';
 import terminalDefault from './terminal-default-icon.png';
 import terminalRoot from './terminal-root-icon.png';
 import terminalUser from './terminal-user-icon.png';
@@ -102,7 +103,7 @@ function BarraTareas({
                     }}>
                   </div>
                   <div className='icon-holder-holder'>
-                    <div className="index-menu-item" onClick={handleIndexClick}>
+                    <div className="index-menu-item" onClick={handleIndexClick} onMouseEnter={() => setMenuOption0Visible(false)}>
                       <img src={terminalDefault} className="icon Terminal" alt="logo" />
                       <p>{terminalNameDefault}</p>
                     </div>
@@ -113,7 +114,7 @@ function BarraTareas({
                   </div>
                   <div className='icon-holder-holder'>
                     <div className="index-menu-item" onClick={handleIndexClick}>
-                      <img src={logo} className="icon Terminal" alt="logo" />
+                      <img src={Proyectos} style={{width: '15px', marginRight: '10px'}} className="icon Terminal" alt="logo" />
                       <p>Proyectos</p>
                     </div>
                     <div className="icon-holder" onClick={handleOption1Click} onMouseEnter={handleOption1MouseEnter}>

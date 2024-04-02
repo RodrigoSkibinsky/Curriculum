@@ -56,7 +56,7 @@ function Menu({ left, visible, indiceMenu, num, img, functionArray, textoArray }
     return (
       visible && (
         <div className="option-menu" style={{
-          marginLeft: left*17.5 + 'px',
+          marginLeft: left * 17.5 + 'px',
           marginTop: 41 * indiceMenu + 'px',
         }}>
           {Array.from({ length: num }).map((_, i) => (
