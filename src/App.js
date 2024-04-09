@@ -6,15 +6,14 @@ function App() {
   const [isTouchScreen, setIsTouchScreen] = useState(false);
 
   useEffect(() => {
-    const onTouchStart = () => {
-      setIsTouchScreen(true);
-      window.removeEventListener('touchstart', onTouchStart);
+    const checkTouchScreen = () => {
+      setIsTouchScreen(navigator.maxTouchPoints > 0 || 'ontouchstart' in window);
     };
 
-    window.addEventListener('touchstart', onTouchStart);
+    checkTouchScreen();
 
     return () => {
-      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchstart', checkTouchScreen);
     };
   }, []);
 

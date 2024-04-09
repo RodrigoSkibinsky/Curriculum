@@ -46,6 +46,16 @@ function DesktopMobile() {
   const [isTerminalHidden, setisTerminalHidden] = useState(false);
   const [isTerminalClosed, setisTerminalClosed] = useState(false);
   const [height, setHeight] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newHeight = window.innerHeight - 32.5;
+      setHeight(newHeight);
+    }, 1000); // Actualiza cada segundo
+  
+    // Limpieza del intervalo cuando el componente se desmonta
+    return () => clearInterval(intervalId);
+  }, []); // Esta dependencia vacía asegura que este efecto se ejecute solo una vez al montar el componente
+
   const [terminalText, setTerminalText] = useState("Inicio");
 
   const [language, setLanguage] = useState("English");
