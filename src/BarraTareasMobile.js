@@ -41,18 +41,21 @@ function BarraTareasMobile({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 450);
-    }
-
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 380);
+    };
+  
     // Manejador de eventos para cambiar el estado cuando se redimensiona la ventana
     window.addEventListener('resize', handleResize);
-
+    window.addEventListener('orientationchange', handleResize); // Agregar listener para cambio de orientación
+  
     // Limpieza del manejador de eventos cuando el componente se desmonta
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize); // Quitar listener para cambio de orientación
     };
   }, []);
+  
 
   let whoIsRodrigoText;
   switch (language) {
