@@ -24,43 +24,45 @@ function getTerminalSubTitle(image) {
 }
 
 function getTerminalColor(image) {
-  return image === terminalRoot ? "#e44" : "#3060ff";
+  if (image === terminalRoot) {
+    return "#e44";
+  } else {
+    return "#3060ff";
+  }
 }
 
 function TerminalContent({ language, selected, altura, textoTerminal }) {
-  const [startY, setStartY] = useState(null);
-  const [startScrollTop, setStartScrollTop] = useState(null);
+  const contentRef = useRef(null);
 
   const handleTouchStart = (e) => {
-    setStartY(e.touches[0].clientY);
-    setStartScrollTop(e.target.scrollTop);
-  };
+    const startY = e.touches[0].clientY;
+    const content = contentRef.current;
+    let startScrollTop = content.scrollTop;
 
-  const handleTouchMove = (e) => {
-    if (!startY || !startScrollTop) return;
+    const onTouchMove = (e) => {
+      const currentY = e.touches[0].clientY;
+      const deltaY = currentY - startY;
 
-    const currentY = e.touches[0].clientY;
-    const deltaY = currentY - startY;
+      content.scrollTop = startScrollTop - deltaY;
+    };
 
-    e.target.scrollTop = startScrollTop - deltaY;
-  };
+    const onTouchEnd = () => {
+      content.removeEventListener('touchmove', onTouchMove);
+      content.removeEventListener('touchend', onTouchEnd);
+    };
 
-  const handleTouchEnd = () => {
-    setStartY(null);
-    setStartScrollTop(null);
+    content.addEventListener('touchmove', onTouchMove);
+    content.addEventListener('touchend', onTouchEnd);
   };
 
   return (
-    <div
-      className="content"
+    <div className="content"
       style={{
         overflowY: 'auto',
         maxHeight: `${altura - 90}px`,
       }}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
+      ref={contentRef}
+      onTouchStart={handleTouchStart}>
       <div>
         <img className='profilePicture' src={fotoPerfil} alt='' />
       </div>
