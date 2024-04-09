@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import fotoPerfil from './foto-perfil-cv.jpg';
 import './../App.css';
 import Presentacion from './Presentacion.js';
@@ -33,36 +33,38 @@ function getTerminalColor(image) {
 
 function TerminalContent({ language, selected, altura, textoTerminal }) {
   const contentRef = useRef(null);
+  const [startY, setStartY] = useState(0);
+  const [startScrollTop, setStartScrollTop] = useState(0);
 
   const handleTouchStart = (e) => {
-    const startY = e.touches[0].clientY;
-    const content = contentRef.current;
-    let startScrollTop = content.scrollTop;
+    setStartY(e.touches[0].clientY);
+    setStartScrollTop(contentRef.current.scrollTop);
+  };
 
-    const onTouchMove = (e) => {
-      const currentY = e.touches[0].clientY;
-      const deltaY = currentY - startY;
+  const handleTouchMove = (e) => {
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+    contentRef.current.scrollTop = startScrollTop - deltaY;
+  };
 
-      content.scrollTop = startScrollTop - deltaY;
-    };
-
-    const onTouchEnd = () => {
-      content.removeEventListener('touchmove', onTouchMove);
-      content.removeEventListener('touchend', onTouchEnd);
-    };
-
-    content.addEventListener('touchmove', onTouchMove);
-    content.addEventListener('touchend', onTouchEnd);
+  const handleTouchEnd = () => {
+    // Cleanup event listeners
+    contentRef.current.removeEventListener('touchmove', handleTouchMove);
+    contentRef.current.removeEventListener('touchend', handleTouchEnd);
   };
 
   return (
-    <div className="content"
+    <div
+      className="content"
       style={{
         overflowY: 'auto',
         maxHeight: `${altura - 90}px`,
       }}
       ref={contentRef}
-      onTouchStart={handleTouchStart}>
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div>
         <img className='profilePicture' src={fotoPerfil} alt='' />
       </div>
