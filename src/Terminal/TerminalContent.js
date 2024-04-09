@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import fotoPerfil from './foto-perfil-cv.jpg';
 import './../App.css';
 import Presentacion from './Presentacion.js';
