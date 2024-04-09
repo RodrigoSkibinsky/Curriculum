@@ -58,7 +58,7 @@ function TerminalContent({ language, selected, altura, textoTerminal }) {
       className="content"
       style={{
         overflowY: 'auto',
-        maxHeight: `${altura - 90}px`,
+        maxHeight: `${altura - 110}px`,
       }}
       ref={contentRef}
       onTouchStart={handleTouchStart}
