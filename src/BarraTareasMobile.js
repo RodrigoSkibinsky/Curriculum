@@ -38,6 +38,22 @@ function BarraTareasMobile({
   seleccionarNoSelec2 
 }) {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 380);
+    }
+
+    // Manejador de eventos para cambiar el estado cuando se redimensiona la ventana
+    window.addEventListener('resize', handleResize);
+
+    // Limpieza del manejador de eventos cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   let whoIsRodrigoText;
   switch (language) {
     case 'Español':
@@ -129,7 +145,7 @@ function BarraTareasMobile({
             </div>
           </div>
           <div className="barra barra2">
-            <p>{whoIsRodrigoText}</p>
+              {isMobile ? null : <p>{whoIsRodrigoText}</p>}
           </div>
           <div className="barra barra3">
             <Clock />
