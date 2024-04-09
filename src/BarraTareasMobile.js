@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo-kali.svg';
 import Proyectos from './proyectos.png';
 import terminalDefault from './terminal-default-icon.png';
