@@ -210,6 +210,12 @@ function Desktop() {
     setHeight(initialHeight);
     setWidth(initialWidth);
   }, []);
+
+  useEffect(() => {
+    sobreMiLang();
+    experienciaLaboralLang();
+    trayectoriaAcademicaLang();
+  }, [language])
   
 
   const handleMouseMove = (e) => {//solo se usa dentro de screen
@@ -233,10 +239,36 @@ function Desktop() {
     handleTerminalItemClick(ItemClick);
   }
 
+  const [sobreMi, setSobreMi] = useState("Sobre Mi")
+  const [experienciaLaboral, setExperienciaLaboral] = useState("Experiencia Laboral")
+  const [trayectoriaAcademica, setTrayectoriaAcademica] = useState("Trayectoria Académica")  
+
+  const sobreMiLang = () => {
+    if (language === "English") {
+      setSobreMi("About Me")
+    } else {
+      setSobreMi("Sobre Mi")
+    }
+  }
+  const experienciaLaboralLang = () => {
+    if (language === "English") {
+      setExperienciaLaboral("Work Experience")
+    } else {
+      setExperienciaLaboral("Experiencia Laboral")
+    }
+  }
+  const trayectoriaAcademicaLang = () => {
+    if (language === "English") {
+      setTrayectoriaAcademica("Academic Background")
+    } else {
+      setTrayectoriaAcademica("Trayectoria Académica")
+    }
+  }  
+
   const numElem0 = 3;
   const imagenesMenu0 = [terminalDefault, terminalDefault, terminalDefault];
   const functionsMenu0 = [() => menu0click("File"), () => menu0click("Action"), () => menu0click("Edit")]; // Corrige la declaración de las variables
-  const textoMenu0 = ["Sobre Mi", "Experiencia Laboral", "Trayectoria Académica"];
+  const textoMenu0 = [sobreMi, experienciaLaboral, trayectoriaAcademica];
   
   const menu0click = (text) => {
     handleTerminalItemClick(text);
