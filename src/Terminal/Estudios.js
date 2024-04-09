@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import EstudiosEspaniol from './EstudiosEspaniol';
 import EstudiosEnglish from './EstudiosEnglish';
 

@@ -35,7 +35,8 @@ function TerminalContent({ language, selected, altura, textoTerminal }) {
     return(
           <div className="content" style={{
             overflowY: 'auto',
-            maxHeight: `${altura - 100}px`,
+            maxHeight: `${altura - 90}px`,
+            WebkitOverflowScrolling: 'touch',
           }}>
             <div>
                 <img className='profilePicture' src={fotoPerfil} alt=''/>

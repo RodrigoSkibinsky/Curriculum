@@ -1,0 +1,49 @@
+@import url('BarraTareasMobile.css');
+@import url('ScreenMobile.css');
+
+#root{
+  --url-computer: url("img/background.png");
+  --altura-barra-mobile : 60px;
+  --altura-top-mobile : 80px;
+  user-select: none;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+}
+
+  .App {/*BarraTareas, Screen y App-header estan contenidos en esta clase*/
+    font-family: 'DejaVu Sans Mono', monospace;
+    background-image: var(--url-computer);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .App-header {/*BarraTareas y Screen estan contenidos en esta clase*/
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {/*se usa en BarraTareas y en Screen*/
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  .app-small-mobile {/*se usa en BarraTareas y en Screen*/
+    height: calc(var(--altura-barra-mobile)/3);
+    width: calc(var(--altura-barra-mobile)/2);
+  }
+
+  .oculto {
+    opacity: 0;
+    pointer-events: none;
+  }
+  

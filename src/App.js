@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import Desktop from './Desktop.js';
+import DesktopMobile from './DesktopMobile.js';
 
 function App() {
   const [isTouchScreen, setIsTouchScreen] = useState(false);
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App-Holder">
-      <Desktop />
+      {isTouchScreen ? <DesktopMobile /> : <Desktop />}
     </div>
   );
 }

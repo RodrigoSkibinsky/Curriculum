@@ -1,0 +1,102 @@
+.barraTareasMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #222c;
+    height: var(--altura-barra-mobile);
+    font-family: 'DejaVu Sans Mono', monospace;
+    z-index: 100;
+  }
+
+  .barra {
+    display: flex;
+    align-items: center;
+  }
+
+  .barra1-mobile {
+    height: var(--altura-barra-mobile);
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .barra3 {
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 2.5%;
+  }
+  
+  .open-icon {
+    flex: auto;
+    justify-self: center;
+    margin: auto;
+  }
+
+  .selected {
+    background-color: #111c;
+    border-bottom: 5px solid #3060ff;
+  }
+
+  .selected2 {
+    background-color: #111c;
+    border-bottom: 5px solid #67d1ff;
+  }
+  
+  .menu-item, .index-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+  }
+  
+  .menu-mobile, .index-menu-mobile, .option-menu-mobile{
+    background-color: #222;
+    position: fixed;
+    top: var(--altura-barra-mobile);
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    z-index: 1000;
+  }
+
+  .icon-holder {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .icon-holder img {
+    width: auto;
+  }
+
+  .index-menu-item {
+    flex-grow: 1;
+  }
+  
+  .menu-item img, .index-menu-item img {
+    margin-right: 10px;
+  }
+
+  .display-terminal {
+    padding: 5px 5px 9px 5px;
+    rotate: 90deg;
+    border-right: #111;
+  }
+
+  .display-app-options {
+    margin-left: 20px;
+    rotate: 90deg;
+    padding: 0px 5px;
+    border-right: #111;
+  }
+  
+  .frame-movile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 75%;
+  }

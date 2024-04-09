@@ -2,7 +2,7 @@
 @import url('Screen.css');
 
 #root{
-  --url-computer: url("../../images/background.png");
+  --url-computer: url("img/background.png");
   --altura-barra : 30px;
   --altura-top : 50px;
   user-select: none;
