@@ -55,7 +55,7 @@ function BarraTareasMobile({
         window.removeEventListener('resize', handleResize);
         window.removeEventListener('orientationchange', handleResize); // Quitar listener para cambio de orientación
       };
-    }, 1); // Ejecutar cada 1 milisegundo (0.001 segundo)
+    }, 10); // Ejecutar cada 10 milisegundo (0.01 segundo)
 
     return () => {
       clearInterval(intervalId); // Limpiar el intervalo cuando el componente se desmonta
