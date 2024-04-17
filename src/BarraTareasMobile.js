@@ -60,7 +60,7 @@ function BarraTareasMobile({
     return () => {
       clearInterval(intervalId); // Limpiar el intervalo cuando el componente se desmonta
     };
-  }, []);  
+  }, []);
 
   let whoIsRodrigoText;
   switch (language) {
