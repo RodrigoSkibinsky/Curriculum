@@ -43,7 +43,7 @@ function BarraTareasMobile({
   useEffect(() => {
     const intervalId = setInterval(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 380);
+        setIsMobile(window.innerWidth < 400);
       };
     
       // Manejador de eventos para cambiar el estado cuando se redimensiona la ventana
