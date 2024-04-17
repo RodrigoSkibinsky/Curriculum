@@ -38,12 +38,12 @@ function BarraTareasMobile({
   seleccionarNoSelec2 
 }) {
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 400);
+        setIsMobile(window.innerWidth < 380);
       };
     
       // Manejador de eventos para cambiar el estado cuando se redimensiona la ventana
