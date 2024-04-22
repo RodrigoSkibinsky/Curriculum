@@ -193,18 +193,22 @@ function Desktop() {
     setWindowPosition({ x: initialX, y: initialY });
   }, []);
 
-  const maximize = () => {//solo se usa dentro de screen
+  const maximize = () => {
     const maxHeight = screenHeight - 32;
-    const maxWidth = screenWidth;
-    if (height !== maxHeight) {
-      setHeight(maxHeight);
-      setWidth(maxWidth);
-      setWindowPosition({ x: 769, y: 375});
-    } else {
-      setHeight(currentHeight);
-      setWidth(currentWidth);
+    const maxWidth = screenWidth - 16;
+    let newX = windowPosition.x;
+    let newY = windowPosition.y;
+    if (currentHeight > maxHeight) {
+      newY = screenHeight - currentHeight;
     }
+    if (currentWidth > maxWidth) {
+      newX = (screenWidth - currentWidth) / 2;
+    }
+    setHeight(maxHeight);
+    setWidth(maxWidth);
+    setWindowPosition({ x: newX, y: newY });
   };
+  
   
   useEffect(() => {
     setHeight(initialHeight);
