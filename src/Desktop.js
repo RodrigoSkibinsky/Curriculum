@@ -199,10 +199,10 @@ function Desktop() {
     let newX = windowPosition.x;
     let newY = windowPosition.y;
     if (currentHeight > maxHeight) {
-      newY = screenHeight - currentHeight + 5;
+      newY = screenHeight - currentHeight + 15;
     }
     if (currentWidth > maxWidth) {
-      newX = (screenWidth - currentWidth) / 2;
+      newX = ((screenWidth - currentWidth) / 2) + 10;
     }
     if (height !== maxHeight) {
       setHeight(maxHeight);
