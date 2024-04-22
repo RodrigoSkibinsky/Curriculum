@@ -194,12 +194,12 @@ function Desktop() {
   }, []);
 
   const maximize = () => {
-    const maxHeight = screenHeight - 40;
+    const maxHeight = screenHeight - 32;
     const maxWidth = screenWidth;
     let newX = windowPosition.x;
     let newY = windowPosition.y;
     if (currentHeight > maxHeight) {
-      newY = screenHeight - currentHeight;
+      newY = screenHeight - currentHeight + 5;
     }
     if (currentWidth > maxWidth) {
       newX = (screenWidth - currentWidth) / 2;
