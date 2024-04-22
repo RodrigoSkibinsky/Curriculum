@@ -199,10 +199,10 @@ function Desktop() {
     let newX = windowPosition.x;
     let newY = windowPosition.y;
     if (currentHeight > maxHeight) {
-      newY = screenHeight - currentHeight + 15;
+      newY = (screenHeight - currentHeight) / 2;
     }
     if (currentWidth > maxWidth) {
-      newX = ((screenWidth - currentWidth) / 2) + 10;
+      newX = (screenWidth - currentWidth) / 2;
     }
     if (height !== maxHeight) {
       setHeight(maxHeight);
@@ -212,7 +212,7 @@ function Desktop() {
       setHeight(initialHeight);
       setWidth(initialWidth);
     }
-  };
+  };  
   
   useEffect(() => {
     setHeight(initialHeight);
