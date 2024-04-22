@@ -194,7 +194,7 @@ function Desktop() {
   }, []);
 
   const maximize = () => {
-    const maxHeight = screenHeight - 32;
+    const maxHeight = screenHeight - 40;
     const maxWidth = screenWidth;
     let newX = windowPosition.x;
     let newY = windowPosition.y;
@@ -204,11 +204,15 @@ function Desktop() {
     if (currentWidth > maxWidth) {
       newX = (screenWidth - currentWidth) / 2;
     }
-    setHeight(maxHeight);
-    setWidth(maxWidth);
-    setWindowPosition({ x: newX, y: newY });
+    if (height !== maxHeight) {
+      setHeight(maxHeight);
+      setWidth(maxWidth);
+      setWindowPosition({ x: newX, y: newY });
+    } else {
+      setHeight(initialHeight);
+      setWidth(initialWidth);
+    }
   };
-  
   
   useEffect(() => {
     setHeight(initialHeight);
