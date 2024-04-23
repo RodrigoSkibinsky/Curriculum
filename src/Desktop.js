@@ -203,7 +203,7 @@ function Desktop() {
       newX = screenWidth / 2;
       setHeight(maxHeight);
       setWidth(maxWidth);
-      setWindowPosition({ x: newX, y: newY});
+      setWindowPosition({ x: newX, y: newY - 10});
     } else {
       setHeight(initialHeight);
       setWidth(initialWidth);
