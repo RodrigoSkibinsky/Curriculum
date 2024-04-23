@@ -46,6 +46,7 @@ function DesktopMobile() {
   const [isTerminalHidden, setisTerminalHidden] = useState(false);
   const [isTerminalClosed, setisTerminalClosed] = useState(false);
   const [height, setHeight] = useState(0);
+  
   useEffect(() => {
     const intervalId = setInterval(() => {
       const newHeight = window.innerHeight - 32.5;
@@ -69,13 +70,12 @@ function DesktopMobile() {
 
   const handleMenuLangVisibility = () => {
     setMenuLangVisible(!menuLangVisible)
-    if (indexVisible) {
-      setIndexVisible(false);
-    }
-    if (menuVisible) {
-      setMenuVisible(false);
-    }
   };
+
+  useEffect(() => {
+      setIndexVisible(false);
+      setMenuVisible(false);
+  }, [menuLangVisible]);
 
   const handleTerminalItemClick = (text) => {
     if (isTerminalClosed) {
@@ -93,13 +93,12 @@ function DesktopMobile() {
 
   const handleDisplayClick = () => {
     setMenuVisible(!menuVisible);
-    if (indexVisible) {
-      setIndexVisible(false)
-    }
-    if (menuLangVisible) {
-      setMenuLangVisible(false);
-    }
   };
+
+  useEffect(() => {
+    setIndexVisible(false);
+    setMenuLangVisible(false);
+  }, [menuVisible]);
 
   const handleIndexMouseEnter = () => {
     setIndexVisible(true);
@@ -110,17 +109,14 @@ function DesktopMobile() {
   
   const handleIndexClick = () => {
     setIndexVisible(!indexVisible);
-    if (menuVisible) {
+  };  
+
+  useEffect(() => {
       setMenuVisible(false);
-    }
-    if (menuLangVisible) {
       setMenuLangVisible(false);
-    }
-    if (!indexVisible) {
       setMenuOption0Visible(false);
       setMenuOption1Visible(false);
-    }
-  };  
+  }, [indexVisible]);
 
   const closeTerminal = () => {//solo se usa dentro de screen
     setisTerminalHidden(true);
