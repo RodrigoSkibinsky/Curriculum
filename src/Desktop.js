@@ -198,12 +198,16 @@ function Desktop() {
     const maxWidth = screenWidth;
     let newX = windowPosition.x;
     let newY = windowPosition.y;
-    newY = (screenHeight - currentHeight) / 2;
-    newX = (screenWidth - currentWidth) / 2;
+    if (currentHeight > maxHeight) {
+      newY = (screenHeight - currentHeight) / 2;
+    }
+    if (currentWidth > maxWidth) {
+      newX = (screenWidth - currentWidth) / 2;
+    }
     if (height !== maxHeight) {
       setHeight(maxHeight);
       setWidth(maxWidth);
-      setWindowPosition({ x: newX, y: newY });
+      setWindowPosition({ x: newX + 100, y: newY });
     } else {
       setHeight(initialHeight);
       setWidth(initialWidth);
